@@ -252,26 +252,34 @@ function getFeatures(map, e, l) {
 
   }
 
-  var queriedFeatures;
+  var queriedFeatures, bboxFeatures;
 
   if (l && l.length > 0) {
     queriedFeatures = map.queryRenderedFeatures(point, {
       layers: l
     });
+    bboxFeatures = map.queryRenderedFeatures(bbox, {
+      layers: l
+    });
   } else {
     queriedFeatures = map.queryRenderedFeatures(point);
+    bboxFeatures = map.queryRenderedFeatures(bbox);
   }
+  
+  const combinedFeatures = [...bboxFeatures, ...queriedFeatures]
+  var features = cleanFeatures(combinedFeatures);
 
   if (getFeatureOpts && getFeatureOpts.debug === "true") {
-    console.log(e.point)
-    console.log({queriedFeatures})
+    console.log({combinedFeatures});
+    console.log(features)
   }
 
-  var features = cleanFeatures(queriedFeatures);
 
   function cleanFeatures(objects) {
+    const ids = []
     return objects.filter(function (obj) {
-      if (obj && obj.source != "composite" && obj.layer.metadata && obj.layer.metadata.popup) {
+      if (obj && obj.source != "composite" && obj.layer.metadata && obj.layer.metadata.popup && !ids.includes(obj.layer.id)) {
+        ids.push(obj.layer.id)
         return obj
       }
     })
