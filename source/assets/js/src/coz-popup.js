@@ -266,23 +266,33 @@ function getFeatures(map, e, l) {
     bboxFeatures = map.queryRenderedFeatures(bbox);
   }
   
-  const combinedFeatures = [...bboxFeatures, ...queriedFeatures]
-  var features = cleanFeatures(combinedFeatures);
+  const combinedFeatures = [...queriedFeatures, ...bboxFeatures]
+  const features = cleanFeatures(combinedFeatures);
 
   if (getFeatureOpts && getFeatureOpts.debug === "true") {
     console.log({combinedFeatures});
-    console.log(features)
+    console.log({features})
   }
 
 
   function cleanFeatures(objects) {
-    const ids = []
-    return objects.filter(function (obj) {
-      if (obj && obj.source != "composite" && obj.layer.metadata && obj.layer.metadata.popup && !ids.includes(obj.layer.id)) {
-        ids.push(obj.layer.id)
-        return obj
+    const features = [];
+    const props = [];
+    objects.forEach(function (obj) {
+      obj.properties["__vt__id__index"] = obj.id
+      const p = JSON.stringify(obj.properties);
+      let unique = true;
+      props.forEach(e => {
+        if (p === e) {
+          unique = false
+        }
+      });
+      if (unique) props.push(p)
+      if (obj && unique && obj.source != "composite" && obj.layer.metadata && obj.layer.metadata.popup) {
+        features.push(obj)
       }
     })
+    return features
   }
 
   if (!features) {
@@ -323,7 +333,7 @@ function popup(map, features, n, highlightOnly) {
     return f != null
   })
 
-  var popupFeatures = removeDuplicates(featuresTemp, "id")
+  var popupFeatures = featuresTemp
 
   if (!popupFeatures.length === 0 && !highlightOnly) {
     highlightClearFeature(popupMap, "click")
@@ -609,12 +619,6 @@ function isImage(key, value) {
   }else{
     return value
   }
-}
-
-/*https://firstclassjs.com/remove-duplicate-objects-from-javascript-array-how-to-performance-comparison/*/
-function removeDuplicates(array, key) {
-  let lookup = new Set();
-  return array.filter(obj => !lookup.has(obj[key]) && lookup.add(obj[key]));
 }
 
 function formatTitle(str) {

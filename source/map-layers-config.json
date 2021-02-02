@@ -899,6 +899,39 @@
     }
   },
   {
+    "id": "dev_aep_tree_removal",
+    "name": "AEP Tree Removal 2021",
+    "directory": "Community Development",
+    "group": "AEP Tree Removal",
+    "source": "dev_aep_tree_removal",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/api/v1/feature-server/collections/public.dev_aep_tree_removal/items.json?limit=50000",
+      "generateId": true
+    },
+    "type": "circle",
+    "paint": {
+      "circle-radius": ["case",
+        ["==", ["get", "city_row_parcel"], true], 7, 4
+      ],
+      "circle-color": ["case",
+        ["==", ["get", "city_row_parcel"], true], "black", "white"
+      ],
+      "circle-stroke-color": ["case",
+        ["==", ["get", "city_row_parcel"], true], "red", "black"
+      ],
+      "circle-stroke-width": ["case",
+        ["==", ["get", "city_row_parcel"], true], 2, 1
+      ]
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
     "id": "Parcels2017",
     "type": "fill",
     "name": "Parcels 2017",
