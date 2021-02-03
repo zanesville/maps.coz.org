@@ -90,7 +90,7 @@ function printMap(m, opts) {
     <div style="float:right;width:300px;height:100px;overflow:hidden;font-size:0.7rem;padding-top:5px;margin-right:10px;letter-spacing:1.2px;text-align:justify;"> \
       <em> \
         <span style="font-weight:bold;">Map Disclaimer</span> \
-            <br>City of Zanesville does not guarantee the accuracy of this data. This map is subject to all terms and conditions of the disclaimer posted at www.coz.org/map-disclaimer.</em> \
+            <br>City of Zanesville does not guarantee the accuracy of this data. This map is subject to all terms and conditions of the disclaimer posted at maps.coz.org/disclaimer.</em> \
     </div>';
     
     var addLegend = document.getElementById("map-print--modal-legend");

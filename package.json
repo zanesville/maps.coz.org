@@ -15,7 +15,7 @@
     "test-deploy": "netlify deploy --prod",
     "encrypt": "node _scripts/_encrypt/encrypt.js",
     "deploy-test": "hexo clean && npm run parcel-js && npm run clean-docs && npm run docs && hexo generate && node _scripts/genPublicApps && gulp clean-public && node _scripts/localToCDN && live-server public",
-    "deploy": "npm run parcel-css && hexo clean && npm run parcel-js && npm run clean-docs && npm run docs && hexo generate && node _scripts/genPublicApps && gulp clean-public && node _scripts/localToCDN && netlify deploy --dir public",
+    "deploy": "npm run parcel-css && hexo clean && npm run parcel-js && npm run clean-docs && npm run docs && hexo generate && node _scripts/genPublicApps && gulp clean-public && node _scripts/localToCDN && netlify deploy --dir public --prod",
     "netlify": "netlify deploy --dir public --prod",
     "backup": "C:/Users/malcolm.meyer/Documents/GIS_Projects_Local/Web Apps Production/gis.coz.org_web_maps/_backupToZDrive.bat",
     "start": "hexo generate && node _scripts/genPublicApps && hexo s"
