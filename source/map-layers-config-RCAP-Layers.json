@@ -4667,7 +4667,133 @@
       "lazyLoading": false
     }
   },
- 
+  {
+    "id": "utl_stormwater_agol_storm_water_catch_basin",
+    "name": "Storm Points",
+    "directory": "City Storm Sewer (In Progress)",
+    "group": "Storm Sewer",
+    "children": true,
+    "legend": "<span class='fa fa-square fa-sm' style='color:fuchsia;'></span> Inlet<br><span class='fa fa-square fa-sm' style='color:dodgerblue;transform:rotate(45deg)'></span> Outfall<br><span class='fa fa-circle fa-sm' style='color:magenta;'></span> Manhole",
+    "source": "utl_stormwater_agol_storm_water_catch_basin",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/static/data/geojson/utl_stormwater_agol_storm_water_catch_basin.geojson",
+      "generateId": true
+    },
+    "type": "symbol",
+    "layout": {
+      "symbol-z-order": "source",
+      "icon-allow-overlap": true,
+      "icon-ignore-placement": true,
+      "icon-image": "square-purple",
+      "icon-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        14,
+        0.4,
+        17,
+        0.7
+      ],
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true,
+      "filterSchema": {
+        "LASTUPDATE": {
+          "type": "date",
+          "epoch": true
+        }
+      }
+    }
+  },
+  {
+    "id": "utl_stormwater_agol_storm_water_culvert_point",
+    "name": "Storm Points",
+    "directory": "City Storm Sewer (In Progress)",
+    "group": "Storm Sewer",
+    "parent": "utl_stormwater_agol_storm_water_catch_basin",
+    "hidden": true,
+    "source": "utl_stormwater_agol_storm_water_culvert_point",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/static/data/geojson/utl_stormwater_agol_storm_water_culvert_point.geojson",
+      "generateId": true
+    },
+    "type": "circle",
+    "paint": {
+      "circle-color": "black",
+      "circle-radius": 5,
+      "circle-stroke-color": "white",
+      "circle-stroke-width": 2
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "utl_stormwater_agol_storm_water_discharge_point",
+    "name": "Storm Points",
+    "directory": "City Storm Sewer (In Progress)",
+    "group": "Storm Sewer",
+    "parent": "utl_stormwater_agol_storm_water_catch_basin",
+    "hidden": true,
+    "source": "utl_stormwater_agol_storm_water_discharge_point",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/static/data/geojson/utl_stormwater_agol_storm_water_discharge_point.geojson",
+      "generateId": true
+    },
+    "type": "symbol",
+    "layout": {
+      "icon-image": "diamond-blue-24",
+      "icon-allow-overlap": true,
+      "icon-size": {
+        "stops": [
+          [14,0.7],
+          [18,0.9]
+        ]
+      },
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "utl_stormwater_agol_storm_water_manhole",
+    "name": "Storm Points",
+    "directory": "City Storm Sewer (In Progress)",
+    "group": "Storm Sewer",
+    "parent": "utl_stormwater_agol_storm_water_catch_basin",
+    "hidden": true,
+    "source": "utl_stormwater_agol_storm_water_manhole",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/static/data/geojson/utl_stormwater_agol_storm_water_manhole.geojson",
+      "generateId": true
+    },
+    "type": "circle",
+    "paint": {
+      "circle-color": "magenta",
+      "circle-radius": 5,
+      "circle-stroke-color": "black",
+      "circle-stroke-width": 2
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
   {
     "id": "eng_building_footprints_3d",
     "type": "fill-extrusion",
