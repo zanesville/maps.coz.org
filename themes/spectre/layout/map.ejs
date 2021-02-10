@@ -402,7 +402,7 @@ function imgZoomOut(el) {
         },
         {
           element: document.getElementById('sidebarId'),
-          intro: "This is the map sidebar. It contains a layer control for turning map layers on and off, and a footer with information about this map and a link to bring up this walthrough.",
+          intro: "This is the map sidebar. It contains a layer control for turning map layers on and off, and a footer with information about this map and a link to bring up this walthrough. If you click on the layer header, it will toggle all the layers in that directory.",
           position: 'right'
         },
         {
@@ -412,11 +412,11 @@ function imgZoomOut(el) {
         },
         {
           element: document.querySelector(".mapboxgl-ctrl-geocoder.mapboxgl-ctrl"),
-          intro: 'This is the address geocoder. Simply type in an address and the map will zoom to that location. This is also used as an optional layer search. Use the help text to determine which layers (if any) will be searched.'
+          intro: 'This is the address geocoder. Simply type in an address and the map will zoom to that location. In some maps you can also search by parcel number.'
         },
         {
           element: document.getElementsByClassName('mapboxgl-ctrl-top-right')[0],
-          intro: "These are the map controls. Typical controls include a zoom control and a GPS toggle. Other controls may include a print button, a street view launcher and a measure control.",
+          intro: "These are the map controls. Typical controls include a zoom control and a GPS toggle. Other controls may include a print button, a street view launcher and a measure control.<br><br>For the print control, you can adjust the map area by clicking the adjust map area button.<br><br>For the street view control, you simply move the icon to where you want to open street view.<br><br>For the terrain control, click this button and it will show the map in 3D.<br><br>For the measure control, this will allow you to add drawings to the map and measure the length and area.",
           position: 'left'
         },
         {
@@ -445,7 +445,7 @@ function imgZoomOut(el) {
       mapDisclaimerModal.classList.remove('active');
       var mapDisclaimerModalLoading = document.getElementById('loading');
       if (loading.classList.contains('loading')) { loading.classList.remove('loading') }
-      // startIntro()
+      startIntro()
     }
   }
 
