@@ -4163,37 +4163,6 @@
     }
   },
   {
-    "id": "utl_stormwater_rcap_streets",
-    "name": "RCAP Project Status",
-    "directory": "City Sewer System",
-    "group": "Storm Sewer Layers",
-    "legend": "<div><span class='fa fa-minus' style='color:red;'></span> Marked<br><span class='fa fa-minus' style='color:orange;'></span> Queued<br><span class='fa fa-minus' style='color:green;'></span> Collected</div>",
-    "type": "line",
-    "source": "utl_stormwater_rcap_streets",
-    "sourceType": {
-      "type": "vector",
-      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_stormwater_rcap_streets/{z}/{x}/{y}.pbf"],
-      "maxzoom": 22
-    },
-    "source-layer": "public.utl_stormwater_rcap_streets",
-    "paint": {
-      "line-width": 8,
-      "line-color": ["case", 
-        ["==", ["get", "status"], "queued"], "goldenrod",
-        ["==", ["get", "status"], "marked"], "red",
-        ["==", ["get", "status"], "collected"], "green",
-        "transparent"
-      ],
-      "line-opacity": 0.5
-    },
-    "layout": {
-      "visibility": "none"
-    },
-    "metadata": {
-      "popup": ["lsn", "int_from", "int_to", "status"]
-    }
-  },
-  {
     "id": "stmLinesOuter",
     "name": "stmLinesOuter",
     "directory": "City Sewer System",
