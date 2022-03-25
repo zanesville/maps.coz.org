@@ -1,5 +1,4 @@
 export * from '../src/coz-helpers.js';
-export * from '../src/coz-ie-polyfills.js';
 export * from '../src/coz-map-add-layers';
 export * from '../src/coz-map-misc-functions.js';
 export * from '../src/coz-sidebar-toggle.js';
