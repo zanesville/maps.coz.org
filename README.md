@@ -5,6 +5,12 @@ The source code is bundled using `parcel-bundler@1.12.4`. The code is *very* par
 
 The site is currently deployed on Netlify.
 
+## Install
+
+- clone the repo
+- npm install
+- cd mapbox-print-pdf and npm install
+
 ## Updates
 
 ### Version 0.2.0
