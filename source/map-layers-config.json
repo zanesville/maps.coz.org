@@ -2415,6 +2415,7 @@
       "popup": true
     }
   },
+
   {
     "id": "utl_mus_sanitary_lines_outer",
     "name": "County Sewer Lines",
@@ -2544,6 +2545,7 @@
       "popup": true
     }
   },
+
   {
     "id": "utl_water_laterals",
     "name": "Laterals",
@@ -3351,6 +3353,114 @@
     },
     "metadata": {
       "popup": ["address", "name", "type"]
+    }
+  },
+
+  {
+    "id": "utl_water_control_valve_insp",
+    "type": "circle",
+    "directory": "City Water Inspections | Field Work",
+    "group": "Water Inspection Layers",
+    "name": "Control Valve Inspections",
+    "source": "utl_water_control_valve_insp",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://services9.arcgis.com/IUhP9plEzDTayUVC/ArcGIS/rest/services/Join_Features_to_Water_Utilities___System_Valve/FeatureServer/0/query?where=OBJECTID%3E0&f=geojson&outFields=*",
+      "generateId": true
+    },
+    "paint": {
+      "circle-radius": 6,
+      "circle-color": ["case",
+      ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
+      "circle-stroke-color": ["case",
+        ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
+      "circle-stroke-width": 2.5
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": ["img_url","DIAMETER", "VALVETYPE", "CRITICALVALVE", "service_date", "inspect_notes", "inspector", "inspect_ok", "direction", "turns"]
+    }
+  },
+  {
+    "id": "utl_water_hydrant_insp",
+    "type": "circle",
+    "directory": "City Water Inspections | Field Work",
+    "group": "Water Inspection Layers",
+    "name": "Blowoff Inspections | Hydrants",
+    "source": "utl_water_hydrant_insp",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://services9.arcgis.com/IUhP9plEzDTayUVC/ArcGIS/rest/services/Blowoff_Inspections_II_Hydrrants/FeatureServer/0/query?where=OBJECTID%3E0&f=geojson&outFields=*",
+      "generateId": true
+    },
+    "paint": {
+      "circle-radius": 6,
+      "circle-color": ["case",
+        ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
+        "circle-stroke-color": ["case",
+          ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
+      "circle-stroke-width": 2.5
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": ["img_url","DIAMETER", "VALVETYPE", "service_date", "inspect_notes", "inspector", "inspect_ok", "direction", "turns"]
+    }
+  },
+  {
+    "id": "utl_water_insp_critical_valve",
+    "name": "Critical Vavle Inspections",
+    "type": "circle",
+    "directory": "City Water Inspections | Field Work",
+    "group": "Water Inspection Layers",
+    "source": "utl_water_insp_critical_valve",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://services9.arcgis.com/IUhP9plEzDTayUVC/arcgis/rest/services/Join_Features_to_Water_Utilities___System_Valve/FeatureServer/0/query?where=OBJECTID%3E0&f=geojson&outFields=*",
+      "generateId": true
+    },
+    "paint": {
+      "circle-radius": 6,
+      "circle-color": ["case",
+      ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
+      "circle-stroke-color": ["case",
+        ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
+      "circle-stroke-width": 2.5
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "filter": ["==", ["get", "CRITICALVALVE"], "Yes"],
+    "metadata": {
+      "popup": ["DIAMETER", "VALVETYPE", "service_date", "inspect_notes", "inspector", "inspect_ok", "direction", "turns"]
+    }
+  },
+  {
+    "id": "utl_water_field_work",
+    "type": "circle",
+    "directory": "City Water Inspections | Field Work",
+    "group": "Water Field Work",
+    "name": "Water Field Work",
+    "source": "utl_water_field_work",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://services9.arcgis.com/IUhP9plEzDTayUVC/arcgis/rest/services/Water_Field_Work_View/FeatureServer/0/query?where=OBJECTID%3E0&f=geojson&outFields=*",
+      "generateId": true
+    },
+    "paint": {
+      "circle-radius": 6,
+      "circle-color": "yellow",
+      "circle-stroke-color": "black",
+      "circle-stroke-width": 2.5
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
     }
   },
   {
@@ -5155,6 +5265,33 @@
       ],
       "line-width": 4,
       "line-dasharray": [2,1]
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "utl_streetlights",
+    "directory": "Engineering",
+    "group": "Electric",
+    "name": "Street Lights",
+    "source": "utl_streetlights",
+    "sourceType": {
+      "type": "vector",
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_streetlights/{z}/{x}/{y}.pbf"],
+      "promoteId": "id",
+      "maxzoom": 22
+    },
+    "source-layer": "public.utl_streetlights",
+    "type": "circle",
+    "paint": {
+      "circle-color": "black",
+      "circle-radius": 5,
+      "circle-stroke-color": "goldenrod",
+      "circle-stroke-width": 2
     },
     "layout": {
       "visibility": "none"
