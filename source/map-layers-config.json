@@ -3412,7 +3412,7 @@
   },
   {
     "id": "utl_water_insp_critical_valve",
-    "name": "Critical Vavle Inspections",
+    "name": "Critical Valve Inspections",
     "type": "circle",
     "directory": "City Water Inspections | Field Work",
     "group": "Water Inspection Layers",
