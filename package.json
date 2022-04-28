@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "build:watch": "webpack --watch",
-    "parcel-css": "parcel build ./source/assets/css/src/main.scss -d ./source/assets/css/dist",
+    "parcel-css": "parcel build ./source/assets/css/src/main.scss --dist-dir ./source/assets/css/dist",
     "docs": "jsdoc source/assets/js/src -c _scripts/_jsdoc/jsdoc.json -d source/docs",
     "clean-docs": "gulp clean-jsdoc",
     "test-deploy": "netlify deploy --prod",
@@ -73,6 +73,7 @@
     "mapbox-upload": "^4.2.4",
     "open-location-code": "^1.0.3",
     "opener": "^1.5.1",
+    "parcel": "^2.5.0",
     "proj4": "^2.6.0",
     "replace-ext": "^1.0.0",
     "spectre.css": "^0.5.8",
@@ -84,6 +85,7 @@
     "webpack-cli": "^4.9.2"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
     "cssnano": "^4.1.8",
     "directory-tree": "^2.2.1",
     "fs-extra": "^6.0.1",
