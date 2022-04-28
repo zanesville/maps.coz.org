@@ -1159,7 +1159,7 @@
     },
     "layout": {
       "symbol-placement": "line",
-      "symbol-spacing": 1000,
+      "symbol-spacing": 300,
       "visibility": "visible",
       "text-padding": 2,
       "text-font": [

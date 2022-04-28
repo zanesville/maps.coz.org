@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack",
     "build:watch": "webpack --watch",
+    "clean": "hexo clean",
     "parcel-css": "parcel build ./source/assets/css/src/main.scss --dist-dir ./source/assets/css/dist",
     "docs": "jsdoc source/assets/js/src -c _scripts/_jsdoc/jsdoc.json -d source/docs",
     "clean-docs": "gulp clean-jsdoc",
