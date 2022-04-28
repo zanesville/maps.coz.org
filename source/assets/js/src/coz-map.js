@@ -89,7 +89,7 @@ class Map {
 
       this._map.on('load', function() {
        
-        mapAddLayers(this, layers);
+        mapAddLayers(this, layers);        
 
         /* TODO ADD FUNCTION THAT LOOPS THROUGH ALL LAYERS AND ADDS CLICK HANDLER IE POPUP FOR EACH LAYER
         SOMETHING LIKE

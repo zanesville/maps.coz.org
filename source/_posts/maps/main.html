@@ -242,27 +242,34 @@ header: >-
       {
         name: "Historic Map 1956",
         layer: "img_hist_maps_1956_parcel_map",
-        id: "hist1956"
+        id: "hist1956",
+        type: "imagery"
+
       },
       {
         name: "Historic Map 1928",
         layer: "img_hist_maps_1928_street_map",
-        id: "hist1928"
+        id: "hist1928",
+        type: "imagery"
+
       },
       {
         name: "Historic Map 1852",
         id: "hist1852",
-        layer: "img_hist_maps_1852_musk"
+        layer: "img_hist_maps_1852_musk",
+        type: "imagery"
       },
       {
         name: "Aerial Imagery 2020",
         layer: "img_osip_2020",
-        id: "img_osip_2020"
+        id: "img_osip_2020",
+        type: "imagery"
       },
       {
         name: "Aerial Imagery 2018",
         layer: "mus_imagery",
-        id: "imagery"
+        id: "imagery",
+        type: "imagery"
       }
 
     ]
@@ -278,7 +285,7 @@ header: >-
       return `
       <div class="form-group">
         <label class="form-checkbox js-layer-toggle" id="${b.id}" data-layer="${b.layer}">
-          <input type="checkbox">
+          <input type="checkbox" data-type="${b.type ? b.type : ''}">
           <i class="form-icon"></i> ${b.name}
         </label>
       </div>
@@ -378,9 +385,9 @@ header: >-
       geocoderEl.id = "coz-geocoder";
       document.body.appendChild(geocoderEl);
       document.getElementById("coz-geocoder").appendChild(geocoder.onAdd(map));
-      
+
       //TODO FIX THIS HACK
-      document.body.addEventListener("click", function(e) {
+      document.body.addEventListener("click", function (e) {
         if (!e.target.classList.contains("mapboxgl-ctrl-geocoder--input")) {
           document.querySelector(".mapboxgl-ctrl-geocoder--input").blur()
         }
@@ -515,20 +522,45 @@ header: >-
                 // sidebarToggle.innerHTML = '<i class="icon icon-cross"></i>';
                 document.querySelector(".mapboxgl-ctrl-top-left").style.left = sidebarEl.scrollWidth + "px";
                 document.querySelector(".coz-map--info-window").style.left = sidebarEl.scrollWidth + 10 + "px";
- 
+
               } else {
                 // sidebarToggle.innerHTML = '<i class="icon icon-arrow-right"></i>';
                 if (window.innerWidth > 768) {
                   document.querySelector(".coz-map--info-window").style.left = "10px";
-                }else{
+                } else {
                   document.querySelector(".coz-map--info-window").style.left = 0;
                 }
                 document.querySelector(".mapboxgl-ctrl-top-left").style.left = 0;
               }
             }
           })
+      });
 
+       /**
+       * NOTE quick fix to control the opacity of the alleys if imagery is added to the map
+       * */
+
+      const sidebarLayerControl = document.querySelector("#coz-sidebar--content")
+
+      sidebarLayerControl.addEventListener("click", (e) => {
+        if (!map.getLayer("alleys")) return
+
+        const _inputs = sidebarLayerControl.querySelectorAll("[data-type='imagery']");
+        let _hasImagery = false;
+        _inputs.forEach(i => {
+          console.log(i)
+          if (i.checked) _hasImagery = true
+        });
+        if (_hasImagery) {
+          map.setPaintProperty("alleys", "line-opacity", 0.1)
+        }else{
+          map.setPaintProperty("alleys", "line-opacity", 1)
+        }
       })
+
+      /**
+      * END QUICK FIX
+      */
     })
 
 </script>

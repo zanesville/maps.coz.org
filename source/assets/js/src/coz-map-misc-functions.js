@@ -4,7 +4,6 @@ import {cozSidebarToggleControl} from './coz-sidebar-toggle';
 import {getLayers, getQuery, getParent} from './coz-helpers';
 import {mapCheckLoading} from './coz-mapCheckLoading';
 import {localGeocoder} from './coz-local-geocoder.js';
-import { copySync } from 'fs-extra';
 
 /**
  * Function to print the rendered map and add a title using a custom version of https://github.com/Eddie-Larsson/mapbox-print-pdf

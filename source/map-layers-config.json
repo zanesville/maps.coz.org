@@ -352,6 +352,7 @@
       "popup": true
     }
   },
+
   {
     "id": "coz_zoning",
     "type": "fill",
@@ -1099,6 +1100,94 @@
     "metadata": {
       "popup": true
     }
+  },
+  {
+    "id": "alleys",
+    "type": "line",
+    "directory": "Administrative Layers",
+    "group": "Roads",
+    "name": "Alleys",
+    "source": "alley_labels_source",
+    "sourceType": {
+      "type": "vector",
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.trn_mus_centerlines/{z}/{x}/{y}.pbf"],
+      "minzoom": 10,
+      "maxzoom": 22
+    },
+    "source-layer": "public.trn_mus_centerlines",
+    "metadata": {
+      "popup": false
+    },
+    "children": true,
+    "paint": {
+      "line-color": "white",
+      "line-width": {"stops": [
+          [10,3],
+          [22,8]
+        ]
+      }
+    },
+    "layout": {
+      "visibility": "visible"
+    },
+    "filter": ["==", ["get", "st_type"], "ALY"]
+  },
+  {
+    "id": "alley_labels",
+    "type": "symbol",
+    "directory": "Administrative Layers",
+    "group": "Roads",
+    "name": "Alley Labels",
+    "source": "alley_labels_source",
+    "sourceType": {
+      "type": "vector",
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.trn_mus_centerlines/{z}/{x}/{y}.pbf"],
+      "minzoom": 10,
+      "maxzoom": 22
+    },
+    "source-layer": "public.trn_mus_centerlines",
+    "parent": "alleys",
+    "hidden": true,
+    "metadata": {
+      "popup": false
+    },
+    "paint": {
+      "text-color": "#3a3a3a",
+      "text-halo-width": 0.8,
+      "text-halo-color": "white",
+      "text-opacity": 1
+    },
+    "layout": {
+      "symbol-placement": "line",
+      "symbol-spacing": 1000,
+      "visibility": "visible",
+      "text-padding": 2,
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
+      "text-field": [
+        "concat",
+        [
+          "get",
+          "st_name"
+        ],
+        " ALLEY"
+      ],
+      "text-max-width": 9,
+      "text-size": {
+        "stops": [
+          [
+            10,
+            9
+          ],
+          [
+            22,
+            14
+          ]
+        ]
+      }
+    },
+    "filter": ["==", ["get", "st_type"], "ALY"]
   },
   {
     "id": "ParcelsLabels",

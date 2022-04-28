@@ -163,6 +163,7 @@ css: >-
       var mapLayers = [
         "mus_imagery_2015",
         "mus_imagery",
+        "img_osip_2020"
       ];
       var layers = data.filter(function(layer) {
         return ((mapLayers.indexOf(layer.id) > -1) || layer.directory === "City Sewer System" || layer.directory === "Administrative Layers" || layer.directory === "County Utilities")
@@ -201,6 +202,34 @@ css: >-
 
       map.addControl(new cozMAP.mapMeasureControl(), 'top-right');
       initMapClick(this);
+
+          /**
+         * NOTE quick fix to control the opacity of the alleys if imagery is added to the map
+         * */
+
+      const sidebarLayerControl = document.querySelector("#coz-sidebar--content")
+
+      sidebarLayerControl.addEventListener("click", (e) => {
+        if (!map.getLayer("alleys")) return
+
+        const _imagery = (sidebarLayerControl.querySelector("#Imagery")) ? sidebarLayerControl.querySelector("#Imagery") : null
+        if (_imagery) {
+          const _inputs = _imagery.parentElement.querySelectorAll("input");
+          let _hasImagery = false;
+          _inputs.forEach(i => {
+            if (i.checked) _hasImagery = true
+          });
+          if (_hasImagery) {
+            map.setPaintProperty("alleys", "line-opacity", 0.1)
+          }else{
+            map.setPaintProperty("alleys", "line-opacity", 1)
+          }
+        }
+      })
+
+      /**
+      * END QUICK FIX
+      */
     });
 
   }
