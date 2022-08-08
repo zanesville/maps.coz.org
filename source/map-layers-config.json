@@ -2479,6 +2479,7 @@
     },
     "filter": [">=", ["get", "date_last_paved"], "2016-01-01"]
   },
+  
   {
     "id": "utl_mus_sanitary_lines",
     "name": "utl_mus_sanitary_lines_inner",
@@ -2866,6 +2867,126 @@
     },
     "metadata": {
       "popup": true
+    }
+  },
+  {
+    "id": "dps_sanitation_routes",
+    "directory": "Sanitation",
+    "group": "Sanitation",
+    "name": "Sanitation Routes",
+    "source": "dps_sanitation_routes",
+    "sourceType": {
+      "type": "vector",
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.dps_sanitation_routes/{z}/{x}/{y}.pbf"],
+      "promoteId": "fid",
+      "maxzoom": 22
+    },
+    "source-layer": "public.dps_sanitation_routes",
+    "type": "fill",
+    "paint": {
+      "fill-color": [
+        "match",
+        ["get", "weekday"],
+        ["Monday"],
+        "blue",
+        ["Tuesday"],
+        "firebrick",
+        ["Wednesday"],
+        "darkorange",
+        ["Thursday"],
+        "dodgerblue",
+        ["Friday"],
+        "green",
+        "black"
+      ], 
+      "fill-outline-color": [
+        "match",
+        ["get", "weekday"],
+        ["Monday"],
+        "blue",
+        ["Tuesday"],
+        "firebrick",
+        ["Wednesday"],
+        "darkorange",
+        ["Thursday"],
+        "dodgerblue",
+        ["Friday"],
+        "green",
+        "black"
+      ],
+      "fill-opacity": 0.5
+    },
+    "layout": {
+      "visibility": "visible"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "dps_sanitation_routes_labels",
+    "directory": "Sanitation",
+    "group": "Sanitation",
+    "name": "Sanitation Route Labels",
+    "source": "dps_sanitation_routes",
+    "sourceType": {
+      "type": "vector",
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.dps_sanitation_routes/{z}/{x}/{y}.pbf"],
+      "promoteId": "fid",
+      "maxzoom": 22
+    },
+    "source-layer": "public.dps_sanitation_routes",
+    "type": "symbol",
+    "paint": {
+      "text-color": "white",
+      "text-halo-width": 1.5,
+      "text-halo-color": [
+        "match",
+        ["get", "weekday"],
+        ["Monday"],
+        "blue",
+        ["Tuesday"],
+        "firebrick",
+        ["Wednesday"],
+        "darkorange",
+        ["Thursday"],
+        "dodgerblue",
+        ["Friday"],
+        "green",
+        "black"
+      ],
+      "text-opacity": 1
+    },
+    "layout": {
+      "visibility": "visible",
+      "text-anchor": "center",
+      "text-padding": 2,
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
+      "text-field": ["concat",
+        "Zone ",
+         [
+          "get",
+          "zone"
+        ]
+      ],
+      "text-max-width": 9,
+      "text-size": {
+        "stops": [
+          [
+            12,
+            18
+          ],
+          [
+            22,
+            22
+          ]
+        ]
+      }
+    },
+    "metadata": {
+      "popup": false
     }
   },
   {

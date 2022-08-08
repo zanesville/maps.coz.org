@@ -1,6 +1,7 @@
-import {getQuery} from "./coz-helpers.js";
 import {getLayers} from "./coz-helpers.js";
+import {getQuery} from "./coz-helpers.js";
 import {hasLayer} from "./coz-helpers.js";
+
 // import {compile} from "handlebars";
 
 // TODO ACCOUNT FOR GEOJSON TYPE
@@ -532,7 +533,8 @@ function popupBuildHtml(map, f) {
       "extrudeheight",
       "parcel_number",
       "uuid",
-      "plan_local"
+      "plan_local",
+      "__vt__id__index",
     ];
 
     excludeFields.map(function(f,i) {
@@ -561,16 +563,14 @@ function popupBuildHtml(map, f) {
 
     keys.forEach(function(key, i) {
       if (excludeFields.indexOf(key.toUpperCase()) < 0) {
-        var val = f.properties[key];  
+        var val = f.properties[key];
         if (val && val != null && val != "" && val != " " && val != undefined && val != "null") {
           var property = (isMapillary(val, f)) ? formatMapillary(val) : (isEpochDate(val)) ? formatDate(val) : (isLink(val)) ? formatLink(val) : (isParcel(val)) ? formatParcel(val) : (isNumber(val)) ? formatNumber(val) : val;
           tbody.innerHTML += `<tr><td>${formatTitle(key)}</td><td>${property}</td></tr>`;
         }
-        // console.log(isImage(key, val))
         if (!hasImage) hasImage = isImage(key, val)
       }
     });
-    // console.log(hasImage)
     if (hasImage != false) {
       var popupImageLink = document.createElement("a");
       popupImageLink.href = hasImage;
@@ -605,6 +605,7 @@ export {
 
 
 function isImage(key, value) {
+  if (!value) return false
   if (key === "alt_link") return false
   if (value.toString().indexOf("https") != 0) return false
   if (value.split(",")) {
