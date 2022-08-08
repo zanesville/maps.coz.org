@@ -2917,7 +2917,7 @@
       "fill-opacity": 0.5
     },
     "layout": {
-      "visibility": "visible"
+      "visibility": "none"
     },
     "metadata": {
       "popup": true
@@ -2958,7 +2958,7 @@
       "text-opacity": 1
     },
     "layout": {
-      "visibility": "visible",
+      "visibility": "none",
       "text-anchor": "center",
       "text-padding": 2,
       "text-font": [
