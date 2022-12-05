@@ -80,7 +80,7 @@ html {
 
 #mapSidebarToggle {
   background: white;
-  background-image: url("https://icongr.am/material/layers.svg");
+  background-image: url("/assets/img/layers.svg");
   background-size: cover;
   background-position: center;
   border: solid 2px black;

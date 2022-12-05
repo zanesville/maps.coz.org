@@ -4,7 +4,7 @@
   "description": "Online web and map applications for the City of Zanesville. This site is managed by the City of Zanesville Department of Public Service, Division of Engineering.",
   "version": "0.2.0",
   "scripts": {
-    "build": "webpack",
+    "build": "npm run parcel-css && webpack",
     "build:watch": "webpack --watch",
     "clean": "hexo clean",
     "parcel-css": "parcel build ./source/assets/css/src/main.scss --dist-dir ./source/assets/css/dist",
@@ -77,7 +77,7 @@
     "parcel": "^2.5.0",
     "proj4": "^2.6.0",
     "replace-ext": "^1.0.0",
-    "spectre.css": "^0.5.8",
+    "spectre.css": "^0.5.9",
     "turf-linestring": "^1.0.2",
     "typeface-muli": "0.0.71",
     "uuid": "^3.4.0",

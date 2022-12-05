@@ -8,8 +8,11 @@ The site is currently deployed on Netlify.
 ## Install
 
 - clone the repo
+- git clone https://github.com/reyemtm/mapbox-layer-control.git
 - npm install
 - cd mapbox-print-pdf and npm install
+- npm run build
+- npm start
 
 ## Updates
 

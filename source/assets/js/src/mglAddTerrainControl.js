@@ -5,7 +5,7 @@ function mglAddTerrainControl() {
     this._btn.type = 'button';
     this._btn['aria-label'] = 'Terrain Control'; 
     this._btn['title'] = 'Terrain Control';
-    this._btn.innerHTML = "<img src='https://icongr.am/material/terrain.svg?size=24color=currentColor'>";
+    this._btn.innerHTML = "<img src='/assets/img/terrain.svg'>";
     this._btn.style.borderRadius = "3px";
 
     let hasTerrain = false;

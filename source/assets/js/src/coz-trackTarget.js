@@ -177,7 +177,7 @@ class target {
       this._btn.style.borderRadius = "3px"
       this._btn.style.backgroundColor = "white"
       this._img = document.createElement("img");
-      this._img.src = "https://icongr.am/clarity/target.svg"
+      this._img.src = "/assets/img/target.svg"
       this._img.style.verticalAlign = "middle";
       this._div = document.createElement("div");
       this._div.style.margin = "0 4px"
