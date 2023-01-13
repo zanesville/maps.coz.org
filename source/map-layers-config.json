@@ -63,9 +63,7 @@
     "source": "img_satellite_2018_mus",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_satellite_2018_mus/{z}/{x}/{y}.webp"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_satellite_2018_mus/{z}/{x}/{y}.webp"],
       "tileSize": 256,
       "attribution": "<a href='http://muskingumcountyauditor.org/Home.aspx?PageID=20' target='_blank'>Imagery &copy; 2015 Muskingum County</a>",
       "maxzoom": 20
@@ -90,10 +88,33 @@
     "source": "img_osip_2020",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_osip_2020/{z}/{x}/{y}.webp"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_osip_2020/{z}/{x}/{y}.webp"],
       "tileSize": 512,
+      "attribution": "<a href='https://ogrip.oit.ohio.gov/projectsinitiatives/statewideimagery.aspx' target='_blank'>OSIP III Imagery</a>",
+      "maxzoom": 20
+    },
+    "paint": {
+      "raster-opacity": 1
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": false
+    }
+  },
+  {
+    "id": "img_2022",
+    "type": "raster",
+    "name": "2022 Imagery",
+    "directory": "Imagery",
+    "group": "Aerial Imagery",
+    "image": "https://gis.coz.org/map-data/preview-images/ortho.jpg",
+    "source": "img_2022",
+    "sourceType": {
+      "type": "raster",
+      "tiles": ["https://tiles.arcgis.com/tiles/N1ybEAKiuuUIL8Mz/arcgis/rest/services/2022tpk/MapServer/tile/{z}/{y}/{x}"],
+      "tileSize": 256,
       "attribution": "<a href='https://ogrip.oit.ohio.gov/projectsinitiatives/statewideimagery.aspx' target='_blank'>OSIP III Imagery</a>",
       "maxzoom": 20
     },
@@ -114,9 +135,7 @@
     "source": "img_hist_maps_1832_musk_atlas",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_hist_maps_1832_musk_atlas/{z}/{x}/{y}.png"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_hist_maps_1832_musk_atlas/{z}/{x}/{y}.png"],
       "tileSize": 256,
       "maxzoom": 16
     },
@@ -140,9 +159,7 @@
     "source": "img_hist_maps_1852_musk",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_hist_maps_1852_musk/{z}/{x}/{y}.png"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_hist_maps_1852_musk/{z}/{x}/{y}.png"],
       "tileSize": 256,
       "maxzoom": 16
     },
@@ -167,9 +184,7 @@
     "source": "img_hist_maps_1910_usgs_24k",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_hist_maps_1910_usgs_24k/{z}/{x}/{y}.png"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_hist_maps_1910_usgs_24k/{z}/{x}/{y}.png"],
       "tileSize": 256,
       "maxzoom": 16,
       "attribution": "<a href='https://earthexplorer.usgs.gov/' target='_blank'>Imagery &copy; USGS</a>"
@@ -195,9 +210,7 @@
     "source": "img_hist_maps_1928_street_map",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_hist_maps_1928_street_map/{z}/{x}/{y}.png"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_hist_maps_1928_street_map/{z}/{x}/{y}.png"],
       "tileSize": 256,
       "maxzoom": 16
     },
@@ -223,9 +236,7 @@
     "source": "img_hist_maps_1956_parcel_map",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_hist_maps_1956_parcel_map/{z}/{x}/{y}.png"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_hist_maps_1956_parcel_map/{z}/{x}/{y}.png"],
       "tileSize": 256,
       "maxzoom": 17
     },
@@ -249,9 +260,7 @@
     "source": "img_hist_maps_1962_usgs_24k",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_hist_maps_1962_usgs_24k/{z}/{x}/{y}.png"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_hist_maps_1962_usgs_24k/{z}/{x}/{y}.png"],
       "tileSize": 256,
       "maxzoom": 16,
       "attribution": "<a href='https://earthexplorer.usgs.gov/' target='_blank'>Topo Map &copy; USGS</a>"
@@ -277,9 +286,7 @@
     "source": "img_hist_maps_1983_coz_downtown",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_hist_maps_1983_coz_downtown/{z}/{x}/{y}.png"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_hist_maps_1983_coz_downtown/{z}/{x}/{y}.png"],
       "tileSize": 256,
       "maxzoom": 22
     },
@@ -304,9 +311,7 @@
     "source": "img_hist_maps_1994_usgs_doq",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_hist_maps_1994_usgs_doq/{z}/{x}/{y}.png"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_hist_maps_1994_usgs_doq/{z}/{x}/{y}.png"],
       "tileSize": 256,
       "maxzoom": 19,
       "attribution": "<a href='https://earthexplorer.usgs.gov/' target='_blank'>DOQ Imagery &copy; USGS</a>"
@@ -332,9 +337,7 @@
     "source": "img_hist_maps_2004_coz_wards",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_hist_maps_2004_coz_wards/{z}/{x}/{y}.png"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_hist_maps_2004_coz_wards/{z}/{x}/{y}.png"],
       "tileSize": 256,
       "maxzoom": 16
     },
@@ -371,10 +374,7 @@
     "paint": {
       "fill-color": [
         "match",
-        [
-          "get",
-          "zoning_code"
-        ],
+        ["get", "zoning_code"],
         "RS-1",
         "YELLOW",
         "RS-2",
@@ -421,12 +421,31 @@
     },
     "metadata": {
       "popup2": "<table><tr><td>Zoning Code: </td><td>{{zoning_code}}</td><tr>Parcel: </>{{parcelnum}}<br><strong>Address: </strong> {{parcel_address}}",
-      "popup3": ["parcelnum", "parcel_address","zoning_code"],
+      "popup3": ["parcelnum", "parcel_address", "zoning_code"],
       "popup": true,
       "filterSchema": {
         "zoning_code": {
           "type": "select",
-          "options": ["", "RS-1","RS-2","RS-3","RS-4","RS-5","RA-1","RM-1","RM-2","C-1","C-2","C-3","C-4","I-1","O-1","O-2","AE","PUD"]  
+          "options": [
+            "",
+            "RS-1",
+            "RS-2",
+            "RS-3",
+            "RS-4",
+            "RS-5",
+            "RA-1",
+            "RM-1",
+            "RM-2",
+            "C-1",
+            "C-2",
+            "C-3",
+            "C-4",
+            "I-1",
+            "O-1",
+            "O-2",
+            "AE",
+            "PUD"
+          ]
         },
         "zoning_ord_date": {
           "type": "date"
@@ -459,27 +478,13 @@
       "visibility": "none",
       "text-anchor": "center",
       "text-padding": 2,
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "zoning_code"
-        ]
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", ["get", "zoning_code"]],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            12,
-            18
-          ],
-          [
-            22,
-            22
-          ]
+          [12, 18],
+          [22, 22]
         ]
       }
     },
@@ -506,11 +511,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "==",
-      "tract_status",
-      "Designated"
-    ],
+    "filter": ["==", "tract_status", "Designated"],
     "metadata": {
       "popup": true
     }
@@ -525,86 +526,28 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels",
     "paint": {
       "fill-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          100
-        ],
+        ["==", ["get", "land_use_code"], 100],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          400
-        ],
+        ["==", ["get", "land_use_code"], 400],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          500
-        ],
+        ["==", ["get", "land_use_code"], 500],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          501
-        ],
+        ["==", ["get", "land_use_code"], 501],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          502
-        ],
+        ["==", ["get", "land_use_code"], 502],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          503
-        ],
+        ["==", ["get", "land_use_code"], 503],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          504
-        ],
+        ["==", ["get", "land_use_code"], 504],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          505
-        ],
+        ["==", ["get", "land_use_code"], 505],
         "firebrick",
         "transparent"
       ],
@@ -628,29 +571,12 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels",
     "paint": {
-      "fill-color": [
-        "interpolate",
-        [
-          "linear"
-        ],
-        [
-          "get",
-          "prior_tax"
-        ],
-        0,
-        "transparent",
-        1,
-        "gold",
-        80000,
-        "#a50f15"
-      ],
+      "fill-color": ["interpolate", ["linear"], ["get", "prior_tax"], 0, "transparent", 1, "gold", 80000, "#a50f15"],
       "fill-opacity": 1,
       "fill-outline-color": "#333"
     },
@@ -681,11 +607,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "==",
-      "status",
-      "Existing"
-    ],
+    "filter": ["==", "status", "Existing"],
     "metadata": {
       "popup": true
     }
@@ -710,69 +632,29 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-allow-overlap": true,
       "text-field": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "id"
-          ],
-          3
-        ],
+        ["==", ["get", "id"], 3],
         "Brighton Reinvestment Area",
-        [
-          "==",
-          [
-            "get",
-            "id"
-          ],
-          4
-        ],
+        ["==", ["get", "id"], 4],
         "Putnam Reinvestment Area",
-        [
-          "==",
-          [
-            "get",
-            "id"
-          ],
-          5
-        ],
+        ["==", ["get", "id"], 5],
         "Downtown Reinvestment Area",
-        [
-          "==",
-          [
-            "get",
-            "id"
-          ],
-          7
-        ],
+        ["==", ["get", "id"], 7],
         "Greenwood Reinvestment Area",
         "Fairview Road Reinvestment Area"
       ],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            12,
-            16
-          ],
-          [
-            22,
-            20
-          ]
+          [12, 16],
+          [22, 20]
         ]
       }
     },
-    "filter": [
-      "==",
-      "status",
-      "Existing"
-    ],
+    "filter": ["==", "status", "Existing"],
     "metadata": {
       "popup": false
     }
@@ -871,27 +753,13 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "name"
-        ]
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", ["get", "name"]],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            12,
-            18
-          ],
-          [
-            22,
-            22
-          ]
+          [12, 18],
+          [22, 22]
         ]
       }
     },
@@ -912,18 +780,10 @@
     },
     "type": "circle",
     "paint": {
-      "circle-radius": ["case",
-        ["==", ["get", "city_row_parcel"], true], 7, 4
-      ],
-      "circle-color": ["case",
-        ["==", ["get", "city_row_parcel"], true], "black", "white"
-      ],
-      "circle-stroke-color": ["case",
-        ["==", ["get", "city_row_parcel"], true], "red", "black"
-      ],
-      "circle-stroke-width": ["case",
-        ["==", ["get", "city_row_parcel"], true], 2, 1
-      ]
+      "circle-radius": ["case", ["==", ["get", "city_row_parcel"], true], 7, 4],
+      "circle-color": ["case", ["==", ["get", "city_row_parcel"], true], "black", "white"],
+      "circle-stroke-color": ["case", ["==", ["get", "city_row_parcel"], true], "red", "black"],
+      "circle-stroke-width": ["case", ["==", ["get", "city_row_parcel"], true], 2, 1]
     },
     "layout": {
       "visibility": "none"
@@ -941,9 +801,7 @@
     "group": "Tax Parcels",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels_2017/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels_2017/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels_2017",
@@ -955,11 +813,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!=",
-      "PARCELNUM",
-      "WW"
-    ],
+    "filter": ["!=", "PARCELNUM", "WW"],
     "metadata": {
       "popup": true
     }
@@ -974,9 +828,7 @@
     "source": "parcel2018Source",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels_2018/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels_2018/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels_2018",
@@ -988,11 +840,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!=",
-      "PARCELNUM",
-      "WW"
-    ],
+    "filter": ["!=", "PARCELNUM", "WW"],
     "metadata": {
       "popup": true
     }
@@ -1007,9 +855,7 @@
     "children": true,
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "minzoom": 15,
@@ -1022,11 +868,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!=",
-      "PARCELNUM",
-      "WW"
-    ],
+    "filter": ["!=", "PARCELNUM", "WW"],
     "metadata": {
       "popup": true
     }
@@ -1042,61 +884,25 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "minzoom": 15,
     "source-layer": "public.adm_mus_parcels",
     "paint": {
-      "line-color": [
-        "case",
-        [
-          "==",
-          [
-            "feature-state",
-            "hover"
-          ],
-          1
-        ],
-        "black",
-        "rgba(255,255,255,1)"
-      ],
-      "line-width": [
-        "case",
-        [
-          "==",
-          [
-            "feature-state",
-            "hover"
-          ],
-          2
-        ],
-        2,
-        2
-      ],
+      "line-color": ["case", ["==", ["feature-state", "hover"], 1], "black", "rgba(255,255,255,1)"],
+      "line-width": ["case", ["==", ["feature-state", "hover"], 2], 2, 2],
       "line-opacity": {
         "stops": [
-          [
-            13,
-            0.1
-          ],
-          [
-            16,
-            1
-          ]
+          [13, 0.1],
+          [16, 1]
         ]
       }
     },
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!=",
-      "PARCELNUM",
-      "WW"
-    ],
+    "filter": ["!=", "PARCELNUM", "WW"],
     "metadata": {
       "popup": true
     }
@@ -1121,9 +927,10 @@
     "children": true,
     "paint": {
       "line-color": "white",
-      "line-width": {"stops": [
-          [10,3],
-          [22,8]
+      "line-width": {
+        "stops": [
+          [10, 3],
+          [22, 8]
         ]
       }
     },
@@ -1162,28 +969,13 @@
       "symbol-spacing": 300,
       "visibility": "visible",
       "text-padding": 2,
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "st_name"
-        ],
-        " ALLEY"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", ["get", "st_name"], " ALLEY"],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            10,
-            9
-          ],
-          [
-            22,
-            14
-          ]
+          [10, 9],
+          [22, 14]
         ]
       }
     },
@@ -1199,9 +991,7 @@
     "minzoom": 19,
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels_centroids/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels_centroids/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels_centroids",
@@ -1213,21 +1003,13 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{parcelnum}",
       "text-anchor": "center",
       "text-size": {
         "stops": [
-          [
-            17,
-            12
-          ],
-          [
-            22,
-            16
-          ]
+          [17, 12],
+          [22, 16]
         ]
       },
       "text-padding": 6
@@ -1251,19 +1033,7 @@
       "generateId": true
     },
     "paint": {
-      "fill-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "to_"
-          ],
-          "ZANESVILLE"
-        ],
-        "fuchsia",
-        "gray"
-      ],
+      "fill-color": ["case", ["==", ["get", "to_"], "ZANESVILLE"], "fuchsia", "gray"],
       "fill-opacity": 0.6,
       "fill-outline-color": "black"
     },
@@ -1341,28 +1111,13 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Regular"
-      ],
-      "text-field": [
-        "concat",
-        "Ward ",
-        [
-          "get",
-          "ward"
-        ]
-      ],
+      "text-font": ["DIN Offc Pro Regular"],
+      "text-field": ["concat", "Ward ", ["get", "ward"]],
       "text-anchor": "center",
       "text-size": {
         "stops": [
-          [
-            17,
-            18
-          ],
-          [
-            22,
-            22
-          ]
+          [17, 18],
+          [22, 22]
         ]
       },
       "text-padding": 6
@@ -1381,9 +1136,7 @@
     "source": "adminSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_admin_boundaries",
@@ -1409,19 +1162,14 @@
     "source": "adminSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_admin_boundaries",
     "paint": {
       "line-color": "white",
       "line-width": 3,
-      "line-dasharray": [
-        2,
-        4
-      ]
+      "line-dasharray": [2, 4]
     },
     "layout": {
       "visibility": "none"
@@ -1440,9 +1188,7 @@
     "source": "addressSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_addresses",
@@ -1451,18 +1197,9 @@
       "circle-stroke-width": 1,
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            13,
-            1
-          ],
-          [
-            16,
-            3
-          ]
+          [0, 0],
+          [13, 1],
+          [16, 3]
         ]
       },
       "circle-stroke-color": "white",
@@ -1487,9 +1224,7 @@
     "source": "addressSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_addresses",
@@ -1502,16 +1237,11 @@
     "minzoom": 17.1,
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Regular"
-      ],
+      "text-font": ["DIN Offc Pro Regular"],
       "text-field": "{lsn}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [
-        0.5,
-        0
-      ]
+      "text-offset": [0.5, 0]
     },
     "metadata": {
       "popup": ["lsn"]
@@ -1555,9 +1285,7 @@
     "source": "eng_building_footprints",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"],
       "minzoom": 15,
       "maxzoom": 22
     },
@@ -1589,45 +1317,9 @@
       "generateId": true
     },
     "paint": {
-      "fill-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "owner"
-          ],
-          "City of Zanesville"
-        ],
-        "darkgreen",
-        "yellowgreen"
-      ],
-      "fill-outline-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "owner"
-          ],
-          "City of Zanesville"
-        ],
-        "forestgreen",
-        "lightgreen"
-      ],
-      "fill-opacity": [
-        "case",
-        [
-          "==",
-          [
-            "feature-state",
-            "hover"
-          ],
-          1
-        ],
-        0.8,
-        0.3
-      ]
+      "fill-color": ["case", ["==", ["get", "owner"], "City of Zanesville"], "darkgreen", "yellowgreen"],
+      "fill-outline-color": ["case", ["==", ["get", "owner"], "City of Zanesville"], "forestgreen", "lightgreen"],
+      "fill-opacity": ["case", ["==", ["feature-state", "hover"], 1], 0.8, 0.3]
     },
     "layout": {
       "visibility": "none"
@@ -1658,33 +1350,9 @@
       "generateId": true
     },
     "paint": {
-      "line-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "owner"
-          ],
-          "City of Zanesville"
-        ],
-        "darkgreen",
-        "yellowgreen"
-      ],
+      "line-color": ["case", ["==", ["get", "owner"], "City of Zanesville"], "darkgreen", "yellowgreen"],
       "line-width": 2,
-      "line-opacity": [
-        "case",
-        [
-          "==",
-          [
-            "feature-state",
-            "hover"
-          ],
-          1
-        ],
-        1,
-        0.8
-      ]
+      "line-opacity": ["case", ["==", ["feature-state", "hover"], 1], 1, 0.8]
     },
     "layout": {
       "visibility": "none"
@@ -1705,19 +1373,7 @@
       "generateId": true
     },
     "paint": {
-      "line-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "owner"
-          ],
-          "City of Zanesville"
-        ],
-        "darkgreen",
-        "yellowgreen"
-      ],
+      "line-color": ["case", ["==", ["get", "owner"], "City of Zanesville"], "darkgreen", "yellowgreen"],
       "line-width": 6,
       "line-offset": 2,
       "line-blur": 3,
@@ -1771,24 +1427,9 @@
       "generateId": true
     },
     "paint": {
-      "line-color": [
-        "case",
-        [
-          "==",
-          [
-            "feature-state",
-            "hover"
-          ],
-          1
-        ],
-        "yellow",
-        "forestgreen"
-      ],
+      "line-color": ["case", ["==", ["feature-state", "hover"], 1], "yellow", "forestgreen"],
       "line-width": 2,
-      "line-dasharray": [
-        5,
-        5
-      ]
+      "line-dasharray": [5, 5]
     },
     "layout": {
       "visibility": "none"
@@ -1806,36 +1447,22 @@
     "source": "rec_parks_tree_inventory",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.rec_parks_tree_inventory/{z}/{x}/{y}.pbf"
-      ]
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.rec_parks_tree_inventory/{z}/{x}/{y}.pbf"]
     },
     "source-layer": "public.rec_parks_tree_inventory",
     "paint": {
       "circle-color": "green",
       "circle-radius": {
         "stops": [
-          [
-            14,
-            3
-          ],
-          [
-            18,
-            8
-          ]
+          [14, 3],
+          [18, 8]
         ]
       },
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [
-            14,
-            2
-          ],
-          [
-            18,
-            4
-          ]
+          [14, 2],
+          [18, 4]
         ]
       },
       "circle-stroke-opacity": 0.6,
@@ -1871,27 +1498,13 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Regular"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "name"
-        ]
-      ],
+      "text-font": ["DIN Offc Pro Regular"],
+      "text-field": ["concat", ["get", "name"]],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            12,
-            8
-          ],
-          [
-            22,
-            18
-          ]
+          [12, 8],
+          [22, 18]
         ]
       }
     },
@@ -1908,21 +1521,14 @@
     "group": "Topography",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.env_mus_contours_2ft_clipped/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.env_mus_contours_2ft_clipped/{z}/{x}/{y}.pbf"],
       "minzoom": 15
     },
     "source-layer": "public.env_mus_contours_2ft_clipped",
     "paint": {
       "line-color": "tan",
       "line-width": 1,
-      "line-dasharray": [
-        3,
-        1,
-        2,
-        1
-      ]
+      "line-dasharray": [3, 1, 2, 1]
     },
     "minzoom": 15,
     "layout": {
@@ -1942,9 +1548,7 @@
     "source": "env_contours_10ft_simplified",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.env_contours_10ft_simplified/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.env_contours_10ft_simplified/{z}/{x}/{y}.pbf"],
       "minzoom": 15
     },
     "source-layer": "public.env_contours_10ft_simplified",
@@ -1985,9 +1589,10 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["attribute","wetland_type"]
+      "popup": ["attribute", "wetland_type"]
     },
-    "filter": ["any",
+    "filter": [
+      "any",
       ["==", ["get", "wetland_ty"], "Freshwater Emergent Wetland"],
       ["==", ["get", "wetland_ty"], "Freshwater Forested/Shrub Wetland"],
       ["==", ["get", "wetland_ty"], "Freshwater Pond"]
@@ -2010,10 +1615,11 @@
     "source-layer": "public.env_hydro_polygons",
     "paint": {
       "fill-color": "#8dcbf7",
-      "fill-opacity": {"stops": [
-        [11,0],
-        [18,0.4]
-      ]
+      "fill-opacity": {
+        "stops": [
+          [11, 0],
+          [18, 0.4]
+        ]
       },
       "fill-outline-color": "transparent"
     },
@@ -2041,21 +1647,17 @@
     "paint": {
       "line-color": "#8dcbf7",
       "line-width": 2,
-      "line-opacity": {"stops": [
-          [12,0],
-          [18,0.2]
+      "line-opacity": {
+        "stops": [
+          [12, 0],
+          [18, 0.2]
         ]
       }
     },
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!in",
-      "gnis_name",
-      "Muskingum River",
-      "Licking River"
-    ],
+    "filter": ["!in", "gnis_name", "Muskingum River", "Licking River"],
     "metadata": {
       "popup": true
     }
@@ -2071,39 +1673,16 @@
     "source-layer": "public.env_nfhl_flood_hazard_areas",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.env_nfhl_flood_hazard_areas/{z}/{x}/{y}.pbf"
-      ]
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.env_nfhl_flood_hazard_areas/{z}/{x}/{y}.pbf"]
     },
     "paint": {
       "fill-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "zone_subty"
-          ],
-          "FLOODWAY"
-        ],
+        ["==", ["get", "zone_subty"], "FLOODWAY"],
         "DODGERBLUE",
-        [
-          "==",
-          [
-            "get",
-            "zone_subty"
-          ],
-          "0.2 PCT ANNUAL CHANCE FLOOD HAZARD"
-        ],
+        ["==", ["get", "zone_subty"], "0.2 PCT ANNUAL CHANCE FLOOD HAZARD"],
         "orangered",
-        [
-          "==",
-          [
-            "get",
-            "zone_subty"
-          ],
-          "AREA WITH REDUCED RISK DUE TO LEVEE"
-        ],
+        ["==", ["get", "zone_subty"], "AREA WITH REDUCED RISK DUE TO LEVEE"],
         "MEDIUMVIOLETRED",
         "turquoise"
       ],
@@ -2135,14 +1714,8 @@
       "line-width": {
         "property": "aadt_total",
         "stops": [
-          [
-            0,
-            5
-          ],
-          [
-            55056,
-            11
-          ]
+          [0, 5],
+          [55056, 11]
         ]
       },
       "line-color": "gray"
@@ -2173,56 +1746,26 @@
       "line-color": {
         "property": "aadt_total",
         "stops": [
-          [
-            0,
-            "#2166ac"
-          ],
-          [
-            2275,
-            "#67a9cf"
-          ],
-          [
-            5892,
-            "#d1e5f0"
-          ],
-          [
-            10188,
-            "orange"
-          ],
-          [
-            16498,
-            "darkorange"
-          ],
-          [
-            26291,
-            "#b2182b"
-          ]
+          [0, "#2166ac"],
+          [2275, "#67a9cf"],
+          [5892, "#d1e5f0"],
+          [10188, "orange"],
+          [16498, "darkorange"],
+          [26291, "#b2182b"]
         ]
       },
       "line-width": {
         "property": "aadt_total",
         "stops": [
-          [
-            0,
-            3
-          ],
-          [
-            16498,
-            9
-          ]
+          [0, 3],
+          [16498, 9]
         ]
       },
       "line-opacity": {
         "property": "aadt_total",
         "stops": [
-          [
-            0,
-            0.6
-          ],
-          [
-            16498,
-            1
-          ]
+          [0, 0.6],
+          [16498, 1]
         ]
       }
     },
@@ -2244,9 +1787,7 @@
     "group": "Mapillary",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://tiles3.mapillary.com/v0.1/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://tiles3.mapillary.com/v0.1/{z}/{x}/{y}.mvt"],
       "minzoom": 0,
       "maxzoom": 14,
       "promoteId": "key"
@@ -2263,25 +1804,7 @@
       "line-cap": "round",
       "line-join": "round"
     },
-    "filter": [
-      "all",
-      [
-        "==",
-        [
-          "get",
-          "userkey"
-        ],
-        "WpzhyQeWLPnZ_TwvxcdU_w"
-      ],
-      [
-        "==",
-        [
-          "get",
-          "pano"
-        ],
-        1
-      ]
-    ],
+    "filter": ["all", ["==", ["get", "userkey"], "WpzhyQeWLPnZ_TwvxcdU_w"], ["==", ["get", "pano"], 1]],
     "metadata": {
       "popup": true
     }
@@ -2305,25 +1828,7 @@
       "line-cap": "round",
       "line-join": "round"
     },
-    "filter": [
-      "all",
-      [
-        "==",
-        [
-          "get",
-          "userkey"
-        ],
-        "WpzhyQeWLPnZ_TwvxcdU_w"
-      ],
-      [
-        "==",
-        [
-          "get",
-          "pano"
-        ],
-        1
-      ]
-    ],
+    "filter": ["all", ["==", ["get", "userkey"], "WpzhyQeWLPnZ_TwvxcdU_w"], ["==", ["get", "pano"], 1]],
     "metadata": {
       "popup": true
     }
@@ -2346,30 +1851,12 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "all",
-      [
-        "==",
-        [
-          "get",
-          "userkey"
-        ],
-        "WpzhyQeWLPnZ_TwvxcdU_w"
-      ],
-      [
-        "==",
-        [
-          "get",
-          "pano"
-        ],
-        1
-      ]
-    ],
+    "filter": ["all", ["==", ["get", "userkey"], "WpzhyQeWLPnZ_TwvxcdU_w"], ["==", ["get", "pano"], 1]],
     "metadata": {
       "popup": true
     }
   },
-  
+
   {
     "id": "public.eng_paver_pci_view_case",
     "name": "PCI Case",
@@ -2388,10 +1875,7 @@
     "paint": {
       "line-color": "WHITE",
       "line-opacity": 1,
-      "line-width": ["case",
-        ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"] ] ], 7,
-        10
-      ]
+      "line-width": ["case", ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"]]], 7, 10]
     },
     "layout": {
       "visibility": "none"
@@ -2418,20 +1902,24 @@
     "paint": {
       "line-color": [
         "case",
-        ["==",["get", "pci_predicted_category"],"EXCELLENT"],"#009392",
-        ["==",["get", "pci_predicted_category"],"VERY GOOD"],"#39b185",
-        ["==",["get", "pci_predicted_category"],"GOOD"],"#9ccb86",
-        ["==",["get", "pci_predicted_category"],"FAIR"],"#e9e29c",
-        ["==",["get", "pci_predicted_category"],"POOR"],"orange",
-        ["==",["get", "pci_predicted_category"],"VERY POOR"],"red",
-        ["==",["get", "pci_predicted_category"],"FAILED"],"darkred",         
+        ["==", ["get", "pci_predicted_category"], "EXCELLENT"],
+        "#009392",
+        ["==", ["get", "pci_predicted_category"], "VERY GOOD"],
+        "#39b185",
+        ["==", ["get", "pci_predicted_category"], "GOOD"],
+        "#9ccb86",
+        ["==", ["get", "pci_predicted_category"], "FAIR"],
+        "#e9e29c",
+        ["==", ["get", "pci_predicted_category"], "POOR"],
+        "orange",
+        ["==", ["get", "pci_predicted_category"], "VERY POOR"],
+        "red",
+        ["==", ["get", "pci_predicted_category"], "FAILED"],
+        "darkred",
         "gray"
       ],
       "line-opacity": 1,
-      "line-width": ["case",
-        ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"] ] ], 4,
-        6
-      ]
+      "line-width": ["case", ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"]]], 4, 6]
     },
     "layout": {
       "visibility": "none"
@@ -2464,8 +1952,10 @@
     },
     "source-layer": "public.eng_paver_pci_view",
     "paint": {
-      "line-color": ["case",
-        ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"] ] ], "blue",
+      "line-color": [
+        "case",
+        ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"]]],
+        "blue",
         "firebrick"
       ],
       "line-opacity": 1,
@@ -2479,7 +1969,7 @@
     },
     "filter": [">=", ["get", "date_last_paved"], "2016-01-01"]
   },
-  
+
   {
     "id": "utl_mus_sanitary_lines",
     "name": "utl_mus_sanitary_lines_inner",
@@ -2545,36 +2035,18 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            2
-          ],
-          [
-            16,
-            5
-          ]
+          [0, 0],
+          [12, 2],
+          [16, 5]
         ]
       },
       "circle-color": "firebrick",
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 2]
         ]
       },
       "circle-pitch-scale": "map",
@@ -2645,19 +2117,14 @@
     "source": "wLateralSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_lateral/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_lateral/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_water_agol_lateral",
     "paint": {
       "line-width": 2,
       "line-color": "MEDIUMSPRINGGREEN",
-      "line-dasharray": [
-        2,
-        1
-      ]
+      "line-dasharray": [2, 1]
     },
     "layout": {
       "visibility": "none"
@@ -2677,9 +2144,7 @@
     "source": "utl_water_meters",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_meters/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_meters/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_water_agol_meters",
@@ -2689,39 +2154,13 @@
       "icon-ignore-placement": true,
       "icon-image": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "SERVICETYPE"
-          ],
-          "Domestic"
-        ],
+        ["==", ["get", "SERVICETYPE"], "Domestic"],
         "square-cyan",
-        [
-          "==",
-          [
-            "get",
-            "SERVICETYPE"
-          ],
-          "Commercial"
-        ],
+        ["==", ["get", "SERVICETYPE"], "Commercial"],
         "square-yellow",
         "circle-black2"
       ],
-      "icon-size": [
-        "interpolate",
-        [
-          "linear"
-        ],
-        [
-          "zoom"
-        ],
-        14,
-        0.4,
-        17,
-        0.7
-      ],
+      "icon-size": ["interpolate", ["linear"], ["zoom"], 14, 0.4, 17, 0.7],
       "visibility": "none"
     },
     "metadata": {
@@ -2740,9 +2179,7 @@
     "source": "utl_water_meters",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_meters/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_meters/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "minzoom": 17,
@@ -2750,23 +2187,9 @@
     "paint": {
       "text-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "SERVICETYPE"
-          ],
-          "Domestic"
-        ],
+        ["==", ["get", "SERVICETYPE"], "Domestic"],
         "#00ffc5",
-        [
-          "==",
-          [
-            "get",
-            "SERVICETYPE"
-          ],
-          "Commercial"
-        ],
+        ["==", ["get", "SERVICETYPE"], "Commercial"],
         "#fce205",
         "black"
       ],
@@ -2776,16 +2199,11 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{ADDRESS}",
       "text-anchor": "bottom-left",
       "text-size": 13,
-      "text-offset": [
-        0.4,
-        -0.4
-      ]
+      "text-offset": [0.4, -0.4]
     },
     "metadata": {
       "popup": true
@@ -2850,9 +2268,7 @@
     "source": "utl_mus_water_customers",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_mus_water_customers/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_mus_water_customers/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_mus_water_customers",
@@ -2898,7 +2314,7 @@
         ["Friday"],
         "green",
         "black"
-      ], 
+      ],
       "fill-outline-color": [
         "match",
         ["get", "weekday"],
@@ -2961,27 +2377,13 @@
       "visibility": "none",
       "text-anchor": "center",
       "text-padding": 2,
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": ["concat",
-        "Zone ",
-         [
-          "get",
-          "zone"
-        ]
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", "Zone ", ["get", "zone"]],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            12,
-            18
-          ],
-          [
-            22,
-            22
-          ]
+          [12, 18],
+          [22, 22]
         ]
       }
     },
@@ -3000,35 +2402,12 @@
     "source": "wMainSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_water_agol_main",
     "paint": {
-      "line-width": [
-        "case",
-        [
-          ">",
-          [
-            "get",
-            "DIAMETER"
-          ],
-          19
-        ],
-        10,
-        [
-          ">",
-          [
-            "get",
-            "DIAMETER"
-          ],
-          11
-        ],
-        8,
-        6
-      ],
+      "line-width": ["case", [">", ["get", "DIAMETER"], 19], 10, [">", ["get", "DIAMETER"], 11], 8, 6],
       "line-color": "white"
     },
     "layout": {
@@ -3049,48 +2428,13 @@
     "source": "wMainSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_water_agol_main",
     "paint": {
-      "line-width": [
-        "case",
-        [
-          ">",
-          [
-            "get",
-            "DIAMETER"
-          ],
-          19
-        ],
-        7,
-        [
-          ">",
-          [
-            "get",
-            "DIAMETER"
-          ],
-          11
-        ],
-        5,
-        3
-      ],
-      "line-color": [
-        "case",
-        [
-          "in",
-          "LP",
-          [
-            "get",
-            "FACILITYID"
-          ]
-        ],
-        "#26d9d0",
-        "#0062ff"
-      ]
+      "line-width": ["case", [">", ["get", "DIAMETER"], 19], 7, [">", ["get", "DIAMETER"], 11], 5, 3],
+      "line-color": ["case", ["in", "LP", ["get", "FACILITYID"]], "#26d9d0", "#0062ff"]
     },
     "layout": {
       "visibility": "none"
@@ -3108,9 +2452,7 @@
     "group": "Water Layers",
     "sourceType": {
       "type": "geojson",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_water_agol_main",
@@ -3122,36 +2464,18 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "DIAMETER"
-        ],
-        "in"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", ["get", "DIAMETER"], "in"],
       "symbol-placement": "line",
       "symbol-spacing": 500,
       "text-anchor": "center",
-      "text-offset": [
-        0,
-        0
-      ],
+      "text-offset": [0, 0],
       "text-allow-overlap": true,
       "text-ignore-placement": true,
       "text-size": {
         "stops": [
-          [
-            17,
-            12
-          ],
-          [
-            22,
-            16
-          ]
+          [17, 12],
+          [22, 16]
         ]
       },
       "text-padding": 0
@@ -3167,54 +2491,43 @@
     "directory": "City Water System",
     "group": "Water Layers",
     "children": true,
-    "legend":"<span class='fa fa-circle fa-sm' style='color:deepskyblue;'></span> Main Valve<br><span class='fa fa-circle fa-sm' style='color:red;'></span> Hydrant Valve<br><span class='fa fa-circle fa-sm' style='color:orange;'></span> Plug Valve<br><span class='fa fa-circle fa-sm' style='color:yellow;'></span> Fire Line Valve<br><span class='fa fa-circle fa-sm' style='color:fuchsia;'></span> Boundary Valve<br>",
+    "legend": "<span class='fa fa-circle fa-sm' style='color:deepskyblue;'></span> Main Valve<br><span class='fa fa-circle fa-sm' style='color:red;'></span> Hydrant Valve<br><span class='fa fa-circle fa-sm' style='color:orange;'></span> Plug Valve<br><span class='fa fa-circle fa-sm' style='color:yellow;'></span> Fire Line Valve<br><span class='fa fa-circle fa-sm' style='color:fuchsia;'></span> Boundary Valve<br>",
     "source": "wSystemValveSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_system_valve/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_system_valve/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_water_agol_system_valve",
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            6
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 6]
         ]
       },
-      "circle-color": ["case",
-        ["==", ["get", "VALVETYPE"], "Main"], "#00C5FF",
-        ["==", ["get", "VALVETYPE"], "Hydrant"], "red",
-        ["==", ["get", "VALVETYPE"], "Plug"], "orange",
-        ["==", ["get", "VALVETYPE"], "Fire Line"], "yellow",
-        ["==", ["get", "VALVETYPE"], "Butterfly"], "white",
-        ["==", ["get", "VALVETYPE"], "Boundary Valve"], "fuchsia",
-          "black"],
-      "circle-stroke-color": ["case",
-        ["has", "VALVETYPE"], "black",
-          "red"],
+      "circle-color": [
+        "case",
+        ["==", ["get", "VALVETYPE"], "Main"],
+        "#00C5FF",
+        ["==", ["get", "VALVETYPE"], "Hydrant"],
+        "red",
+        ["==", ["get", "VALVETYPE"], "Plug"],
+        "orange",
+        ["==", ["get", "VALVETYPE"], "Fire Line"],
+        "yellow",
+        ["==", ["get", "VALVETYPE"], "Butterfly"],
+        "white",
+        ["==", ["get", "VALVETYPE"], "Boundary Valve"],
+        "fuchsia",
+        "black"
+      ],
+      "circle-stroke-color": ["case", ["has", "VALVETYPE"], "black", "red"],
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [16, 2]
         ]
       },
       "circle-pitch-scale": "map",
@@ -3237,32 +2550,19 @@
     "source": "wSystemValveSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_system_valve/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_system_valve/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_water_agol_system_valve",
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            0.5
-          ],
-          [
-            16,
-            3
-          ]
+          [0, 0],
+          [12, 0.5],
+          [16, 3]
         ]
       },
-      "circle-color": ["case",
-        ["==", ["get", "VALVETYPE"], "Boundary Valve"], "black",
-          "black"],
+      "circle-color": ["case", ["==", ["get", "VALVETYPE"], "Boundary Valve"], "black", "black"],
       "circle-pitch-scale": "map",
       "circle-pitch-alignment": "map"
     },
@@ -3287,32 +2587,17 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            5
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 5]
         ]
       },
       "circle-color": "whitesmoke",
       "circle-stroke-color": "royalblue",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [16, 2]
         ]
       },
       "circle-pitch-scale": "map",
@@ -3335,9 +2620,7 @@
     "source": "wCurbStopValveSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_curb_stop_valve/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_curb_stop_valve/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_water_agol_curb_stop_valve",
@@ -3347,45 +2630,17 @@
       "icon-ignore-placement": true,
       "icon-image": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "ACCESS_TYPE"
-          ],
-          "Curb Stop Valve"
-        ],
+        ["==", ["get", "ACCESS_TYPE"], "Curb Stop Valve"],
         "circle-seagreen2",
-        [
-          "==",
-          [
-            "get",
-            "ACCESS_TYPE"
-          ],
-          "Meter Pit"
-        ],
+        ["==", ["get", "ACCESS_TYPE"], "Meter Pit"],
         "triangle-seagreen2",
         "circle-black2"
       ],
       "icon-size": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "ACCESS_TYPE"
-          ],
-          "Curb Stop Valve"
-        ],
+        ["==", ["get", "ACCESS_TYPE"], "Curb Stop Valve"],
         0.7,
-        [
-          "==",
-          [
-            "get",
-            "ACCESS_TYPE"
-          ],
-          "Meter Pit"
-        ],
+        ["==", ["get", "ACCESS_TYPE"], "Meter Pit"],
         1,
         0.7
       ],
@@ -3410,18 +2665,9 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            2
-          ],
-          [
-            16,
-            7
-          ]
+          [0, 0],
+          [12, 2],
+          [16, 7]
         ]
       },
       "circle-color": "red",
@@ -3429,18 +2675,9 @@
       "circle-stroke-opacity": 1,
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            2
-          ],
-          [
-            16,
-            3
-          ]
+          [0, 0],
+          [12, 2],
+          [16, 3]
         ]
       },
       "circle-pitch-scale": "map",
@@ -3473,16 +2710,11 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{FACILITYID}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [
-        0.5,
-        -0.4
-      ]
+      "text-offset": [0.5, -0.4]
     },
     "metadata": {
       "popup": true
@@ -3502,19 +2734,7 @@
     },
     "paint": {
       "fill-color": "firebrick",
-      "fill-opacity": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "missing"
-          ],
-          1
-        ],
-        0.9,
-        0.4
-      ],
+      "fill-opacity": ["case", ["==", ["get", "missing"], 1], 0.9, 0.4],
       "fill-outline-color": "white"
     },
     "layout": {
@@ -3539,18 +2759,9 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            4
-          ],
-          [
-            16,
-            12
-          ]
+          [0, 0],
+          [12, 4],
+          [16, 12]
         ]
       },
       "circle-color": "red",
@@ -3580,17 +2791,26 @@
     },
     "paint": {
       "circle-radius": 6,
-      "circle-color": ["case",
-      ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
-      "circle-stroke-color": ["case",
-        ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
+      "circle-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
+      "circle-stroke-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
       "circle-stroke-width": 2.5
     },
     "layout": {
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["img_url","DIAMETER", "VALVETYPE", "CRITICALVALVE", "service_date", "inspect_notes", "inspector", "inspect_ok", "direction", "turns"]
+      "popup": [
+        "img_url",
+        "DIAMETER",
+        "VALVETYPE",
+        "CRITICALVALVE",
+        "service_date",
+        "inspect_notes",
+        "inspector",
+        "inspect_ok",
+        "direction",
+        "turns"
+      ]
     }
   },
   {
@@ -3607,17 +2827,25 @@
     },
     "paint": {
       "circle-radius": 6,
-      "circle-color": ["case",
-        ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
-        "circle-stroke-color": ["case",
-          ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
+      "circle-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
+      "circle-stroke-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
       "circle-stroke-width": 2.5
     },
     "layout": {
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["img_url","DIAMETER", "VALVETYPE", "service_date", "inspect_notes", "inspector", "inspect_ok", "direction", "turns"]
+      "popup": [
+        "img_url",
+        "DIAMETER",
+        "VALVETYPE",
+        "service_date",
+        "inspect_notes",
+        "inspector",
+        "inspect_ok",
+        "direction",
+        "turns"
+      ]
     }
   },
   {
@@ -3634,10 +2862,8 @@
     },
     "paint": {
       "circle-radius": 6,
-      "circle-color": ["case",
-      ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
-      "circle-stroke-color": ["case",
-        ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
+      "circle-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
+      "circle-stroke-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
       "circle-stroke-width": 2.5
     },
     "layout": {
@@ -3645,7 +2871,16 @@
     },
     "filter": ["==", ["get", "CRITICALVALVE"], "Yes"],
     "metadata": {
-      "popup": ["DIAMETER", "VALVETYPE", "service_date", "inspect_notes", "inspector", "inspect_ok", "direction", "turns"]
+      "popup": [
+        "DIAMETER",
+        "VALVETYPE",
+        "service_date",
+        "inspect_notes",
+        "inspector",
+        "inspect_ok",
+        "direction",
+        "turns"
+      ]
     }
   },
   {
@@ -3676,7 +2911,8 @@
   {
     "id": "utl_sanitary_east_end_grid",
     "type": "fill",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "East End Sewers",
     "name": "East End Sewer Map",
     "source": "utl_sanitary_east_end_grid",
@@ -3699,7 +2935,8 @@
   {
     "id": "utl_sanitary_east_end_parcels",
     "type": "fill",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "East End Sewers",
     "name": "East End Sewer Parcels",
     "source": "utl_sanitary_east_end_parcels",
@@ -3723,7 +2960,8 @@
   {
     "id": "utl_sanitary_cso_areas",
     "type": "fill",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "CSO",
     "name": "CSO Area Boundaries",
     "legend": "<span class='fa fa-square' style='color:red'></span> Not Separated<br><span class='fa fa-square' style='color:purple'></span> Planned Separation<br><span class='fa fa-square' style='color:green'></span> Separated<br>",
@@ -3736,23 +2974,9 @@
     "paint": {
       "fill-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "separated"
-          ],
-          "No"
-        ],
+        ["==", ["get", "separated"], "No"],
         "red",
-        [
-          "==",
-          [
-            "get",
-            "separated"
-          ],
-          "Yes"
-        ],
+        ["==", ["get", "separated"], "Yes"],
         "green",
         "purple"
       ],
@@ -3770,7 +2994,8 @@
     "id": "utl_sanitary_cso_areas_labels",
     "type": "symbol",
     "top": true,
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "CSO",
     "name": "CSO Area Labels",
     "source": "utl_sanitary_cso_areas",
@@ -3786,9 +3011,7 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{cso_area}"
     },
     "metadata": {
@@ -3798,7 +3021,8 @@
   {
     "id": "sanLinesOuter",
     "name": "sanLinesOuter",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Layers",
     "hidden": true,
     "parent": "sanLinesInner",
@@ -3806,35 +3030,12 @@
     "source": "sanitaryLinesSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.utl_sanitary_lines",
     "paint": {
-      "line-width": [
-        "case",
-        [
-          ">",
-          [
-            "get",
-            "diameter"
-          ],
-          24
-        ],
-        8,
-        [
-          ">",
-          [
-            "get",
-            "diameter"
-          ],
-          11
-        ],
-        6,
-        5
-      ],
+      "line-width": ["case", [">", ["get", "diameter"], 24], 8, [">", ["get", "diameter"], 11], 6, 5],
       "line-color": "white"
     },
     "layout": {
@@ -3847,7 +3048,8 @@
   {
     "id": "sanLinesInner",
     "name": "Sanitary Lines",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Layers",
     "children": true,
     "legend": "<span class='fa fa-minus' style='color:darkgreen;'></span> Interceptor<br><span class='fa fa-minus' style='color:limegreen;'></span> Sanitary Main<br><span class='fa fa-minus' style='color:sienna;'></span> Combo Line<br><span class='fa fa-minus' style='color:black;'></span> Force Main<br><span class='fa fa-minus' style='color:gray;'></span> Abandoned<br><span class='fa fa-minus' style='color:lightgray;'></span> Other (Lateral/Unknown)",
@@ -3855,81 +3057,23 @@
     "source": "sanitaryLinesSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.utl_sanitary_lines",
     "paint": {
-      "line-width": [
-        "case",
-        [
-          ">",
-          [
-            "get",
-            "diameter"
-          ],
-          24
-        ],
-        6,
-        [
-          ">",
-          [
-            "get",
-            "diameter"
-          ],
-          11
-        ],
-        4,
-        3
-      ],
+      "line-width": ["case", [">", ["get", "diameter"], 24], 6, [">", ["get", "diameter"], 11], 4, 3],
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "subclass"
-          ],
-          "Interceptor"
-        ],
+        ["==", ["get", "subclass"], "Interceptor"],
         "darkgreen",
-        [
-          "==",
-          [
-            "get",
-            "subclass"
-          ],
-          "Sanitary"
-        ],
+        ["==", ["get", "subclass"], "Sanitary"],
         "limegreen",
-        [
-          "==",
-          [
-            "get",
-            "subclass"
-          ],
-          "Combination"
-        ],
+        ["==", ["get", "subclass"], "Combination"],
         "sienna",
-        [
-          "==",
-          [
-            "get",
-            "subclass"
-          ],
-          "Abandoned"
-        ],
+        ["==", ["get", "subclass"], "Abandoned"],
         "gray",
-        [
-          "==",
-          [
-            "get",
-            "subclass"
-          ],
-          "Force Main"
-        ],
+        ["==", ["get", "subclass"], "Force Main"],
         "#202020",
         "lightgray"
       ]
@@ -3950,7 +3094,8 @@
   {
     "id": "sanLinesArrow",
     "type": "symbol",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Layers",
     "name": "Sanitary Flow Direction",
     "parent": "sanLinesInner",
@@ -3958,9 +3103,7 @@
     "source": "sanitaryLinesSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.utl_sanitary_lines",
@@ -3981,7 +3124,8 @@
   {
     "id": "utl_sanitary_laterals_case",
     "name": "Sanitary Laterals",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Layers",
     "hidden": true,
     "parent": "utl_sanitary_laterals",
@@ -4007,7 +3151,8 @@
   {
     "id": "utl_sanitary_laterals",
     "name": "Sanitary Laterals",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Layers",
     "legend": "<span class='fa fa-minus' style='color:orange;'></span> Active<br><span class='fa fa-minus' style='color:red;'></span> Unknown<br><span class='fa fa-minus' style='color:black;'></span> Capped",
     "children": true,
@@ -4023,32 +3168,11 @@
       "line-width": 3,
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "status"
-          ],
-          "active"
-        ],
+        ["==", ["get", "status"], "active"],
         "orange",
-        [
-          "==",
-          [
-            "get",
-            "status"
-          ],
-          "capped"
-        ],
+        ["==", ["get", "status"], "capped"],
         "gray",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "storm"
-        ],
+        ["==", ["get", "class"], "storm"],
         "fuchsia",
         "red"
       ]
@@ -4063,7 +3187,8 @@
   {
     "id": "utl_sanitary_laterals_points",
     "name": "Sanitary Laterals",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Layers",
     "hidden": true,
     "parent": "utl_sanitary_laterals",
@@ -4091,16 +3216,15 @@
   {
     "id": "sanLinesLabels",
     "type": "symbol",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Layers",
     "name": "Sanitary Line Labels",
     "children": true,
     "source": "sanitaryArrowSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.utl_sanitary_lines",
@@ -4112,36 +3236,18 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "diameter"
-        ],
-        "in"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", ["get", "diameter"], "in"],
       "symbol-placement": "line",
       "symbol-spacing": 500,
       "text-anchor": "top",
-      "text-offset": [
-        0,
-        0.5
-      ],
+      "text-offset": [0, 0.5],
       "text-allow-overlap": true,
       "text-ignore-placement": true,
       "text-size": {
         "stops": [
-          [
-            17,
-            12
-          ],
-          [
-            22,
-            16
-          ]
+          [17, 12],
+          [22, 16]
         ]
       },
       "text-padding": 0
@@ -4154,7 +3260,8 @@
     "id": "sanitarystructures",
     "type": "circle",
     "name": "Sanitary Structures",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Layers",
     "source": "sanitaryStructuresSource",
     "sourceType": {
@@ -4165,39 +3272,18 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            2
-          ],
-          [
-            16,
-            5
-          ]
+          [0, 0],
+          [12, 2],
+          [16, 5]
         ]
       },
-      "circle-color": [
-        "case", ["==", ["get", "class"], "MH"], "limegreen",
-        "black"
-      ],
+      "circle-color": ["case", ["==", ["get", "class"], "MH"], "limegreen", "black"],
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 2]
         ]
       },
       "circle-pitch-scale": "map",
@@ -4213,7 +3299,8 @@
   {
     "id": "sanitaryManholeLabels",
     "type": "symbol",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Layers",
     "name": "Sanitary Structure Labels",
     "source": "sanitaryLabelsSource",
@@ -4230,16 +3317,11 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{fieldid}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [
-        0.5,
-        -0.2
-      ]
+      "text-offset": [0.5, -0.2]
     },
     "metadata": {
       "popup": true
@@ -4249,14 +3331,11 @@
     "id": "utl_sanitary_master_meters",
     "type": "circle",
     "name": "Sanitary Master Meters",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Layers",
     "metadata": {
-      "popup": [
-        "name",
-        "source",
-        "created"
-      ]
+      "popup": ["name", "source", "created"]
     },
     "source": "utl_sanitary_master_meters",
     "sourceType": {
@@ -4267,36 +3346,18 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            4
-          ],
-          [
-            16,
-            8
-          ]
+          [0, 0],
+          [12, 4],
+          [16, 8]
         ]
       },
       "circle-color": "firebrick",
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 2]
         ]
       },
       "circle-pitch-scale": "map",
@@ -4309,7 +3370,8 @@
   {
     "id": "utl_sanitary_regulators",
     "type": "circle",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "CSO",
     "name": "CSO Regulators",
     "source": "utl_sanitary_regulators",
@@ -4321,78 +3383,25 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            6
-          ],
-          [
-            16,
-            10
-          ]
+          [0, 0],
+          [12, 6],
+          [16, 10]
         ]
       },
       "circle-color": [
         "case",
-        [
-          "in",
-          [
-            "get",
-            "rack_id"
-          ],
-          [
-            "literal",
-            [
-              "R-15",
-              "R-17",
-              "R-18",
-              "R-19",
-              "R-07",
-              "R-02",
-              "R-04",
-              "R-05"
-            ]
-          ]
-        ],
+        ["in", ["get", "rack_id"], ["literal", ["R-15", "R-17", "R-18", "R-19", "R-07", "R-02", "R-04", "R-05"]]],
         "green",
-        [
-          "in",
-          [
-            "get",
-            "rack_id"
-          ],
-          [
-            "literal",
-            [
-              "R-11",
-              "R-10",
-              "R-09",
-              "R-08",
-              "R-06"
-            ]
-          ]
-        ],
+        ["in", ["get", "rack_id"], ["literal", ["R-11", "R-10", "R-09", "R-08", "R-06"]]],
         "purple",
         "red"
       ],
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 2]
         ]
       },
       "circle-opacity": 0.8
@@ -4407,7 +3416,8 @@
   {
     "id": "utl_sanitary_regulators_labels",
     "type": "symbol",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "CSO",
     "name": "CSO Regulators Labels",
     "top": true,
@@ -4420,44 +3430,9 @@
     "paint": {
       "text-color": [
         "case",
-        [
-          "in",
-          [
-            "get",
-            "rack_id"
-          ],
-          [
-            "literal",
-            [
-              "R-15",
-              "R-17",
-              "R-18",
-              "R-19",
-              "R-07",
-              "R-02",
-              "R-04",
-              "R-05"
-            ]
-          ]
-        ],
+        ["in", ["get", "rack_id"], ["literal", ["R-15", "R-17", "R-18", "R-19", "R-07", "R-02", "R-04", "R-05"]]],
         "green",
-        [
-          "in",
-          [
-            "get",
-            "rack_id"
-          ],
-          [
-            "literal",
-            [
-              "R-11",
-              "R-10",
-              "R-09",
-              "R-08",
-              "R-06"
-            ]
-          ]
-        ],
+        ["in", ["get", "rack_id"], ["literal", ["R-11", "R-10", "R-09", "R-08", "R-06"]]],
         "purple",
         "red"
       ],
@@ -4467,16 +3442,11 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{rack_id}",
       "text-anchor": "bottom-left",
       "text-size": 16,
-      "text-offset": [
-        0.5,
-        -0.2
-      ]
+      "text-offset": [0.5, -0.2]
     },
     "metadata": {
       "popup": false
@@ -4485,8 +3455,9 @@
   {
     "id": "stmLinesOuter",
     "name": "stmLinesOuter",
-    "directory": "City Sewer System",
-    "group": "Storm Sewer Layers",
+    "directory": "Storm Sewer System",
+
+    "group": "Storm Sewer Layers [Archive]",
     "parent": "stmLinesInner",
     "hidden": true,
     "type": "line",
@@ -4503,11 +3474,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!=",
-      "feature",
-      "Abandoned"
-    ],
+    "filter": ["!=", "feature", "Abandoned"],
     "metadata": {
       "popup": true
     }
@@ -4515,8 +3482,8 @@
   {
     "id": "stmLinesInner",
     "name": "Legacy Storm Lines",
-    "directory": "City Sewer System",
-    "group": "Storm Sewer Layers",
+    "directory": "Storm Sewer System",
+    "group": "Storm Sewer Layers [Archive]",
     "children": true,
     "type": "line",
     "source": "stormLinesSource",
@@ -4530,92 +3497,37 @@
       "line-width": 4,
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Private"
-        ],
+        ["==", ["get", "class"], "Private"],
         "goldenrod",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Storm Main"
-        ],
+        ["==", ["get", "class"], "Storm Main"],
         "#FB00FF",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Combination"
-        ],
+        ["==", ["get", "class"], "Combination"],
         "sienna",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Stream"
-        ],
+        ["==", ["get", "class"], "Stream"],
         "rgb(0,169,230)",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Ditch"
-        ],
+        ["==", ["get", "class"], "Ditch"],
         "rgb(0,255,197)",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Culvert"
-        ],
+        ["==", ["get", "class"], "Culvert"],
         "#333",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Abandoned"
-        ],
+        ["==", ["get", "class"], "Abandoned"],
         "gray",
         "gray"
       ],
       "line-opacity": 0.3
-
     },
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!in",
-      "class",
-      "Ditch",
-      "Stream",
-      "Stream CSO Outfall"
-    ],
+    "filter": ["!in", "class", "Ditch", "Stream", "Stream CSO Outfall"],
     "metadata": {
       "popup": true
     }
   },
   {
     "id": "stmLinesInnerStreams",
-    "directory": "City Sewer System",
-    "group": "Storm Sewer Layers",
+    "directory": "Storm Sewer System",
+
+    "group": "Storm Sewer Layers [Archive]",
     "parent": "stmLinesInner",
     "hidden": true,
     "type": "line",
@@ -4627,38 +3539,14 @@
     },
     "paint": {
       "line-width": 4,
-      "line-dasharray": [
-        3,
-        2
-      ],
+      "line-dasharray": [3, 2],
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Stream"
-        ],
+        ["==", ["get", "class"], "Stream"],
         "rgb(0,169,230)",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Ditch"
-        ],
+        ["==", ["get", "class"], "Ditch"],
         "rgb(0,255,197)",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Stream CSO Outfall"
-        ],
+        ["==", ["get", "class"], "Stream CSO Outfall"],
         "darkorange",
         "gray"
       ],
@@ -4667,13 +3555,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "in",
-      "class",
-      "Ditch",
-      "Stream",
-      "Stream CSO Outfall"
-    ],
+    "filter": ["in", "class", "Ditch", "Stream", "Stream CSO Outfall"],
     "metadata": {
       "popup": true
     }
@@ -4681,8 +3563,9 @@
   {
     "id": "stormLinesArrow",
     "type": "symbol",
-    "directory": "City Sewer System",
-    "group": "Storm Sewer Layers",
+    "directory": "Storm Sewer System",
+
+    "group": "Storm Sewer Layers [Archive]",
     "name": "Sanitary Flow Direction",
     "parent": "stmLinesInner",
     "hidden": true,
@@ -4708,8 +3591,9 @@
   },
   {
     "id": "stormStructures",
-    "directory": "City Sewer System",
-    "group": "Storm Sewer Layers",
+    "directory": "Storm Sewer System",
+
+    "group": "Storm Sewer Layers [Archive]",
     "type": "circle",
     "name": "Legacy Storm Structures",
     "children": true,
@@ -4721,10 +3605,7 @@
       "generateId": true
     },
     "paint": {
-      "circle-color": ["case", 
-        ["==", ["get", "class"], "Inlet"], "fuchsia",
-        "black"
-      ],
+      "circle-color": ["case", ["==", ["get", "class"], "Inlet"], "fuchsia", "black"],
       "circle-radius": 5,
       "circle-opacity": 0.3,
       "circle-stroke-color": "white",
@@ -4738,51 +3619,244 @@
       "popup": true
     }
   },
-    {
-      "id": "stormStructuresIcons",
-      "directory": "City Sewer System",
-      "group": "Storm Sewer Layers",
-      "parent": "stormStructures",
-      "hidden": true,
-      "type": "symbol",
-      "source": "stmStructuresSource",
-      "sourceType": {
-        "type": "geojson",
-        "data": "https://311.coz.org/api/v1/feature-server/collections/public.utl_stormwater_stm_points/items.json?limit=50000",
-        "generateId": true
+  {
+    "id": "stormStructuresIcons",
+    "directory": "Storm Sewer System",
+    "group": "Storm Sewer Layers [Archive]",
+    "parent": "stormStructures",
+    "hidden": true,
+    "type": "symbol",
+    "source": "stmStructuresSource",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/api/v1/feature-server/collections/public.utl_stormwater_stm_points/items.json?limit=50000",
+      "generateId": true
+    },
+    "layout": {
+      "icon-image": ["case", ["==", ["get", "class"], "CSO Outfall"], "diamond-orange-24", "diamond-blue-24"],
+      "icon-allow-overlap": true,
+      "icon-size": {
+        "stops": [
+          [14, 0.7],
+          [18, 0.9]
+        ]
       },
-      "layout": {
-        "icon-image": ["case",
-          ["==", ["get", "class"], "CSO Outfall"], "diamond-orange-24",
-          "diamond-blue-24"
-        ],
-        "icon-allow-overlap": true,
-        "icon-size": {
-          "stops": [
-            [14,0.7],
-            [18,0.9]
-          ]
-        },
-        "visibility": "none"
+      "visibility": "none"
+    },
+    "filter": ["in", "class", "CSO Outfall", "Outfall"],
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "streams",
+    "name": "Streams [Legacy Storm]",
+    "directory": "Storm Sewer System",
+    "group": "Storm Sewer Layers",
+    "type": "line",
+    "source": "stormLinesSource",
+    "legend": "<div><span class='fa fa-minus' style='color:DeepSkyBlue'></span> Stream</div><div><span class='fa fa-minus' style='color:black'></span> Ditch</div>",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/api/v1/feature-server/collections/public.utl_stormwater_stm_lines/items.json?limit=50000",
+      "generateId": true
+    },
+    "paint": {
+      "line-width": 5,
+      "line-color": [
+        "case",
+        ["==", ["get", "class"], "Stream"],
+        "DeepSkyBlue",
+        ["==", ["get", "class"], "Ditch"],
+        "black",
+        "black"
+      ],
+      "line-opacity": 0.9
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "filter": ["in", "class", "Ditch", "Stream"],
+    "metadata": {
+      "popup": false
+    }
+  },
+  {
+    "id": "utl_storm_outer",
+    "name": "Storm Lines",
+    "directory": "Storm Sewer System",
+    "group": "Storm Sewer Layers",
+    "parent": "utl_storm_inner",
+    "hidden": true,
+    "type": "line",
+    "source": "utl_storm_lines_source",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/api/v1/feature-server/collections/public.utl_stormline/items.json?limit=50000",
+      "generateId": true
+    },
+    "paint": {
+      "line-width": 10,
+      "line-color": "white"
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "utl_storm_inner",
+    "name": "Storm Lines",
+    "directory": "Storm Sewer System",
+    "group": "Storm Sewer Layers",
+    "hidden": false,
+    "children": true,
+    "type": "line",
+    "source": "utl_storm_lines_source",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/api/v1/feature-server/collections/public.utl_stormline/items.json?limit=50000",
+      "generateId": true
+    },
+    "paint": {
+      "line-width": 6,
+      "line-color": ["match",
+        ["get", "comp_class"],
+          "gravitymain",
+          "fuchsia",
+          "opendrain",
+          "skyblue",
+          "culvert",
+          "black",
+          "black"
+      ]
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "legend": "<span class='fa fa-minus' style='color:fuchsia;'></span> Gravity Main<br><span class='fa fa-minus' style='color:skyblue;'></span> Open Drain<br><span class='fa fa-minus' style='color:black;'></span> Culvert",
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "utl_storm_arrows",
+    "type": "symbol",
+    "directory": "Storm Sewer System",
+    "group": "Storm Sewer Layers",
+    "name": "Storm Flow Direction",
+    "parent": "utl_storm_outer",
+    "hidden": true,
+    "source": "utl_storm_lines_source",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/api/v1/feature-server/collections/public.utl_stormline/items.json?limit=50000",
+      "generateId": true
+    },
+    "layout": {
+      "symbol-placement": "line",
+      "icon-allow-overlap": true,
+      "icon-ignore-placement": true,
+      "icon-padding": 0,
+      "icon-image": "arrow",
+      "icon-size": 0.05,
+      "icon-anchor": "center",
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "utl_storm_points",
+    "name": "Storm Points",
+    "directory": "Storm Sewer System",
+    "group": "Storm Sewer Layers",
+    "hidden": false,
+    "children": true,
+    "type": "circle",
+    "source": "utl_storm_points_source",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/api/v1/feature-server/collections/public.utl_stormpoint/items.json?limit=50000",
+      "generateId": true
+    },
+    "paint": {
+      "circle-color": ["case",
+        ["==", ["get", "comp_class"], "catchbasin"], "fuchsia",
+        ["==", ["get", "comp_class"], "cleanout"], "darkorange",
+        ["==", ["get", "comp_class"], "culvertpoint"], "darkgray",
+        ["==", ["get", "comp_class"], "manhole"], "#212121",
+        ["==", ["get", "comp_class"], "missingpoint"], "red",
+        "black"
+      ],
+      "circle-radius": {
+        "stops": [
+          [0, 1],
+          [20, 8]
+        ]
       },
-      "filter": ["in", "class", "CSO Outfall", "Outfall"],
-      "metadata": {
-        "popup": true
+      "circle-opacity": 1,
+      "circle-stroke-color": "white",
+      "circle-stroke-width":  {
+        "stops": [
+          [0, 1],
+          [20, 3]
+        ]
       }
+    },
+    "filter": ["!in", "comp_class", "dischargepoint"],
+    "layout": {
+      "visibility": "none"
+    },
+    "legend": "<span class='fa fa-circle' style='color:fuchsia;'></span> Catch Basin<br><span class='fa fa-circle' style='color:fuchsia;'></span> Manhole<br><span class='fa fa-circle' style='color:darkorange;'></span> Cleanout<br><span class='fa fa-circle' style='color:darkgray;'></span> Culvert Point<br><span class='fa fa-circle' style='color:dodgerblue;'></span> Discharge Point<br><span class='fa fa-circle' style='color:red;'></span> Missing Point<br>",
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "utl_storm_icons",
+
+    "directory": "Storm Sewer System",
+    "group": "Storm Sewer Layers",
+    "hidden": true,
+    "parent": "utl_storm_points",
+    "type": "symbol",
+    "source": "stmStructuresSource",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://311.coz.org/api/v1/feature-server/collections/public.utl_stormpoint/items.json?limit=50000",
+      "generateId": true
+    },
+    "layout": {
+      "icon-image": ["case", 
+        ["==", ["get", "comp_class"], "dischargepoint"], "diamond-blue-24",
+        "manhole-storm"
+      ],
+      "icon-allow-overlap": true,
+      "icon-ignore-placement": true,
+      "icon-size": ["case", 
+        ["==", ["get", "comp_class"], "dischargepoint"],  0.9, 0.3
+      ],
+      "visibility": "none"
+    },
+    "filter": ["in", "comp_class", "dischargepoint", "manhole"],
+    "metadata": {
+      "popup": true
+    }
   },
   {
     "id": "utl_sanitary_flow_monitors",
     "type": "circle",
     "name": "AECOM Flow Monitors",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Layers",
     "children": true,
     "metadata": {
-      "popup": [
-        "name",
-        "source",
-        "created"
-      ]
+      "popup": ["name", "source", "created"]
     },
     "source": "utl_sanitary_flow_monitors",
     "sourceType": {
@@ -4793,36 +3867,18 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            6
-          ],
-          [
-            16,
-            10
-          ]
+          [0, 0],
+          [12, 6],
+          [16, 10]
         ]
       },
       "circle-color": "rgba(0,0,0,0.5)",
       "circle-stroke-color": "fuchsia",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            3
-          ],
-          [
-            16,
-            4
-          ]
+          [0, 0],
+          [12, 3],
+          [16, 4]
         ]
       },
       "circle-pitch-scale": "map",
@@ -4836,7 +3892,8 @@
     "id": "utl_sanitary_flow_monitors_labels",
     "type": "symbol",
     "name": "AECOM Flow Monitor Labels",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "parent": "utl_sanitary_flow_monitors",
     "top": true,
     "hidden": true,
@@ -4858,23 +3915,19 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "FM-{name}",
       "text-anchor": "bottom-left",
       "text-size": 16,
-      "text-offset": [
-        0.7,
-        -0.2
-      ]
+      "text-offset": [0.7, -0.2]
     }
   },
   {
     "id": "public.utl_sanitary_plans_view",
     "type": "fill",
     "name": "Sanitary Plan Polygons",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Sanitary Sewer Plans",
     "metadata": {
       "popup": true
@@ -4897,7 +3950,8 @@
   {
     "id": "utl_wastewater_manhole_inspections",
     "name": "Manhole Inspections",
-    "directory": "City Sewer System",
+    "directory": "Sanitary Sewer System",
+
     "group": "Inspection Layers",
     "type": "circle",
     "source": "utl_wastewater_manhole_inspections",
@@ -4911,18 +3965,9 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            8
-          ],
-          [
-            16,
-            16
-          ]
+          [0, 0],
+          [12, 8],
+          [16, 16]
         ]
       },
       "circle-color": "red",
@@ -4931,18 +3976,9 @@
       "circle-stroke-opacity": 0.5,
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            2
-          ],
-          [
-            16,
-            3
-          ]
+          [0, 0],
+          [12, 2],
+          [16, 3]
         ]
       },
       "circle-pitch-scale": "map",
@@ -4956,7 +3992,7 @@
       "lazyLoading": false
     }
   },
- 
+
   {
     "id": "eng_building_footprints_3d",
     "type": "fill-extrusion",
@@ -4966,9 +4002,7 @@
     "source": "eng_building_footprints",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"],
       "minzoom": 15,
       "maxzoom": 22
     },
@@ -4978,50 +4012,15 @@
       "fill-extrusion-opacity": 0.6,
       "fill-extrusion-height": [
         "case",
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          10
-        ],
+        [">", ["get", "extrudeheight"], 10],
         18,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          20
-        ],
+        [">", ["get", "extrudeheight"], 20],
         26,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          30
-        ],
+        [">", ["get", "extrudeheight"], 30],
         34,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          40
-        ],
+        [">", ["get", "extrudeheight"], 40],
         42,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          50
-        ],
+        [">", ["get", "extrudeheight"], 50],
         52,
         8
       ]
@@ -5070,9 +4069,7 @@
     "source": "public.eng_coz_structures",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.eng_coz_structures/{z}/{x}/{y}.pbf"
-       ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.eng_coz_structures/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.eng_coz_structures",
@@ -5081,50 +4078,15 @@
       "fill-extrusion-opacity": 0.6,
       "fill-extrusion-height": [
         "case",
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          10
-        ],
+        [">", ["get", "extrudeheight"], 10],
         18,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          20
-        ],
+        [">", ["get", "extrudeheight"], 20],
         26,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          30
-        ],
+        [">", ["get", "extrudeheight"], 30],
         34,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          40
-        ],
+        [">", ["get", "extrudeheight"], 40],
         42,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          50
-        ],
+        [">", ["get", "extrudeheight"], 50],
         52,
         8
       ]
@@ -5160,8 +4122,8 @@
       "circle-stroke-width": 2,
       "circle-radius": {
         "stops": [
-          [14,2],
-          [18,4]
+          [14, 2],
+          [18, 4]
         ]
       }
     },
@@ -5194,16 +4156,11 @@
     "minzoom": 17.1,
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Regular"
-      ],
+      "text-font": ["DIN Offc Pro Regular"],
       "text-field": "{address}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [
-        0.5,
-        0
-      ]
+      "text-offset": [0.5, 0]
     },
     "metadata": {
       "popup": false
@@ -5226,43 +4183,53 @@
       "generateId": true
     },
     "paint": {
-      "circle-color": ["case", 
-        ["==", ["get", "icon"], "fire-24"], "hsl(0, 100%, 90%)",
-        ["==", ["get", "category"], "parks"], "hsl(120, 100%, 95%)",
-        ["==", ["get", "category"], "historic"], "hsl(19, 26%, 95%)",
-        ["==", ["get", "category"], "municipal"], "hsl(187, 82%, 95%)",
-        ["==", ["get", "category"], "cemeteries"], "hsl(187, 82%, 95%)",
-        ["==", ["get", "category"], "public"], "hsl(187, 82%, 95%)",
-        "white"  
+      "circle-color": [
+        "case",
+        ["==", ["get", "icon"], "fire-24"],
+        "hsl(0, 100%, 90%)",
+        ["==", ["get", "category"], "parks"],
+        "hsl(120, 100%, 95%)",
+        ["==", ["get", "category"], "historic"],
+        "hsl(19, 26%, 95%)",
+        ["==", ["get", "category"], "municipal"],
+        "hsl(187, 82%, 95%)",
+        ["==", ["get", "category"], "cemeteries"],
+        "hsl(187, 82%, 95%)",
+        ["==", ["get", "category"], "public"],
+        "hsl(187, 82%, 95%)",
+        "white"
       ],
-      "circle-stroke-color": ["case", 
-        ["==", ["get", "icon"], "fire-24"], "red",
-        ["==", ["get", "category"], "parks"], "green",
-        ["==", ["get", "category"], "historic"], "hsl(19, 26%, 28%)",
-        ["==", ["get", "category"], "municipal"], "#0079a2",
-        ["==", ["get", "category"], "cemeteries"], "#0079a2",
-        ["==", ["get", "category"], "public"], "#0079a2",
-  
-        "#333"  
+      "circle-stroke-color": [
+        "case",
+        ["==", ["get", "icon"], "fire-24"],
+        "red",
+        ["==", ["get", "category"], "parks"],
+        "green",
+        ["==", ["get", "category"], "historic"],
+        "hsl(19, 26%, 28%)",
+        ["==", ["get", "category"], "municipal"],
+        "#0079a2",
+        ["==", ["get", "category"], "cemeteries"],
+        "#0079a2",
+        ["==", ["get", "category"], "public"],
+        "#0079a2",
+
+        "#333"
       ],
       "circle-stroke-width": 2,
       "circle-radius": {
         "stops": [
-          [14,10],
-          [18,13]
+          [14, 10],
+          [18, 13]
         ]
       }
     },
     "layout": {
       "visibility": "none"
     },
-    "filter": ["all",
-      ["!=", ["get", "icon"], null],
-      ["!=", ["get", "icon"], ""],
-      ["!=", ["get", "type"], "Park"]
-    ]
+    "filter": ["all", ["!=", ["get", "icon"], null], ["!=", ["get", "icon"], ""], ["!=", ["get", "type"], "Park"]]
   },
-  
+
   {
     "id": "eng_coz_pois_icon",
     "type": "symbol",
@@ -5284,19 +4251,15 @@
       "icon-allow-overlap": true,
       "icon-size": {
         "stops": [
-          [14,0.7],
-          [18,0.9]
+          [14, 0.7],
+          [18, 0.9]
         ]
       },
       "visibility": "none"
     },
-    "filter": ["all",
-      ["!=", ["get", "icon"], null],
-      ["!=", ["get", "icon"], ""],
-      ["!=", ["get", "type"], "Park"]
-    ]
+    "filter": ["all", ["!=", ["get", "icon"], null], ["!=", ["get", "icon"], ""], ["!=", ["get", "type"], "Park"]]
   },
-  
+
   {
     "id": "eng_coz_pois_labels",
     "type": "symbol",
@@ -5315,15 +4278,22 @@
     },
     "minzoom": 16,
     "paint": {
-      "text-color": ["case", 
-        ["==", ["get", "icon"], "fire-24"], "red",
-        ["==", ["get", "category"], "parks"], "green",
-        ["==", ["get", "category"], "historic"], "hsl(19, 26%, 28%)",
-        ["==", ["get", "category"], "municipal"], "#005673",
-        ["==", ["get", "category"], "cemeteries"], "#005673",
-        ["==", ["get", "category"], "public"], "#005673",
-  
-        "#333"  
+      "text-color": [
+        "case",
+        ["==", ["get", "icon"], "fire-24"],
+        "red",
+        ["==", ["get", "category"], "parks"],
+        "green",
+        ["==", ["get", "category"], "historic"],
+        "hsl(19, 26%, 28%)",
+        ["==", ["get", "category"], "municipal"],
+        "#005673",
+        ["==", ["get", "category"], "cemeteries"],
+        "#005673",
+        ["==", ["get", "category"], "public"],
+        "#005673",
+
+        "#333"
       ],
       "text-halo-color": "white",
       "text-halo-width": 2,
@@ -5332,9 +4302,7 @@
     "layout": {
       "icon-allow-overlap": false,
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Regular"
-      ],
+      "text-font": ["DIN Offc Pro Regular"],
       "text-field": "{name}",
       "text-anchor": "bottom-left",
       "text-offset": [0.6, -0.5],
@@ -5345,11 +4313,7 @@
         ]
       }
     },
-    "filter": ["all",
-      ["!=", ["get", "icon"], null],
-      ["!=", ["get", "icon"], ""],
-      ["!=", ["get", "type"], "Park"]
-    ]
+    "filter": ["all", ["!=", ["get", "icon"], null], ["!=", ["get", "icon"], ""], ["!=", ["get", "type"], "Park"]]
   },
   {
     "id": "eng_road_closures",
@@ -5357,7 +4321,7 @@
     "name": "Active Road Closures",
     "group": "Road Closures",
     "directory": "Engineering",
-    "legend":"<div><span class='fa fa-minus' style='color:orange;'></span> Alternate Routes<br><span class='fa fa-minus' style='color:red;'></span> Road Closed</div>",
+    "legend": "<div><span class='fa fa-minus' style='color:orange;'></span> Alternate Routes<br><span class='fa fa-minus' style='color:red;'></span> Road Closed</div>",
     "source": "eng_road_closures",
     "sourceType": {
       "type": "geojson",
@@ -5365,9 +4329,12 @@
       "generateId": true
     },
     "paint": {
-      "line-color": ["case",
-        ["==", ["get", "type"], "detour"], "orange",
-        ["==", ["get", "type"], "closed"], "red",
+      "line-color": [
+        "case",
+        ["==", ["get", "type"], "detour"],
+        "orange",
+        ["==", ["get", "type"], "closed"],
+        "red",
         "#000"
       ],
       "line-width": 6
@@ -5395,7 +4362,7 @@
       "generateId": true
     },
     "paint": {
-      "line-color":"red",
+      "line-color": "red",
       "line-width": 10
     },
     "layout": {
@@ -5419,9 +4386,9 @@
       "generateId": true
     },
     "paint": {
-      "line-color":"white",
+      "line-color": "white",
       "line-width": 4,
-      "line-dasharray": [2,1]
+      "line-dasharray": [2, 1]
     },
     "layout": {
       "visibility": "none"
@@ -5445,7 +4412,7 @@
       "generateId": true
     },
     "paint": {
-      "line-color":"#121212",
+      "line-color": "#121212",
       "line-width": 6
     },
     "layout": {
@@ -5469,12 +4436,9 @@
       "generateId": true
     },
     "paint": {
-      "line-color":["case", 
-        ["==", ["get", "footway"], "sidewalk"], "goldenrod",
-        "white"
-      ],
+      "line-color": ["case", ["==", ["get", "footway"], "sidewalk"], "goldenrod", "white"],
       "line-width": 4,
-      "line-dasharray": [2,1]
+      "line-dasharray": [2, 1]
     },
     "layout": {
       "visibility": "none"
