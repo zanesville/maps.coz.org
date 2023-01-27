@@ -2068,7 +2068,7 @@
     "source": "utl_mus_sanitary_lift_stations",
     "sourceType": {
       "type": "geojson",
-      "data": "https://services5.arcgis.com/N1ybEAKiuuUIL8Mz/ArcGIS/rest/services/MuskingumCoWaterDept/FeatureServer/1/query?where=OBJECTID%3E0&f=geojson&fields=*",
+      "data": "https://services5.arcgis.com/N1ybEAKiuuUIL8Mz/ArcGIS/rest/services/Muskingum_County_Water/FeatureServer/1/query?where=OBJECTID%3E0&f=geojson&fields=*",
       "generateId": true
     },
     "paint": {
@@ -2093,7 +2093,7 @@
     "source": "utl_mus_water_lines",
     "sourceType": {
       "type": "geojson",
-      "data": "https://services5.arcgis.com/N1ybEAKiuuUIL8Mz/ArcGIS/rest/services/MuskingumCoWaterDept/FeatureServer/9/query?where=OBJECTID%3E0&f=geojson&fields=*",
+      "data": "https://services5.arcgis.com/N1ybEAKiuuUIL8Mz/ArcGIS/rest/services/Muskingum_County_Water/FeatureServer/9/query?where=OBJECTID%3E0&f=geojson&fields=*",
       "generateId": true
     },
     "paint": {
@@ -2218,7 +2218,7 @@
     "source": "utl_mus_water_valves",
     "sourceType": {
       "type": "geojson",
-      "data": "https://services5.arcgis.com/N1ybEAKiuuUIL8Mz/ArcGIS/rest/services/MuskingumCoWaterDept/FeatureServer/6/query?where=OBJECTID%3E0&f=geojson&fields=*",
+      "data": "https://services5.arcgis.com/N1ybEAKiuuUIL8Mz/ArcGIS/rest/services/Muskingum_County_Water/FeatureServer/6/query?where=OBJECTID%3E0&f=geojson&fields=*",
       "generateId": true
     },
     "paint": {
@@ -2243,7 +2243,7 @@
     "source": "utl_mus_water_hydrants",
     "sourceType": {
       "type": "geojson",
-      "data": "https://services5.arcgis.com/N1ybEAKiuuUIL8Mz/ArcGIS/rest/services/MuskingumCoWaterDept/FeatureServer/4/query?where=OBJECTID%3E0&f=geojson&fields=*",
+      "data": "https://services5.arcgis.com/N1ybEAKiuuUIL8Mz/ArcGIS/rest/services/Muskingum_County_Water/FeatureServer/4/query?where=OBJECTID%3E0&f=geojson&fields=* ",
       "generateId": true
     },
     "paint": {
