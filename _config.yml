@@ -199,7 +199,6 @@ auto_dir_categorize:
   force: false # options:true, false; default is false
 
 # mapbox dataset edit token
-# sk.eyJ1IjoiY296Z2lzIiwiYSI6ImNqczM2eWQxYjF3emw0NG85bGN0cjJmOWgifQ.dHmpgehC8hN2-t4svOJnng
 
 #hexo-renderer-webpack
 #webpack:

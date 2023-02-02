@@ -17,7 +17,7 @@
     Access-Control-Allow-Origin = '*'
 
 # this is not available in the free current plan
-[[headers]]
-  for = "/development/*"
-  [headers.values]
-    Basic-Auth = "test:test"
+#[[headers]]
+#  for = "/development/*"
+#  [headers.values]
+#    Basic-Auth = "test:test"
