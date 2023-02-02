@@ -20,3 +20,5 @@ The site is currently deployed on Netlify.
 
 - Updated Hexo to version 5.4.0
 - Updated hexo-directory-category and hexo-generator-search to the latest versions
+- 
+- https://docs.google.com/spreadsheets/d/1VVxm-Rygvt05hGe0mhbIGmXm3dlimlfkx5uPPaR_vcQ/edit#gid=0
