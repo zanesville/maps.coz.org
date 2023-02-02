@@ -116,7 +116,7 @@ $zindex-4: 400 !default;
 //mapbox
 @import '../../../../node_modules/@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
-@import '../../../../mapbox-layer-control/src/layerControl.css';
+@import '../../js/mapbox-layer-control-src/layerControl.css';
 
 .btn:focus, .btn:hover {
   background: #0b729b;

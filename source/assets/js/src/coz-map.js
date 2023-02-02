@@ -1,9 +1,10 @@
-import { mapAddLayers } from "./coz-map-add-layers";
-import { layerControlGrouped } from '../../../../mapbox-layer-control/src/layerControlGrouped.js';
-import { popup, getFeatures } from './coz-popup';
-import { mapAddControls } from "./coz-map-misc-functions.js";
+import { getFeatures, popup } from './coz-popup';
 import { getQuery, updateQueryStringParam } from "./coz-helpers.js";
+
 import { OpenLocationCode } from "open-location-code";
+import { layerControlGrouped } from '../mapbox-layer-control-src/layerControlGrouped.js';
+import { mapAddControls } from "./coz-map-misc-functions.js";
+import { mapAddLayers } from "./coz-map-add-layers";
 import { mapCheckLoading } from "./coz-mapCheckLoading.js";
 
 const styles = {
