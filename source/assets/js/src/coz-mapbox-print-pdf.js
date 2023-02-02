@@ -1,4 +1,5 @@
-var cozMapboxPrint = require('../../../../mapbox-print-pdf');
+// var cozMapboxPrint = require('../../../../mapbox-print-pdf');
+var cozMapboxPrint = require('./printPDF/build/mapbox-print-pdf');
 
 /* to do
  - bake all ids into the function or as variables
