@@ -475,7 +475,34 @@ function popupBuildHtml(map, f) {
 
     var keys = Object.keys(f.properties);
 
-    var excludeFields = [
+    const aliasFields = {
+      // "AADT": "Average Annual Daily Traffic",
+      // "PARCELNUM": "Parcel ID",
+      // "Land_Use": "Land Use",
+      // "MASTER_TNM": "Tax Name",
+      // "FIRST_OWNE": "Owner",
+      // "ERU": "ERU for Account",
+      // "Sump_Depth": "Sump Depth",
+      // "Owner_1": "Owner",
+      // "Legal_Description": "Legal Description",
+      // "ELEV": "Elevation",
+      // "SQFT": "Impervious Surface",
+      // "FIELDID": "Field ID",
+      // "url_pdf": "URL for Inpsection Report",
+      // "IDUP": "Upstream Asset ID",
+      // "IDDN": "Downstream Asset ID",
+      // "INSPECTLOG": "Inspection Log",
+      // "audlink": "Auditor Link",
+      "CreationDate": "Creation Date",
+      "EditDate": "Edit Date",
+      "url_1": "Image 1",
+      "url_2": "Image 2",
+      "url_3": "Image 3",
+      "url_4": "Image 4",
+      "esrignss_positionsourcetype": "Position Source Type",
+    }
+
+    const excludeFields = [
       "ACCOUNT_NUM",
       "CENTROID_X",
       "CENTROID_Y",
@@ -563,14 +590,15 @@ function popupBuildHtml(map, f) {
 
     table.innerHTML += `<!-- ${f.layer.id} -->`
 
-    keys.forEach(function(key, i) {
-      if (excludeFields.indexOf(key.toUpperCase()) < 0) {
-        var val = f.properties[key];
+    keys.forEach(function(k, i) {
+      const key = aliasFields[k] ? aliasFields[k] : k.replace(/esrignss/g, "gps_");
+      var val = f.properties[k];
+      if (excludeFields.indexOf(k.toUpperCase()) < 0) {
         if (val && val != null && val != "" && val != " " && val != undefined && val != "null") {
           var property = (isMapillary(val, f)) ? formatMapillary(val) : (isEpochDate(val)) ? formatDate(val) : (isLink(val)) ? formatLink(val) : (isParcel(val)) ? formatParcel(val) : (isNumber(val)) ? formatNumber(val) : val;
           tbody.innerHTML += `<tr><td>${formatTitle(key)}</td><td>${property}</td></tr>`;
         }
-        if (!hasImage) hasImage = isImage(key, val)
+        if (!hasImage) hasImage = isImage(k, val)
       }
     });
     if (hasImage != false) {
