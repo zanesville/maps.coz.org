@@ -799,6 +799,26 @@
           ],
           5
         ],
+        [
+          "==",
+          [
+            "get",
+            "id"
+          ],
+          6
+        ],
+        "Fairview Road Reinvestment Area"
+      ], 
+        [
+          "==",
+          [
+            "get",
+            "id"
+          ],
+          9
+        ],
+        "State Street CRA",
+      ],      
         "Downtown Reinvestment Area",
         [
           "==",
