@@ -798,7 +798,7 @@
             "id"
           ],
           5
-        ],     
+        ],
         "Downtown Reinvestment Area",
         [
           "==",
@@ -809,24 +809,7 @@
           7
         ],
         "Greenwood Reinvestment Area",
-        [
-          "==",
-          [
-            "get",
-            "id"
-          ],
-          6
-        ],
-        "Fairview Road Reinvestment Area",
-        [
-          "==",
-          [
-            "get",
-            "id"
-          ],
-          9
-        ],
-        "State Street Reinvestment Area",        
+        "Fairview Road Reinvestment Area"
       ],
       "text-max-width": 9,
       "text-size": {
