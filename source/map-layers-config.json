@@ -771,46 +771,7 @@
         "DIN Offc Pro Bold"
       ],
       "text-allow-overlap": true,
-      "text-field": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "id"
-          ],
-          3
-        ],
-        "Brighton Reinvestment Area",
-        [
-          "==",
-          [
-            "get",
-            "id"
-          ],
-          4
-        ],
-        "Putnam Reinvestment Area",
-        [
-          "==",
-          [
-            "get",
-            "id"
-          ],
-          5
-        ],
-        "Downtown Reinvestment Area",
-        [
-          "==",
-          [
-            "get",
-            "id"
-          ],
-          7
-        ],
-        "Greenwood Reinvestment Area",
-        "Fairview Road Reinvestment Area"
-      ],
+      "text-field": ["get", "name"],
       "text-max-width": 9,
       "text-size": {
         "stops": [

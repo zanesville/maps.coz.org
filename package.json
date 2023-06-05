@@ -18,7 +18,7 @@
     "netlify:test": "netlify deploy --dir public",
     "backup": "C:/Users/malcolm.meyer/Documents/GIS_Projects_Local/Web Apps Production/gis.coz.org_web_maps/_backupToZDrive.bat",
     "start": "hexo s",
-    "dev": "hexo generate && node _scripts/genPublicApps && hexo s",
+    "dev": "npm run build && hexo generate && node _scripts/genPublicApps && hexo s",
     "generate": "hexo generate",
     "build:netlify": "hexo clean && npm run parcel-css && npm run build && npm run clean-docs && npm run docs && hexo generate && node _scripts/genPublicApps && gulp clean-public && node _scripts/localToCDN"
   },
