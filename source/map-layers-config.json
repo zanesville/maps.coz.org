@@ -3436,16 +3436,9 @@
       ],
       "line-color": [
         "case",
-        [
-          "in",
-          "LP",
-          [
-            "get",
-            "FACILITYID"
-          ]
-        ],
-        "#26d9d0",
-        "#0062ff"
+        ["==", ["get","SYSTEM"], "High Pressure"],"#0062ff",
+        ["==", ["get","SYSTEM"], "Low Pressure"],"#26d9d0",
+        "deeppink"
       ]
     },
     "layout": {
