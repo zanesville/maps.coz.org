@@ -2566,80 +2566,6 @@
     }
   },
   {
-    "id": "utl_water_lsli",
-    "name": "Water Lead Service Lines",
-    "directory": "City Water System",
-    "group": "Water Layers",
-    "source": "utl_water_lsli",
-    "sourceType": {
-      "type": "vector",
-      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"]
-    },
-    "source-layer": "public.utl_water_lsli",
-    "children": true,
-    "type": "circle",
-    "paint": {
-      "circle-radius": {
-        "stops": [
-          [0, 0],
-          [12, 4],
-          [16, 9]
-        ]
-      },
-      "circle-stroke-width": 2,
-      "circle-stroke-color": "white",
-      "circle-color": [
-        "match",
-        ["get", "smaterial"],
-        "Lead",
-        "red",
-        "Unknown - Material Unknown",
-        "black",
-        "dodgerblue"
-      ]
-    },
-    "legend": "<div><span class='fa fa-circle' style='color:red'></span> Lead<br><span class='fa fa-circle' style='color:dodgerblue'></span> Plastic or Copper<br><span class='fa fa-circle' style='color:black'></span> Unknown</div>",
-    "layout": {
-      "visibility": "none"
-    },
-    "metadata": {
-      "popup": false,
-      "filterSchema": {
-        "smaterial": {
-          "type": "select",
-          "options": [
-            "Lead",
-            "Non-Lead - Copper",
-            "Non-Lead - Plastic",
-            "Unknown - Material Unknown"
-          ]
-        }
-      }
-    }
-  },
-  {
-    "id": "utl_water_lsli_icon",
-    "source": "utl_water_lsli",
-    "sourceType": {
-      "type": "vector",
-      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"]
-    },
-    "source-layer": "public.utl_water_lsli",
-    "parent": "utl_water_lsli",
-    "type": "symbol",
-    "layout": {
-      "visibility": "none",
-      "icon-image": "level-crossing",
-      "icon-allow-overlap": true
-    },
-    "paint": {
-      "icon-opacity": ["match", ["get", "smaterial"], "Lead", 1, "Unknown - Material Unknown", 1, 0]
-    },
-    "metadata": {
-      "popup": true
-    }
-  },
-  {
     "id": "wMainInner",
     "name": "Water Mains",
     "type": "line",
@@ -2740,6 +2666,80 @@
     },
     "layout": {
       "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "utl_water_lsli",
+    "name": "Water Lead Service Lines",
+    "directory": "City Water System",
+    "group": "Water Layers",
+    "source": "utl_water_lsli",
+    "sourceType": {
+      "type": "vector",
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"]
+    },
+    "source-layer": "public.utl_water_lsli",
+    "children": true,
+    "type": "circle",
+    "paint": {
+      "circle-radius": {
+        "stops": [
+          [0, 0],
+          [12, 4],
+          [16, 9]
+        ]
+      },
+      "circle-stroke-width": 2,
+      "circle-stroke-color": "white",
+      "circle-color": [
+        "match",
+        ["get", "smaterial"],
+        "Lead",
+        "red",
+        "Unknown - Material Unknown",
+        "black",
+        "dodgerblue"
+      ]
+    },
+    "legend": "<div><span class='fa fa-circle' style='color:red'></span> Lead<br><span class='fa fa-circle' style='color:dodgerblue'></span> Plastic or Copper<br><span class='fa fa-circle' style='color:black'></span> Unknown</div>",
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": false,
+      "filterSchema": {
+        "smaterial": {
+          "type": "select",
+          "options": [
+            "Lead",
+            "Non-Lead - Copper",
+            "Non-Lead - Plastic",
+            "Unknown - Material Unknown"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": "utl_water_lsli_icon",
+    "source": "utl_water_lsli",
+    "sourceType": {
+      "type": "vector",
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"]
+    },
+    "source-layer": "public.utl_water_lsli",
+    "parent": "utl_water_lsli",
+    "type": "symbol",
+    "layout": {
+      "visibility": "none",
+      "icon-image": "level-crossing",
+      "icon-allow-overlap": true
+    },
+    "paint": {
+      "icon-opacity": ["match", ["get", "smaterial"], "Lead", 1, "Unknown - Material Unknown", 1, 0]
     },
     "metadata": {
       "popup": true
