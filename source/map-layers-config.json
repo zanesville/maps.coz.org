@@ -2726,12 +2726,15 @@
   {
     "id": "utl_water_lsli_icon",
     "source": "utl_water_lsli",
+    "directory": "City Water System",
+    "group": "Water Layers",
     "sourceType": {
       "type": "vector",
       "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"]
     },
     "source-layer": "public.utl_water_lsli",
     "parent": "utl_water_lsli",
+    "hidden": true,
     "type": "symbol",
     "layout": {
       "visibility": "none",
