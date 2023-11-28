@@ -94,9 +94,7 @@
     "source": "img_osip_2020",
     "sourceType": {
       "type": "raster",
-      "tiles": [
-        "https://311.coz.org/static/data/raster-tiles/img_osip_2020/{z}/{x}/{y}.webp"
-      ],
+      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_osip_2020/{z}/{x}/{y}.webp"],
       "tileSize": 512,
       "attribution": "<a href='https://ogrip.oit.ohio.gov/projectsinitiatives/statewideimagery.aspx' target='_blank'>OSIP III Imagery</a>",
       "maxzoom": 20
@@ -393,9 +391,7 @@
     "legend": "<div id='RS-1' title='Low-Density Single-Family'><span class='fa fa-square' style='color:YELLOW'></span> RS-1</div><div id='RS-2' title='Medium-Low-Density Single-Family'><span class='fa fa-square' style='color:GOLD'></span> RS-2</div><div id='RS-3' title='Medium-Density Single-Family'><span class='fa fa-square' style='color:ORANGE'></span> RS-3</div><div id='RS-4' title='Medium-High-Density Single-Family'><span class='fa fa-square' style='color:DARKORANGE'></span> RS-4</div><div id='RS-5' title='High-Density Single-Family'><span class='fa fa-square' style='color:rgb(179,78,11)'></span> RS-5</div><div id='RA-1' title='Attached Residential'><span class='fa fa-square' style='color:LIGHTBLUE'></span> RA-1</div><div id='RM-1' title='Low-Density Multi-Family'><span class='fa fa-square' style='color:DEEPSKYBLUE'></span> RM-1</div><div id='RM-2' title='High-Density Multi-Family'><span class='fa fa-square' style='color:ROYALBLUE'></span> RM-2</div><div id='C-1' title='Neighborhood Commercial'><span class='fa fa-square' style='color:pink'></span> C-1</div><div id='C-2' title='Community Commercial'><span class='fa fa-square' style='color:INDIANRED'></span> C-2</div><div id='C-3' title='Downtown Commercial'><span class='fa fa-square' style='color:CRIMSON'></span> C-3</div><div id='C-4' title='Highway Commercial'><span class='fa fa-square' style='color:MAROON'></span> C-4</div><div id='I-1' title='Industrial'><span class='fa fa-square' style='color:GRAY'></span> I-1</div><div id='O-1' title='Local Office'><span class='fa fa-square' style='color:VIOLET'></span> O-1</div><div id='O-2' title='Office Park'><span class='fa fa-square' style='color:MAGENTA'></span> O-2</div><div id='AE' title='Agriculture and Estate'><span class='fa fa-square' style='color:YELLOWGREEN'></span> AE</div><div id='PUD' title='Planned Unit Development'><span class='fa fa-square' style='color:PURPLE'></span> PUD</div>",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"],
       "promoteId": "id",
       "maxzoom": 22
     },
@@ -403,10 +399,7 @@
     "paint": {
       "fill-color": [
         "match",
-        [
-          "get",
-          "zoning_code"
-        ],
+        ["get", "zoning_code"],
         "RS-1",
         "YELLOW",
         "RS-2",
@@ -453,11 +446,7 @@
     },
     "metadata": {
       "popup2": "<table><tr><td>Zoning Code: </td><td>{{zoning_code}}</td><tr>Parcel: </>{{parcelnum}}<br><strong>Address: </strong> {{parcel_address}}",
-      "popup3": [
-        "parcelnum",
-        "parcel_address",
-        "zoning_code"
-      ],
+      "popup3": ["parcelnum", "parcel_address", "zoning_code"],
       "popup": true,
       "filterSchema": {
         "zoning_code": {
@@ -499,9 +488,7 @@
     "source": "zoningSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"],
       "promoteId": "id",
       "maxzoom": 22
     },
@@ -516,27 +503,13 @@
       "visibility": "none",
       "text-anchor": "center",
       "text-padding": 2,
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "zoning_code"
-        ]
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", ["get", "zoning_code"]],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            12,
-            18
-          ],
-          [
-            22,
-            22
-          ]
+          [12, 18],
+          [22, 22]
         ]
       }
     },
@@ -552,9 +525,7 @@
     "source": "cic_properies_source",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.dev_cic_parcels/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.dev_cic_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 22,
       "promoteId": "fid"
     },
@@ -591,11 +562,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "==",
-      "tract_status",
-      "Designated"
-    ],
+    "filter": ["==", "tract_status", "Designated"],
     "metadata": {
       "popup": true
     }
@@ -610,86 +577,28 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels",
     "paint": {
       "fill-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          100
-        ],
+        ["==", ["get", "land_use_code"], 100],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          400
-        ],
+        ["==", ["get", "land_use_code"], 400],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          500
-        ],
+        ["==", ["get", "land_use_code"], 500],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          501
-        ],
+        ["==", ["get", "land_use_code"], 501],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          502
-        ],
+        ["==", ["get", "land_use_code"], 502],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          503
-        ],
+        ["==", ["get", "land_use_code"], 503],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          504
-        ],
+        ["==", ["get", "land_use_code"], 504],
         "firebrick",
-        [
-          "==",
-          [
-            "get",
-            "land_use_code"
-          ],
-          505
-        ],
+        ["==", ["get", "land_use_code"], 505],
         "firebrick",
         "transparent"
       ],
@@ -713,22 +622,15 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels",
     "paint": {
       "fill-color": [
         "interpolate",
-        [
-          "linear"
-        ],
-        [
-          "get",
-          "prior_tax"
-        ],
+        ["linear"],
+        ["get", "prior_tax"],
         0,
         "transparent",
         1,
@@ -766,11 +668,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "==",
-      "status",
-      "Existing"
-    ],
+    "filter": ["==", "status", "Existing"],
     "metadata": {
       "popup": true
     }
@@ -795,30 +693,18 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-allow-overlap": true,
       "text-field": ["get", "name"],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            12,
-            16
-          ],
-          [
-            22,
-            20
-          ]
+          [12, 16],
+          [22, 20]
         ]
       }
     },
-    "filter": [
-      "==",
-      "status",
-      "Existing"
-    ],
+    "filter": ["==", "status", "Existing"],
     "metadata": {
       "popup": false
     }
@@ -917,27 +803,13 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "name"
-        ]
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", ["get", "name"]],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            12,
-            18
-          ],
-          [
-            22,
-            22
-          ]
+          [12, 18],
+          [22, 22]
         ]
       }
     },
@@ -958,58 +830,10 @@
     },
     "type": "circle",
     "paint": {
-      "circle-radius": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "city_row_parcel"
-          ],
-          true
-        ],
-        7,
-        4
-      ],
-      "circle-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "city_row_parcel"
-          ],
-          true
-        ],
-        "black",
-        "white"
-      ],
-      "circle-stroke-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "city_row_parcel"
-          ],
-          true
-        ],
-        "red",
-        "black"
-      ],
-      "circle-stroke-width": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "city_row_parcel"
-          ],
-          true
-        ],
-        2,
-        1
-      ]
+      "circle-radius": ["case", ["==", ["get", "city_row_parcel"], true], 7, 4],
+      "circle-color": ["case", ["==", ["get", "city_row_parcel"], true], "black", "white"],
+      "circle-stroke-color": ["case", ["==", ["get", "city_row_parcel"], true], "red", "black"],
+      "circle-stroke-width": ["case", ["==", ["get", "city_row_parcel"], true], 2, 1]
     },
     "layout": {
       "visibility": "none"
@@ -1041,11 +865,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!=",
-      "PARCELNUM",
-      "WW"
-    ],
+    "filter": ["!=", "PARCELNUM", "WW"],
     "metadata": {
       "popup": true
     }
@@ -1074,11 +894,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!=",
-      "PARCELNUM",
-      "WW"
-    ],
+    "filter": ["!=", "PARCELNUM", "WW"],
     "metadata": {
       "popup": true
     }
@@ -1093,9 +909,7 @@
     "children": true,
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "minzoom": 15,
@@ -1108,11 +922,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!=",
-      "PARCELNUM",
-      "WW"
-    ],
+    "filter": ["!=", "PARCELNUM", "WW"],
     "metadata": {
       "popup": true
     }
@@ -1128,61 +938,25 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "minzoom": 15,
     "source-layer": "public.adm_mus_parcels",
     "paint": {
-      "line-color": [
-        "case",
-        [
-          "==",
-          [
-            "feature-state",
-            "hover"
-          ],
-          1
-        ],
-        "black",
-        "rgba(255,255,255,1)"
-      ],
-      "line-width": [
-        "case",
-        [
-          "==",
-          [
-            "feature-state",
-            "hover"
-          ],
-          2
-        ],
-        2,
-        2
-      ],
+      "line-color": ["case", ["==", ["feature-state", "hover"], 1], "black", "rgba(255,255,255,1)"],
+      "line-width": ["case", ["==", ["feature-state", "hover"], 2], 2, 2],
       "line-opacity": {
         "stops": [
-          [
-            13,
-            0.1
-          ],
-          [
-            16,
-            1
-          ]
+          [13, 0.1],
+          [16, 1]
         ]
       }
     },
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!=",
-      "PARCELNUM",
-      "WW"
-    ],
+    "filter": ["!=", "PARCELNUM", "WW"],
     "metadata": {
       "popup": true
     }
@@ -1211,28 +985,15 @@
       "line-color": "white",
       "line-width": {
         "stops": [
-          [
-            10,
-            3
-          ],
-          [
-            22,
-            8
-          ]
+          [10, 3],
+          [22, 8]
         ]
       }
     },
     "layout": {
       "visibility": "visible"
     },
-    "filter": [
-      "==",
-      [
-        "get",
-        "st_type"
-      ],
-      "ALY"
-    ]
+    "filter": ["==", ["get", "st_type"], "ALY"]
   },
   {
     "id": "alley_labels",
@@ -1266,39 +1027,17 @@
       "symbol-spacing": 300,
       "visibility": "visible",
       "text-padding": 2,
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "st_name"
-        ],
-        " ALLEY"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", ["get", "st_name"], " ALLEY"],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            10,
-            9
-          ],
-          [
-            22,
-            14
-          ]
+          [10, 9],
+          [22, 14]
         ]
       }
     },
-    "filter": [
-      "==",
-      [
-        "get",
-        "st_type"
-      ],
-      "ALY"
-    ]
+    "filter": ["==", ["get", "st_type"], "ALY"]
   },
   {
     "id": "ParcelsLabels",
@@ -1324,21 +1063,13 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{parcelnum}",
       "text-anchor": "center",
       "text-size": {
         "stops": [
-          [
-            17,
-            12
-          ],
-          [
-            22,
-            16
-          ]
+          [17, 12],
+          [22, 16]
         ]
       },
       "text-padding": 6
@@ -1362,19 +1093,7 @@
       "generateId": true
     },
     "paint": {
-      "fill-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "to_"
-          ],
-          "ZANESVILLE"
-        ],
-        "fuchsia",
-        "gray"
-      ],
+      "fill-color": ["case", ["==", ["get", "to_"], "ZANESVILLE"], "fuchsia", "gray"],
       "fill-opacity": 0.6,
       "fill-outline-color": "black"
     },
@@ -1452,28 +1171,13 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Regular"
-      ],
-      "text-field": [
-        "concat",
-        "Ward ",
-        [
-          "get",
-          "ward"
-        ]
-      ],
+      "text-font": ["DIN Offc Pro Regular"],
+      "text-field": ["concat", "Ward ", ["get", "ward"]],
       "text-anchor": "center",
       "text-size": {
         "stops": [
-          [
-            17,
-            18
-          ],
-          [
-            22,
-            22
-          ]
+          [17, 18],
+          [22, 22]
         ]
       },
       "text-padding": 6
@@ -1529,10 +1233,7 @@
     "paint": {
       "line-color": "white",
       "line-width": 3,
-      "line-dasharray": [
-        2,
-        4
-      ]
+      "line-dasharray": [2, 4]
     },
     "layout": {
       "visibility": "none"
@@ -1551,9 +1252,7 @@
     "source": "addressSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_addresses",
@@ -1562,18 +1261,9 @@
       "circle-stroke-width": 1,
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            13,
-            1
-          ],
-          [
-            16,
-            3
-          ]
+          [0, 0],
+          [13, 1],
+          [16, 3]
         ]
       },
       "circle-stroke-color": "white",
@@ -1584,9 +1274,7 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": [
-        "lsn"
-      ]
+      "popup": ["lsn"]
     }
   },
   {
@@ -1600,9 +1288,7 @@
     "source": "addressSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_addresses",
@@ -1615,21 +1301,14 @@
     "minzoom": 17.1,
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Regular"
-      ],
+      "text-font": ["DIN Offc Pro Regular"],
       "text-field": "{lsn}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [
-        0.5,
-        0
-      ]
+      "text-offset": [0.5, 0]
     },
     "metadata": {
-      "popup": [
-        "lsn"
-      ]
+      "popup": ["lsn"]
     }
   },
   {
@@ -1653,11 +1332,7 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": [
-        "imp_eru",
-        "imp_master",
-        "imp_total_area"
-      ],
+      "popup": ["imp_eru", "imp_master", "imp_total_area"],
       "filterSchema": {
         "imp_total_area": {
           "type": "number"
@@ -1710,57 +1385,23 @@
     "paint": {
       "fill-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "owner"
-          ],
-          "City of Zanesville"
-        ],
+        ["==", ["get", "owner"], "City of Zanesville"],
         "darkgreen",
         "yellowgreen"
       ],
       "fill-outline-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "owner"
-          ],
-          "City of Zanesville"
-        ],
+        ["==", ["get", "owner"], "City of Zanesville"],
         "forestgreen",
         "lightgreen"
       ],
-      "fill-opacity": [
-        "case",
-        [
-          "==",
-          [
-            "feature-state",
-            "hover"
-          ],
-          1
-        ],
-        0.8,
-        0.3
-      ]
+      "fill-opacity": ["case", ["==", ["feature-state", "hover"], 1], 0.8, 0.3]
     },
     "layout": {
       "visibility": "none"
     },
     "metadata": {
-      "popup": [
-        "acres",
-        "amenities",
-        "img",
-        "info",
-        "location",
-        "name",
-        "owner"
-      ]
+      "popup": ["acres", "amenities", "img", "info", "location", "name", "owner"]
     }
   },
   {
@@ -1787,31 +1428,12 @@
     "paint": {
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "owner"
-          ],
-          "City of Zanesville"
-        ],
+        ["==", ["get", "owner"], "City of Zanesville"],
         "darkgreen",
         "yellowgreen"
       ],
       "line-width": 2,
-      "line-opacity": [
-        "case",
-        [
-          "==",
-          [
-            "feature-state",
-            "hover"
-          ],
-          1
-        ],
-        1,
-        0.8
-      ]
+      "line-opacity": ["case", ["==", ["feature-state", "hover"], 1], 1, 0.8]
     },
     "layout": {
       "visibility": "none"
@@ -1834,14 +1456,7 @@
     "paint": {
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "owner"
-          ],
-          "City of Zanesville"
-        ],
+        ["==", ["get", "owner"], "City of Zanesville"],
         "darkgreen",
         "yellowgreen"
       ],
@@ -1898,24 +1513,9 @@
       "generateId": true
     },
     "paint": {
-      "line-color": [
-        "case",
-        [
-          "==",
-          [
-            "feature-state",
-            "hover"
-          ],
-          1
-        ],
-        "yellow",
-        "forestgreen"
-      ],
+      "line-color": ["case", ["==", ["feature-state", "hover"], 1], "yellow", "forestgreen"],
       "line-width": 2,
-      "line-dasharray": [
-        5,
-        5
-      ]
+      "line-dasharray": [5, 5]
     },
     "layout": {
       "visibility": "none"
@@ -1942,27 +1542,15 @@
       "circle-color": "green",
       "circle-radius": {
         "stops": [
-          [
-            14,
-            3
-          ],
-          [
-            18,
-            8
-          ]
+          [14, 3],
+          [18, 8]
         ]
       },
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [
-            14,
-            2
-          ],
-          [
-            18,
-            4
-          ]
+          [14, 2],
+          [18, 4]
         ]
       },
       "circle-stroke-opacity": 0.6,
@@ -1998,27 +1586,13 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Regular"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "name"
-        ]
-      ],
+      "text-font": ["DIN Offc Pro Regular"],
+      "text-field": ["concat", ["get", "name"]],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            12,
-            8
-          ],
-          [
-            22,
-            18
-          ]
+          [12, 8],
+          [22, 18]
         ]
       }
     },
@@ -2044,12 +1618,7 @@
     "paint": {
       "line-color": "tan",
       "line-width": 1,
-      "line-dasharray": [
-        3,
-        1,
-        2,
-        1
-      ]
+      "line-dasharray": [3, 1, 2, 1]
     },
     "minzoom": 15,
     "layout": {
@@ -2113,37 +1682,13 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": [
-        "attribute",
-        "wetland_type"
-      ]
+      "popup": ["attribute", "wetland_type"]
     },
     "filter": [
       "any",
-      [
-        "==",
-        [
-          "get",
-          "wetland_ty"
-        ],
-        "Freshwater Emergent Wetland"
-      ],
-      [
-        "==",
-        [
-          "get",
-          "wetland_ty"
-        ],
-        "Freshwater Forested/Shrub Wetland"
-      ],
-      [
-        "==",
-        [
-          "get",
-          "wetland_ty"
-        ],
-        "Freshwater Pond"
-      ]
+      ["==", ["get", "wetland_ty"], "Freshwater Emergent Wetland"],
+      ["==", ["get", "wetland_ty"], "Freshwater Forested/Shrub Wetland"],
+      ["==", ["get", "wetland_ty"], "Freshwater Pond"]
     ]
   },
   {
@@ -2158,23 +1703,15 @@
     "source": "env_hydro_polygons",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.env_hydro_polygons/{z}/{x}/{y}.pbf"
-      ]
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.env_hydro_polygons/{z}/{x}/{y}.pbf"]
     },
     "source-layer": "public.env_hydro_polygons",
     "paint": {
       "fill-color": "#8dcbf7",
       "fill-opacity": {
         "stops": [
-          [
-            11,
-            0
-          ],
-          [
-            18,
-            0.4
-          ]
+          [11, 0],
+          [18, 0.4]
         ]
       },
       "fill-outline-color": "transparent"
@@ -2197,9 +1734,7 @@
     "type": "line",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.env_nhd_flowline/{z}/{x}/{y}.pbf"
-      ]
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.env_nhd_flowline/{z}/{x}/{y}.pbf"]
     },
     "source-layer": "public.env_nhd_flowline",
     "paint": {
@@ -2207,26 +1742,15 @@
       "line-width": 2,
       "line-opacity": {
         "stops": [
-          [
-            12,
-            0
-          ],
-          [
-            18,
-            0.2
-          ]
+          [12, 0],
+          [18, 0.2]
         ]
       }
     },
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!in",
-      "gnis_name",
-      "Muskingum River",
-      "Licking River"
-    ],
+    "filter": ["!in", "gnis_name", "Muskingum River", "Licking River"],
     "metadata": {
       "popup": true
     }
@@ -2249,32 +1773,11 @@
     "paint": {
       "fill-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "zone_subty"
-          ],
-          "FLOODWAY"
-        ],
+        ["==", ["get", "zone_subty"], "FLOODWAY"],
         "DODGERBLUE",
-        [
-          "==",
-          [
-            "get",
-            "zone_subty"
-          ],
-          "0.2 PCT ANNUAL CHANCE FLOOD HAZARD"
-        ],
+        ["==", ["get", "zone_subty"], "0.2 PCT ANNUAL CHANCE FLOOD HAZARD"],
         "orangered",
-        [
-          "==",
-          [
-            "get",
-            "zone_subty"
-          ],
-          "AREA WITH REDUCED RISK DUE TO LEVEE"
-        ],
+        ["==", ["get", "zone_subty"], "AREA WITH REDUCED RISK DUE TO LEVEE"],
         "MEDIUMVIOLETRED",
         "turquoise"
       ],
@@ -2285,12 +1788,7 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": [
-        "zone_subty",
-        "fld_zone",
-        "dfirm_id",
-        "fld_ar_id"
-      ]
+      "popup": ["zone_subty", "fld_zone", "dfirm_id", "fld_ar_id"]
     }
   },
   {
@@ -2313,14 +1811,8 @@
       "line-width": {
         "property": "aadt_total",
         "stops": [
-          [
-            0,
-            5
-          ],
-          [
-            55056,
-            11
-          ]
+          [0, 5],
+          [55056, 11]
         ]
       },
       "line-color": "gray"
@@ -2353,56 +1845,26 @@
       "line-color": {
         "property": "aadt_total",
         "stops": [
-          [
-            0,
-            "#2166ac"
-          ],
-          [
-            2275,
-            "#67a9cf"
-          ],
-          [
-            5892,
-            "#d1e5f0"
-          ],
-          [
-            10188,
-            "orange"
-          ],
-          [
-            16498,
-            "darkorange"
-          ],
-          [
-            26291,
-            "#b2182b"
-          ]
+          [0, "#2166ac"],
+          [2275, "#67a9cf"],
+          [5892, "#d1e5f0"],
+          [10188, "orange"],
+          [16498, "darkorange"],
+          [26291, "#b2182b"]
         ]
       },
       "line-width": {
         "property": "aadt_total",
         "stops": [
-          [
-            0,
-            3
-          ],
-          [
-            16498,
-            9
-          ]
+          [0, 3],
+          [16498, 9]
         ]
       },
       "line-opacity": {
         "property": "aadt_total",
         "stops": [
-          [
-            0,
-            0.6
-          ],
-          [
-            16498,
-            1
-          ]
+          [0, 0.6],
+          [16498, 1]
         ]
       }
     },
@@ -2424,9 +1886,7 @@
     "group": "Mapillary",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://tiles3.mapillary.com/v0.1/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://tiles3.mapillary.com/v0.1/{z}/{x}/{y}.mvt"],
       "minzoom": 0,
       "maxzoom": 14,
       "promoteId": "key"
@@ -2445,22 +1905,8 @@
     },
     "filter": [
       "all",
-      [
-        "==",
-        [
-          "get",
-          "userkey"
-        ],
-        "WpzhyQeWLPnZ_TwvxcdU_w"
-      ],
-      [
-        "==",
-        [
-          "get",
-          "pano"
-        ],
-        1
-      ]
+      ["==", ["get", "userkey"], "WpzhyQeWLPnZ_TwvxcdU_w"],
+      ["==", ["get", "pano"], 1]
     ],
     "metadata": {
       "popup": true
@@ -2487,22 +1933,8 @@
     },
     "filter": [
       "all",
-      [
-        "==",
-        [
-          "get",
-          "userkey"
-        ],
-        "WpzhyQeWLPnZ_TwvxcdU_w"
-      ],
-      [
-        "==",
-        [
-          "get",
-          "pano"
-        ],
-        1
-      ]
+      ["==", ["get", "userkey"], "WpzhyQeWLPnZ_TwvxcdU_w"],
+      ["==", ["get", "pano"], 1]
     ],
     "metadata": {
       "popup": true
@@ -2528,22 +1960,8 @@
     },
     "filter": [
       "all",
-      [
-        "==",
-        [
-          "get",
-          "userkey"
-        ],
-        "WpzhyQeWLPnZ_TwvxcdU_w"
-      ],
-      [
-        "==",
-        [
-          "get",
-          "pano"
-        ],
-        1
-      ]
+      ["==", ["get", "userkey"], "WpzhyQeWLPnZ_TwvxcdU_w"],
+      ["==", ["get", "pano"], 1]
     ],
     "metadata": {
       "popup": true
@@ -2571,21 +1989,7 @@
       "line-opacity": 1,
       "line-width": [
         "case",
-        [
-          "in",
-          [
-            "get",
-            "road_type"
-          ],
-          [
-            "literal",
-            [
-              "Service",
-              "Alley",
-              "Trail"
-            ]
-          ]
-        ],
+        ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"]]],
         7,
         10
       ]
@@ -2617,89 +2021,26 @@
     "paint": {
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "pci_predicted_category"
-          ],
-          "EXCELLENT"
-        ],
+        ["==", ["get", "pci_predicted_category"], "EXCELLENT"],
         "#009392",
-        [
-          "==",
-          [
-            "get",
-            "pci_predicted_category"
-          ],
-          "VERY GOOD"
-        ],
+        ["==", ["get", "pci_predicted_category"], "VERY GOOD"],
         "#39b185",
-        [
-          "==",
-          [
-            "get",
-            "pci_predicted_category"
-          ],
-          "GOOD"
-        ],
+        ["==", ["get", "pci_predicted_category"], "GOOD"],
         "#9ccb86",
-        [
-          "==",
-          [
-            "get",
-            "pci_predicted_category"
-          ],
-          "FAIR"
-        ],
+        ["==", ["get", "pci_predicted_category"], "FAIR"],
         "#e9e29c",
-        [
-          "==",
-          [
-            "get",
-            "pci_predicted_category"
-          ],
-          "POOR"
-        ],
+        ["==", ["get", "pci_predicted_category"], "POOR"],
         "orange",
-        [
-          "==",
-          [
-            "get",
-            "pci_predicted_category"
-          ],
-          "VERY POOR"
-        ],
+        ["==", ["get", "pci_predicted_category"], "VERY POOR"],
         "red",
-        [
-          "==",
-          [
-            "get",
-            "pci_predicted_category"
-          ],
-          "FAILED"
-        ],
+        ["==", ["get", "pci_predicted_category"], "FAILED"],
         "darkred",
         "gray"
       ],
       "line-opacity": 1,
       "line-width": [
         "case",
-        [
-          "in",
-          [
-            "get",
-            "road_type"
-          ],
-          [
-            "literal",
-            [
-              "Service",
-              "Alley",
-              "Trail"
-            ]
-          ]
-        ],
+        ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"]]],
         4,
         6
       ]
@@ -2715,16 +2056,7 @@
         },
         "pci_predicted_category": {
           "type": "select",
-          "options": [
-            "",
-            "EXCELLENT",
-            "VERY GOOD",
-            "GOOD",
-            "FAIR",
-            "POOR",
-            "VERY POOR",
-            "FAILED"
-          ]
+          "options": ["", "EXCELLENT", "VERY GOOD", "GOOD", "FAIR", "POOR", "VERY POOR", "FAILED"]
         }
       }
     }
@@ -2748,21 +2080,7 @@
     "paint": {
       "line-color": [
         "case",
-        [
-          "in",
-          [
-            "get",
-            "road_type"
-          ],
-          [
-            "literal",
-            [
-              "Service",
-              "Alley",
-              "Trail"
-            ]
-          ]
-        ],
+        ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"]]],
         "blue",
         "firebrick"
       ],
@@ -2773,20 +2091,9 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": [
-        "name",
-        "date_last_paved",
-        "road_type"
-      ]
+      "popup": ["name", "date_last_paved", "road_type"]
     },
-    "filter": [
-      ">=",
-      [
-        "get",
-        "date_last_paved"
-      ],
-      "2016-01-01"
-    ]
+    "filter": [">=", ["get", "date_last_paved"], "2016-01-01"]
   },
   {
     "id": "utl_mus_sanitary_lines",
@@ -2858,36 +2165,18 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            2
-          ],
-          [
-            16,
-            5
-          ]
+          [0, 0],
+          [12, 2],
+          [16, 5]
         ]
       },
       "circle-color": "firebrick",
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 2]
         ]
       },
       "circle-pitch-scale": "map",
@@ -2966,10 +2255,7 @@
     "paint": {
       "line-width": 2,
       "line-color": "MEDIUMSPRINGGREEN",
-      "line-dasharray": [
-        2,
-        1
-      ]
+      "line-dasharray": [2, 1]
     },
     "layout": {
       "visibility": "none"
@@ -3001,39 +2287,13 @@
       "icon-ignore-placement": true,
       "icon-image": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "SERVICETYPE"
-          ],
-          "Domestic"
-        ],
+        ["==", ["get", "SERVICETYPE"], "Domestic"],
         "square-cyan",
-        [
-          "==",
-          [
-            "get",
-            "SERVICETYPE"
-          ],
-          "Commercial"
-        ],
+        ["==", ["get", "SERVICETYPE"], "Commercial"],
         "square-yellow",
         "circle-black2"
       ],
-      "icon-size": [
-        "interpolate",
-        [
-          "linear"
-        ],
-        [
-          "zoom"
-        ],
-        14,
-        0.4,
-        17,
-        0.7
-      ],
+      "icon-size": ["interpolate", ["linear"], ["zoom"], 14, 0.4, 17, 0.7],
       "visibility": "none"
     },
     "metadata": {
@@ -3062,23 +2322,9 @@
     "paint": {
       "text-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "SERVICETYPE"
-          ],
-          "Domestic"
-        ],
+        ["==", ["get", "SERVICETYPE"], "Domestic"],
         "#00ffc5",
-        [
-          "==",
-          [
-            "get",
-            "SERVICETYPE"
-          ],
-          "Commercial"
-        ],
+        ["==", ["get", "SERVICETYPE"], "Commercial"],
         "#fce205",
         "black"
       ],
@@ -3088,16 +2334,11 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{ADDRESS}",
       "text-anchor": "bottom-left",
       "text-size": 13,
-      "text-offset": [
-        0.4,
-        -0.4
-      ]
+      "text-offset": [0.4, -0.4]
     },
     "metadata": {
       "popup": true
@@ -3200,57 +2441,31 @@
     "paint": {
       "fill-color": [
         "match",
-        [
-          "get",
-          "weekday"
-        ],
-        [
-          "Monday"
-        ],
+        ["get", "weekday"],
+        ["Monday"],
         "blue",
-        [
-          "Tuesday"
-        ],
+        ["Tuesday"],
         "firebrick",
-        [
-          "Wednesday"
-        ],
+        ["Wednesday"],
         "darkorange",
-        [
-          "Thursday"
-        ],
+        ["Thursday"],
         "dodgerblue",
-        [
-          "Friday"
-        ],
+        ["Friday"],
         "green",
         "black"
       ],
       "fill-outline-color": [
         "match",
-        [
-          "get",
-          "weekday"
-        ],
-        [
-          "Monday"
-        ],
+        ["get", "weekday"],
+        ["Monday"],
         "blue",
-        [
-          "Tuesday"
-        ],
+        ["Tuesday"],
         "firebrick",
-        [
-          "Wednesday"
-        ],
+        ["Wednesday"],
         "darkorange",
-        [
-          "Thursday"
-        ],
+        ["Thursday"],
         "dodgerblue",
-        [
-          "Friday"
-        ],
+        ["Friday"],
         "green",
         "black"
       ],
@@ -3284,29 +2499,16 @@
       "text-halo-width": 1.5,
       "text-halo-color": [
         "match",
-        [
-          "get",
-          "weekday"
-        ],
-        [
-          "Monday"
-        ],
+        ["get", "weekday"],
+        ["Monday"],
         "blue",
-        [
-          "Tuesday"
-        ],
+        ["Tuesday"],
         "firebrick",
-        [
-          "Wednesday"
-        ],
+        ["Wednesday"],
         "darkorange",
-        [
-          "Thursday"
-        ],
+        ["Thursday"],
         "dodgerblue",
-        [
-          "Friday"
-        ],
+        ["Friday"],
         "green",
         "black"
       ],
@@ -3316,28 +2518,13 @@
       "visibility": "none",
       "text-anchor": "center",
       "text-padding": 2,
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": [
-        "concat",
-        "Zone ",
-        [
-          "get",
-          "zone"
-        ]
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", "Zone ", ["get", "zone"]],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [
-            12,
-            18
-          ],
-          [
-            22,
-            22
-          ]
+          [12, 18],
+          [22, 22]
         ]
       }
     },
@@ -3356,32 +2543,16 @@
     "source": "wMainSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_water_agol_main",
     "paint": {
       "line-width": [
         "case",
-        [
-          ">",
-          [
-            "get",
-            "DIAMETER"
-          ],
-          19
-        ],
+        [">", ["get", "DIAMETER"], 19],
         10,
-        [
-          ">",
-          [
-            "get",
-            "DIAMETER"
-          ],
-          11
-        ],
+        [">", ["get", "DIAMETER"], 11],
         8,
         6
       ],
@@ -3389,6 +2560,80 @@
     },
     "layout": {
       "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "utl_water_lsli",
+    "name": "Water Lead Service Lines",
+    "directory": "City Water System",
+    "group": "Water Layers",
+    "source": "utl_water_lsli",
+    "sourceType": {
+      "type": "vector",
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"]
+    },
+    "source-layer": "public.utl_water_lsli",
+    "children": true,
+    "type": "circle",
+    "paint": {
+      "circle-radius": {
+        "stops": [
+          [0, 0],
+          [12, 4],
+          [16, 9]
+        ]
+      },
+      "circle-stroke-width": 2,
+      "circle-stroke-color": "white",
+      "circle-color": [
+        "match",
+        ["get", "smaterial"],
+        "Lead",
+        "red",
+        "Unknown - Material Unknown",
+        "black",
+        "dodgerblue"
+      ]
+    },
+    "legend": "<div><span class='fa fa-circle' style='color:red'></span> Lead<br><span class='fa fa-circle' style='color:dodgerblue'></span> Plastic or Copper<br><span class='fa fa-circle' style='color:black'></span> Unknown</div>",
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": false,
+      "filterSchema": {
+        "smaterial": {
+          "type": "select",
+          "options": [
+            "Lead",
+            "Non-Lead - Copper",
+            "Non-Lead - Plastic",
+            "Unknown - Material Unknown"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": "utl_water_lsli_icon",
+    "source": "utl_water_lsli",
+    "sourceType": {
+      "type": "vector",
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"]
+    },
+    "source-layer": "public.utl_water_lsli",
+    "parent": "utl_water_lsli",
+    "type": "symbol",
+    "layout": {
+      "visibility": "none",
+      "icon-image": "level-crossing",
+      "icon-allow-overlap": true
+    },
+    "paint": {
+      "icon-opacity": ["match", ["get", "smaterial"], "Lead", 1, "Unknown - Material Unknown", 1, 0]
     },
     "metadata": {
       "popup": true
@@ -3405,39 +2650,25 @@
     "source": "wMainSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_water_agol_main",
     "paint": {
       "line-width": [
         "case",
-        [
-          ">",
-          [
-            "get",
-            "DIAMETER"
-          ],
-          19
-        ],
+        [">", ["get", "DIAMETER"], 19],
         7,
-        [
-          ">",
-          [
-            "get",
-            "DIAMETER"
-          ],
-          11
-        ],
+        [">", ["get", "DIAMETER"], 11],
         5,
         3
       ],
       "line-color": [
         "case",
-        ["==", ["get","SYSTEM"], "High Pressure"],"#0062ff",
-        ["==", ["get","SYSTEM"], "Low Pressure"],"#26d9d0",
+        ["==", ["get", "SYSTEM"], "High Pressure"],
+        "#0062ff",
+        ["==", ["get", "SYSTEM"], "Low Pressure"],
+        "#26d9d0",
         "deeppink"
       ]
     },
@@ -3457,9 +2688,7 @@
     "group": "Water Layers",
     "sourceType": {
       "type": "geojson",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"
-      ],
+      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_water_agol_main",
@@ -3471,36 +2700,18 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "DIAMETER"
-        ],
-        "in"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", ["get", "DIAMETER"], "in"],
       "symbol-placement": "line",
       "symbol-spacing": 500,
       "text-anchor": "center",
-      "text-offset": [
-        0,
-        0
-      ],
+      "text-offset": [0, 0],
       "text-allow-overlap": true,
       "text-ignore-placement": true,
       "text-size": {
         "stops": [
-          [
-            17,
-            12
-          ],
-          [
-            22,
-            16
-          ]
+          [17, 12],
+          [22, 16]
         ]
       },
       "text-padding": 0
@@ -3519,9 +2730,7 @@
     "source-layer": "public.utl_water_fitting",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.utl_water_fitting/{z}/{x}/{y}.pbf"
-      ]
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_fitting/{z}/{x}/{y}.pbf"]
     },
     "paint": {
       "circle-radius": 5,
@@ -3588,97 +2797,32 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            6
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 6]
         ]
       },
       "circle-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "VALVETYPE"
-          ],
-          "Main"
-        ],
+        ["==", ["get", "VALVETYPE"], "Main"],
         "#00C5FF",
-        [
-          "==",
-          [
-            "get",
-            "VALVETYPE"
-          ],
-          "Hydrant"
-        ],
+        ["==", ["get", "VALVETYPE"], "Hydrant"],
         "red",
-        [
-          "==",
-          [
-            "get",
-            "VALVETYPE"
-          ],
-          "Plug"
-        ],
+        ["==", ["get", "VALVETYPE"], "Plug"],
         "orange",
-        [
-          "==",
-          [
-            "get",
-            "VALVETYPE"
-          ],
-          "Fire Line"
-        ],
+        ["==", ["get", "VALVETYPE"], "Fire Line"],
         "yellow",
-        [
-          "==",
-          [
-            "get",
-            "VALVETYPE"
-          ],
-          "Butterfly"
-        ],
+        ["==", ["get", "VALVETYPE"], "Butterfly"],
         "white",
-        [
-          "==",
-          [
-            "get",
-            "VALVETYPE"
-          ],
-          "Boundary Valve"
-        ],
+        ["==", ["get", "VALVETYPE"], "Boundary Valve"],
         "fuchsia",
         "black"
       ],
-      "circle-stroke-color": [
-        "case",
-        [
-          "has",
-          "VALVETYPE"
-        ],
-        "black",
-        "red"
-      ],
+      "circle-stroke-color": ["case", ["has", "VALVETYPE"], "black", "red"],
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [16, 2]
         ]
       },
       "circle-pitch-scale": "map",
@@ -3710,33 +2854,12 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            0.5
-          ],
-          [
-            16,
-            3
-          ]
+          [0, 0],
+          [12, 0.5],
+          [16, 3]
         ]
       },
-      "circle-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "VALVETYPE"
-          ],
-          "Boundary Valve"
-        ],
-        "black",
-        "black"
-      ],
+      "circle-color": ["case", ["==", ["get", "VALVETYPE"], "Boundary Valve"], "black", "black"],
       "circle-pitch-scale": "map",
       "circle-pitch-alignment": "map"
     },
@@ -3761,32 +2884,17 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            5
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 5]
         ]
       },
       "circle-color": "whitesmoke",
       "circle-stroke-color": "royalblue",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [16, 2]
         ]
       },
       "circle-pitch-scale": "map",
@@ -3821,45 +2929,17 @@
       "icon-ignore-placement": true,
       "icon-image": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "ACCESS_TYPE"
-          ],
-          "Curb Stop Valve"
-        ],
+        ["==", ["get", "ACCESS_TYPE"], "Curb Stop Valve"],
         "circle-seagreen2",
-        [
-          "==",
-          [
-            "get",
-            "ACCESS_TYPE"
-          ],
-          "Meter Pit"
-        ],
+        ["==", ["get", "ACCESS_TYPE"], "Meter Pit"],
         "triangle-seagreen2",
         "circle-black2"
       ],
       "icon-size": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "ACCESS_TYPE"
-          ],
-          "Curb Stop Valve"
-        ],
+        ["==", ["get", "ACCESS_TYPE"], "Curb Stop Valve"],
         0.7,
-        [
-          "==",
-          [
-            "get",
-            "ACCESS_TYPE"
-          ],
-          "Meter Pit"
-        ],
+        ["==", ["get", "ACCESS_TYPE"], "Meter Pit"],
         1,
         0.7
       ],
@@ -3884,18 +2964,9 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            2
-          ],
-          [
-            16,
-            7
-          ]
+          [0, 0],
+          [12, 2],
+          [16, 7]
         ]
       },
       "circle-color": "red",
@@ -3903,18 +2974,9 @@
       "circle-stroke-opacity": 1,
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            2
-          ],
-          [
-            16,
-            3
-          ]
+          [0, 0],
+          [12, 2],
+          [16, 3]
         ]
       },
       "circle-pitch-scale": "map",
@@ -3947,16 +3009,11 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{FACILITYID}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [
-        0.5,
-        -0.4
-      ]
+      "text-offset": [0.5, -0.4]
     },
     "metadata": {
       "popup": true
@@ -3976,19 +3033,7 @@
     },
     "paint": {
       "fill-color": "firebrick",
-      "fill-opacity": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "missing"
-          ],
-          1
-        ],
-        0.9,
-        0.4
-      ],
+      "fill-opacity": ["case", ["==", ["get", "missing"], 1], 0.9, 0.4],
       "fill-outline-color": "white"
     },
     "layout": {
@@ -4013,18 +3058,9 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            4
-          ],
-          [
-            16,
-            12
-          ]
+          [0, 0],
+          [12, 4],
+          [16, 12]
         ]
       },
       "circle-color": "red",
@@ -4036,11 +3072,7 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": [
-        "address",
-        "name",
-        "type"
-      ]
+      "popup": ["address", "name", "type"]
     }
   },
   {
@@ -4057,32 +3089,8 @@
     },
     "paint": {
       "circle-radius": 6,
-      "circle-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "inspect_ok"
-          ],
-          "Yes"
-        ],
-        "white",
-        "white"
-      ],
-      "circle-stroke-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "inspect_ok"
-          ],
-          "Yes"
-        ],
-        "black",
-        "red"
-      ],
+      "circle-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
+      "circle-stroke-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
       "circle-stroke-width": 2.5
     },
     "layout": {
@@ -4117,32 +3125,8 @@
     },
     "paint": {
       "circle-radius": 6,
-      "circle-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "inspect_ok"
-          ],
-          "Yes"
-        ],
-        "white",
-        "white"
-      ],
-      "circle-stroke-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "inspect_ok"
-          ],
-          "Yes"
-        ],
-        "black",
-        "red"
-      ],
+      "circle-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
+      "circle-stroke-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
       "circle-stroke-width": 2.5
     },
     "layout": {
@@ -4176,45 +3160,14 @@
     },
     "paint": {
       "circle-radius": 6,
-      "circle-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "inspect_ok"
-          ],
-          "Yes"
-        ],
-        "white",
-        "white"
-      ],
-      "circle-stroke-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "inspect_ok"
-          ],
-          "Yes"
-        ],
-        "black",
-        "red"
-      ],
+      "circle-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
+      "circle-stroke-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
       "circle-stroke-width": 2.5
     },
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "==",
-      [
-        "get",
-        "CRITICALVALVE"
-      ],
-      "Yes"
-    ],
+    "filter": ["==", ["get", "CRITICALVALVE"], "Yes"],
     "metadata": {
       "popup": [
         "DIAMETER",
@@ -4323,23 +3276,9 @@
     "paint": {
       "fill-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "separated"
-          ],
-          "No"
-        ],
+        ["==", ["get", "separated"], "No"],
         "red",
-        [
-          "==",
-          [
-            "get",
-            "separated"
-          ],
-          "Yes"
-        ],
+        ["==", ["get", "separated"], "Yes"],
         "green",
         "purple"
       ],
@@ -4373,9 +3312,7 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{cso_area}"
     },
     "metadata": {
@@ -4402,23 +3339,9 @@
     "paint": {
       "line-width": [
         "case",
-        [
-          ">",
-          [
-            "get",
-            "diameter"
-          ],
-          24
-        ],
+        [">", ["get", "diameter"], 24],
         8,
-        [
-          ">",
-          [
-            "get",
-            "diameter"
-          ],
-          11
-        ],
+        [">", ["get", "diameter"], 11],
         6,
         5
       ],
@@ -4451,72 +3374,23 @@
     "paint": {
       "line-width": [
         "case",
-        [
-          ">",
-          [
-            "get",
-            "diameter"
-          ],
-          24
-        ],
+        [">", ["get", "diameter"], 24],
         6,
-        [
-          ">",
-          [
-            "get",
-            "diameter"
-          ],
-          11
-        ],
+        [">", ["get", "diameter"], 11],
         4,
         3
       ],
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "subclass"
-          ],
-          "Interceptor"
-        ],
+        ["==", ["get", "subclass"], "Interceptor"],
         "darkgreen",
-        [
-          "==",
-          [
-            "get",
-            "subclass"
-          ],
-          "Sanitary"
-        ],
+        ["==", ["get", "subclass"], "Sanitary"],
         "limegreen",
-        [
-          "==",
-          [
-            "get",
-            "subclass"
-          ],
-          "Combination"
-        ],
+        ["==", ["get", "subclass"], "Combination"],
         "sienna",
-        [
-          "==",
-          [
-            "get",
-            "subclass"
-          ],
-          "Abandoned"
-        ],
+        ["==", ["get", "subclass"], "Abandoned"],
         "gray",
-        [
-          "==",
-          [
-            "get",
-            "subclass"
-          ],
-          "Force Main"
-        ],
+        ["==", ["get", "subclass"], "Force Main"],
         "#202020",
         "lightgray"
       ]
@@ -4529,13 +3403,7 @@
       "filterSchema": {
         "subclass": {
           "type": "select",
-          "options": [
-            "",
-            "Interceptor",
-            "Sanitary",
-            "Combination",
-            "Force Main"
-          ]
+          "options": ["", "Interceptor", "Sanitary", "Combination", "Force Main"]
         }
       }
     }
@@ -4620,32 +3488,11 @@
       "line-width": 3,
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "status"
-          ],
-          "active"
-        ],
+        ["==", ["get", "status"], "active"],
         "orange",
-        [
-          "==",
-          [
-            "get",
-            "status"
-          ],
-          "capped"
-        ],
+        ["==", ["get", "status"], "capped"],
         "gray",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "storm"
-        ],
+        ["==", ["get", "class"], "storm"],
         "fuchsia",
         "red"
       ]
@@ -4711,36 +3558,18 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
-      "text-field": [
-        "concat",
-        [
-          "get",
-          "diameter"
-        ],
-        "in"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
+      "text-field": ["concat", ["get", "diameter"], "in"],
       "symbol-placement": "line",
       "symbol-spacing": 500,
       "text-anchor": "top",
-      "text-offset": [
-        0,
-        0.5
-      ],
+      "text-offset": [0, 0.5],
       "text-allow-overlap": true,
       "text-ignore-placement": true,
       "text-size": {
         "stops": [
-          [
-            17,
-            12
-          ],
-          [
-            22,
-            16
-          ]
+          [17, 12],
+          [22, 16]
         ]
       },
       "text-padding": 0
@@ -4764,48 +3593,18 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            2
-          ],
-          [
-            16,
-            5
-          ]
+          [0, 0],
+          [12, 2],
+          [16, 5]
         ]
       },
-      "circle-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "MH"
-        ],
-        "limegreen",
-        "black"
-      ],
+      "circle-color": ["case", ["==", ["get", "class"], "MH"], "limegreen", "black"],
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 2]
         ]
       },
       "circle-pitch-scale": "map",
@@ -4838,16 +3637,11 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{fieldid}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [
-        0.5,
-        -0.2
-      ]
+      "text-offset": [0.5, -0.2]
     },
     "metadata": {
       "popup": true
@@ -4860,11 +3654,7 @@
     "directory": "Sanitary Sewer System",
     "group": "Sanitary Sewer Layers",
     "metadata": {
-      "popup": [
-        "name",
-        "source",
-        "created"
-      ]
+      "popup": ["name", "source", "created"]
     },
     "source": "utl_sanitary_master_meters",
     "sourceType": {
@@ -4875,36 +3665,18 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            4
-          ],
-          [
-            16,
-            8
-          ]
+          [0, 0],
+          [12, 4],
+          [16, 8]
         ]
       },
       "circle-color": "firebrick",
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 2]
         ]
       },
       "circle-pitch-scale": "map",
@@ -4929,78 +3701,29 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            6
-          ],
-          [
-            16,
-            10
-          ]
+          [0, 0],
+          [12, 6],
+          [16, 10]
         ]
       },
       "circle-color": [
         "case",
         [
           "in",
-          [
-            "get",
-            "rack_id"
-          ],
-          [
-            "literal",
-            [
-              "R-15",
-              "R-17",
-              "R-18",
-              "R-19",
-              "R-07",
-              "R-02",
-              "R-04",
-              "R-05"
-            ]
-          ]
+          ["get", "rack_id"],
+          ["literal", ["R-15", "R-17", "R-18", "R-19", "R-07", "R-02", "R-04", "R-05"]]
         ],
         "green",
-        [
-          "in",
-          [
-            "get",
-            "rack_id"
-          ],
-          [
-            "literal",
-            [
-              "R-11",
-              "R-10",
-              "R-09",
-              "R-08",
-              "R-06"
-            ]
-          ]
-        ],
+        ["in", ["get", "rack_id"], ["literal", ["R-11", "R-10", "R-09", "R-08", "R-06"]]],
         "purple",
         "red"
       ],
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            1
-          ],
-          [
-            16,
-            2
-          ]
+          [0, 0],
+          [12, 1],
+          [16, 2]
         ]
       },
       "circle-opacity": 0.8
@@ -5030,42 +3753,11 @@
         "case",
         [
           "in",
-          [
-            "get",
-            "rack_id"
-          ],
-          [
-            "literal",
-            [
-              "R-15",
-              "R-17",
-              "R-18",
-              "R-19",
-              "R-07",
-              "R-02",
-              "R-04",
-              "R-05"
-            ]
-          ]
+          ["get", "rack_id"],
+          ["literal", ["R-15", "R-17", "R-18", "R-19", "R-07", "R-02", "R-04", "R-05"]]
         ],
         "green",
-        [
-          "in",
-          [
-            "get",
-            "rack_id"
-          ],
-          [
-            "literal",
-            [
-              "R-11",
-              "R-10",
-              "R-09",
-              "R-08",
-              "R-06"
-            ]
-          ]
-        ],
+        ["in", ["get", "rack_id"], ["literal", ["R-11", "R-10", "R-09", "R-08", "R-06"]]],
         "purple",
         "red"
       ],
@@ -5075,16 +3767,11 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "{rack_id}",
       "text-anchor": "bottom-left",
       "text-size": 16,
-      "text-offset": [
-        0.5,
-        -0.2
-      ]
+      "text-offset": [0.5, -0.2]
     },
     "metadata": {
       "popup": false
@@ -5111,11 +3798,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!=",
-      "feature",
-      "Abandoned"
-    ],
+    "filter": ["!=", "feature", "Abandoned"],
     "metadata": {
       "popup": true
     }
@@ -5138,68 +3821,19 @@
       "line-width": 4,
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Private"
-        ],
+        ["==", ["get", "class"], "Private"],
         "goldenrod",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Storm Main"
-        ],
+        ["==", ["get", "class"], "Storm Main"],
         "#FB00FF",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Combination"
-        ],
+        ["==", ["get", "class"], "Combination"],
         "sienna",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Stream"
-        ],
+        ["==", ["get", "class"], "Stream"],
         "rgb(0,169,230)",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Ditch"
-        ],
+        ["==", ["get", "class"], "Ditch"],
         "rgb(0,255,197)",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Culvert"
-        ],
+        ["==", ["get", "class"], "Culvert"],
         "#333",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Abandoned"
-        ],
+        ["==", ["get", "class"], "Abandoned"],
         "gray",
         "gray"
       ],
@@ -5208,13 +3842,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "!in",
-      "class",
-      "Ditch",
-      "Stream",
-      "Stream CSO Outfall"
-    ],
+    "filter": ["!in", "class", "Ditch", "Stream", "Stream CSO Outfall"],
     "metadata": {
       "popup": true
     }
@@ -5234,38 +3862,14 @@
     },
     "paint": {
       "line-width": 4,
-      "line-dasharray": [
-        3,
-        2
-      ],
+      "line-dasharray": [3, 2],
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Stream"
-        ],
+        ["==", ["get", "class"], "Stream"],
         "rgb(0,169,230)",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Ditch"
-        ],
+        ["==", ["get", "class"], "Ditch"],
         "rgb(0,255,197)",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Stream CSO Outfall"
-        ],
+        ["==", ["get", "class"], "Stream CSO Outfall"],
         "darkorange",
         "gray"
       ],
@@ -5274,13 +3878,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "in",
-      "class",
-      "Ditch",
-      "Stream",
-      "Stream CSO Outfall"
-    ],
+    "filter": ["in", "class", "Ditch", "Stream", "Stream CSO Outfall"],
     "metadata": {
       "popup": true
     }
@@ -5328,43 +3926,13 @@
       "generateId": true
     },
     "paint": {
-      "circle-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Inlet"
-        ],
-        "fuchsia",
-        "black"
-      ],
+      "circle-color": ["case", ["==", ["get", "class"], "Inlet"], "fuchsia", "black"],
       "circle-radius": 5,
       "circle-opacity": 0.3,
       "circle-stroke-color": "white",
       "circle-stroke-width": 2
     },
-    "filter": [
-      "all",
-      [
-        "!=",
-        [
-          "get",
-          "class"
-        ],
-        "CSO Outfall"
-      ],
-      [
-        "!=",
-        [
-          "get",
-          "class"
-        ],
-        "Outfall"
-      ]
-    ],
+    "filter": ["all", ["!=", ["get", "class"], "CSO Outfall"], ["!=", ["get", "class"], "Outfall"]],
     "layout": {
       "visibility": "none"
     },
@@ -5388,38 +3956,20 @@
     "layout": {
       "icon-image": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "CSO Outfall"
-        ],
+        ["==", ["get", "class"], "CSO Outfall"],
         "diamond-orange-24",
         "diamond-blue-24"
       ],
       "icon-allow-overlap": true,
       "icon-size": {
         "stops": [
-          [
-            14,
-            0.7
-          ],
-          [
-            18,
-            0.9
-          ]
+          [14, 0.7],
+          [18, 0.9]
         ]
       },
       "visibility": "none"
     },
-    "filter": [
-      "in",
-      "class",
-      "CSO Outfall",
-      "Outfall"
-    ],
+    "filter": ["in", "class", "CSO Outfall", "Outfall"],
     "metadata": {
       "popup": true
     }
@@ -5441,23 +3991,9 @@
       "line-width": 5,
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Stream"
-        ],
+        ["==", ["get", "class"], "Stream"],
         "DeepSkyBlue",
-        [
-          "==",
-          [
-            "get",
-            "class"
-          ],
-          "Ditch"
-        ],
+        ["==", ["get", "class"], "Ditch"],
         "black",
         "black"
       ],
@@ -5466,12 +4002,7 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": [
-      "in",
-      "class",
-      "Ditch",
-      "Stream"
-    ],
+    "filter": ["in", "class", "Ditch", "Stream"],
     "metadata": {
       "popup": false
     }
@@ -5519,10 +4050,7 @@
       "line-width": 6,
       "line-color": [
         "match",
-        [
-          "get",
-          "comp_class"
-        ],
+        ["get", "comp_class"],
         "gravitymain",
         "fuchsia",
         "opendrain",
@@ -5585,85 +4113,34 @@
     "paint": {
       "circle-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "comp_class"
-          ],
-          "catchbasin"
-        ],
+        ["==", ["get", "comp_class"], "catchbasin"],
         "fuchsia",
-        [
-          "==",
-          [
-            "get",
-            "comp_class"
-          ],
-          "cleanout"
-        ],
+        ["==", ["get", "comp_class"], "cleanout"],
         "darkorange",
-        [
-          "==",
-          [
-            "get",
-            "comp_class"
-          ],
-          "culvertpoint"
-        ],
+        ["==", ["get", "comp_class"], "culvertpoint"],
         "darkgray",
-        [
-          "==",
-          [
-            "get",
-            "comp_class"
-          ],
-          "manhole"
-        ],
+        ["==", ["get", "comp_class"], "manhole"],
         "#212121",
-        [
-          "==",
-          [
-            "get",
-            "comp_class"
-          ],
-          "missingpoint"
-        ],
+        ["==", ["get", "comp_class"], "missingpoint"],
         "red",
         "black"
       ],
       "circle-radius": {
         "stops": [
-          [
-            0,
-            1
-          ],
-          [
-            20,
-            8
-          ]
+          [0, 1],
+          [20, 8]
         ]
       },
       "circle-opacity": 1,
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            1
-          ],
-          [
-            20,
-            3
-          ]
+          [0, 1],
+          [20, 3]
         ]
       }
     },
-    "filter": [
-      "!in",
-      "comp_class",
-      "dischargepoint"
-    ],
+    "filter": ["!in", "comp_class", "dischargepoint"],
     "layout": {
       "visibility": "none"
     },
@@ -5688,40 +4165,16 @@
     "layout": {
       "icon-image": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "comp_class"
-          ],
-          "dischargepoint"
-        ],
+        ["==", ["get", "comp_class"], "dischargepoint"],
         "diamond-blue-24",
         "manhole-storm"
       ],
       "icon-allow-overlap": true,
       "icon-ignore-placement": true,
-      "icon-size": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "comp_class"
-          ],
-          "dischargepoint"
-        ],
-        0.9,
-        0.3
-      ],
+      "icon-size": ["case", ["==", ["get", "comp_class"], "dischargepoint"], 0.9, 0.3],
       "visibility": "none"
     },
-    "filter": [
-      "in",
-      "comp_class",
-      "dischargepoint",
-      "manhole"
-    ],
+    "filter": ["in", "comp_class", "dischargepoint", "manhole"],
     "metadata": {
       "popup": true
     }
@@ -5734,11 +4187,7 @@
     "group": "Sanitary Sewer Layers",
     "children": true,
     "metadata": {
-      "popup": [
-        "name",
-        "source",
-        "created"
-      ]
+      "popup": ["name", "source", "created"]
     },
     "source": "utl_sanitary_flow_monitors",
     "sourceType": {
@@ -5749,36 +4198,18 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            6
-          ],
-          [
-            16,
-            10
-          ]
+          [0, 0],
+          [12, 6],
+          [16, 10]
         ]
       },
       "circle-color": "rgba(0,0,0,0.5)",
       "circle-stroke-color": "fuchsia",
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            3
-          ],
-          [
-            16,
-            4
-          ]
+          [0, 0],
+          [12, 3],
+          [16, 4]
         ]
       },
       "circle-pitch-scale": "map",
@@ -5814,16 +4245,11 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Bold"
-      ],
+      "text-font": ["DIN Offc Pro Bold"],
       "text-field": "FM-{name}",
       "text-anchor": "bottom-left",
       "text-size": 16,
-      "text-offset": [
-        0.7,
-        -0.2
-      ]
+      "text-offset": [0.7, -0.2]
     }
   },
   {
@@ -5867,18 +4293,9 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            8
-          ],
-          [
-            16,
-            16
-          ]
+          [0, 0],
+          [12, 8],
+          [16, 16]
         ]
       },
       "circle-color": "red",
@@ -5887,18 +4304,9 @@
       "circle-stroke-opacity": 0.5,
       "circle-stroke-width": {
         "stops": [
-          [
-            0,
-            0
-          ],
-          [
-            12,
-            2
-          ],
-          [
-            16,
-            3
-          ]
+          [0, 0],
+          [12, 2],
+          [16, 3]
         ]
       },
       "circle-pitch-scale": "map",
@@ -5933,50 +4341,15 @@
       "fill-extrusion-opacity": 0.6,
       "fill-extrusion-height": [
         "case",
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          10
-        ],
+        [">", ["get", "extrudeheight"], 10],
         18,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          20
-        ],
+        [">", ["get", "extrudeheight"], 20],
         26,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          30
-        ],
+        [">", ["get", "extrudeheight"], 30],
         34,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          40
-        ],
+        [">", ["get", "extrudeheight"], 40],
         42,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          50
-        ],
+        [">", ["get", "extrudeheight"], 50],
         52,
         8
       ]
@@ -6036,50 +4409,15 @@
       "fill-extrusion-opacity": 0.6,
       "fill-extrusion-height": [
         "case",
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          10
-        ],
+        [">", ["get", "extrudeheight"], 10],
         18,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          20
-        ],
+        [">", ["get", "extrudeheight"], 20],
         26,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          30
-        ],
+        [">", ["get", "extrudeheight"], 30],
         34,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          40
-        ],
+        [">", ["get", "extrudeheight"], 40],
         42,
-        [
-          ">",
-          [
-            "get",
-            "extrudeheight"
-          ],
-          50
-        ],
+        [">", ["get", "extrudeheight"], 50],
         52,
         8
       ]
@@ -6117,14 +4455,8 @@
       "circle-stroke-width": 2,
       "circle-radius": {
         "stops": [
-          [
-            14,
-            2
-          ],
-          [
-            18,
-            4
-          ]
+          [14, 2],
+          [18, 4]
         ]
       }
     },
@@ -6159,16 +4491,11 @@
     "minzoom": 17.1,
     "layout": {
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Regular"
-      ],
+      "text-font": ["DIN Offc Pro Regular"],
       "text-field": "{address}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [
-        0.5,
-        0
-      ]
+      "text-offset": [0.5, 0]
     },
     "metadata": {
       "popup": false
@@ -6182,11 +4509,7 @@
     "directory": "City Places & Services",
     "group": "City POIS",
     "metadata": {
-      "popup": [
-        "name",
-        "images",
-        "address"
-      ]
+      "popup": ["name", "images", "address"]
     },
     "source": "eng_coz_pois_source",
     "sourceType": {
@@ -6197,131 +4520,41 @@
     "paint": {
       "circle-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "icon"
-          ],
-          "fire-24"
-        ],
+        ["==", ["get", "icon"], "fire-24"],
         "hsl(0, 100%, 90%)",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "parks"
-        ],
+        ["==", ["get", "category"], "parks"],
         "hsl(120, 100%, 95%)",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "historic"
-        ],
+        ["==", ["get", "category"], "historic"],
         "hsl(19, 26%, 95%)",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "municipal"
-        ],
+        ["==", ["get", "category"], "municipal"],
         "hsl(187, 82%, 95%)",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "cemeteries"
-        ],
+        ["==", ["get", "category"], "cemeteries"],
         "hsl(187, 82%, 95%)",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "public"
-        ],
+        ["==", ["get", "category"], "public"],
         "hsl(187, 82%, 95%)",
         "white"
       ],
       "circle-stroke-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "icon"
-          ],
-          "fire-24"
-        ],
+        ["==", ["get", "icon"], "fire-24"],
         "red",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "parks"
-        ],
+        ["==", ["get", "category"], "parks"],
         "green",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "historic"
-        ],
+        ["==", ["get", "category"], "historic"],
         "hsl(19, 26%, 28%)",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "municipal"
-        ],
+        ["==", ["get", "category"], "municipal"],
         "#0079a2",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "cemeteries"
-        ],
+        ["==", ["get", "category"], "cemeteries"],
         "#0079a2",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "public"
-        ],
+        ["==", ["get", "category"], "public"],
         "#0079a2",
         "#333"
       ],
       "circle-stroke-width": 2,
       "circle-radius": {
         "stops": [
-          [
-            14,
-            10
-          ],
-          [
-            18,
-            13
-          ]
+          [14, 10],
+          [18, 13]
         ]
       }
     },
@@ -6330,30 +4563,9 @@
     },
     "filter": [
       "all",
-      [
-        "!=",
-        [
-          "get",
-          "icon"
-        ],
-        null
-      ],
-      [
-        "!=",
-        [
-          "get",
-          "icon"
-        ],
-        ""
-      ],
-      [
-        "!=",
-        [
-          "get",
-          "type"
-        ],
-        "Park"
-      ]
+      ["!=", ["get", "icon"], null],
+      ["!=", ["get", "icon"], ""],
+      ["!=", ["get", "type"], "Park"]
     ]
   },
   {
@@ -6370,56 +4582,24 @@
       "generateId": true
     },
     "metadata": {
-      "popup": [
-        "name",
-        "images",
-        "address",
-        "website"
-      ]
+      "popup": ["name", "images", "address", "website"]
     },
     "layout": {
       "icon-image": "{icon}",
       "icon-allow-overlap": true,
       "icon-size": {
         "stops": [
-          [
-            14,
-            0.7
-          ],
-          [
-            18,
-            0.9
-          ]
+          [14, 0.7],
+          [18, 0.9]
         ]
       },
       "visibility": "none"
     },
     "filter": [
       "all",
-      [
-        "!=",
-        [
-          "get",
-          "icon"
-        ],
-        null
-      ],
-      [
-        "!=",
-        [
-          "get",
-          "icon"
-        ],
-        ""
-      ],
-      [
-        "!=",
-        [
-          "get",
-          "type"
-        ],
-        "Park"
-      ]
+      ["!=", ["get", "icon"], null],
+      ["!=", ["get", "icon"], ""],
+      ["!=", ["get", "type"], "Park"]
     ]
   },
   {
@@ -6430,11 +4610,7 @@
     "directory": "City Places & Services",
     "group": "City POIS",
     "metadata": {
-      "popup": [
-        "name",
-        "images",
-        "address"
-      ]
+      "popup": ["name", "images", "address"]
     },
     "source": "eng_coz_pois_source",
     "sourceType": {
@@ -6446,59 +4622,17 @@
     "paint": {
       "text-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "icon"
-          ],
-          "fire-24"
-        ],
+        ["==", ["get", "icon"], "fire-24"],
         "red",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "parks"
-        ],
+        ["==", ["get", "category"], "parks"],
         "green",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "historic"
-        ],
+        ["==", ["get", "category"], "historic"],
         "hsl(19, 26%, 28%)",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "municipal"
-        ],
+        ["==", ["get", "category"], "municipal"],
         "#005673",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "cemeteries"
-        ],
+        ["==", ["get", "category"], "cemeteries"],
         "#005673",
-        [
-          "==",
-          [
-            "get",
-            "category"
-          ],
-          "public"
-        ],
+        ["==", ["get", "category"], "public"],
         "#005673",
         "#333"
       ],
@@ -6509,54 +4643,22 @@
     "layout": {
       "icon-allow-overlap": false,
       "visibility": "none",
-      "text-font": [
-        "DIN Offc Pro Regular"
-      ],
+      "text-font": ["DIN Offc Pro Regular"],
       "text-field": "{name}",
       "text-anchor": "bottom-left",
-      "text-offset": [
-        0.6,
-        -0.5
-      ],
+      "text-offset": [0.6, -0.5],
       "text-size": {
         "stops": [
-          [
-            14,
-            12
-          ],
-          [
-            18,
-            14
-          ]
+          [14, 12],
+          [18, 14]
         ]
       }
     },
     "filter": [
       "all",
-      [
-        "!=",
-        [
-          "get",
-          "icon"
-        ],
-        null
-      ],
-      [
-        "!=",
-        [
-          "get",
-          "icon"
-        ],
-        ""
-      ],
-      [
-        "!=",
-        [
-          "get",
-          "type"
-        ],
-        "Park"
-      ]
+      ["!=", ["get", "icon"], null],
+      ["!=", ["get", "icon"], ""],
+      ["!=", ["get", "type"], "Park"]
     ]
   },
   {
@@ -6575,23 +4677,9 @@
     "paint": {
       "line-color": [
         "case",
-        [
-          "==",
-          [
-            "get",
-            "type"
-          ],
-          "detour"
-        ],
+        ["==", ["get", "type"], "detour"],
         "orange",
-        [
-          "==",
-          [
-            "get",
-            "type"
-          ],
-          "closed"
-        ],
+        ["==", ["get", "type"], "closed"],
         "red",
         "#000"
       ],
@@ -6601,19 +4689,9 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": [
-        "title",
-        "description"
-      ]
+      "popup": ["title", "description"]
     },
-    "filter": [
-      "==",
-      [
-        "get",
-        "status"
-      ],
-      "active"
-    ]
+    "filter": ["==", ["get", "status"], "active"]
   },
   {
     "id": "tmp_trail_expansion_case",
@@ -6656,10 +4734,7 @@
     "paint": {
       "line-color": "white",
       "line-width": 4,
-      "line-dasharray": [
-        2,
-        1
-      ]
+      "line-dasharray": [2, 1]
     },
     "layout": {
       "visibility": "none"
@@ -6707,24 +4782,9 @@
       "generateId": true
     },
     "paint": {
-      "line-color": [
-        "case",
-        [
-          "==",
-          [
-            "get",
-            "footway"
-          ],
-          "sidewalk"
-        ],
-        "goldenrod",
-        "white"
-      ],
+      "line-color": ["case", ["==", ["get", "footway"], "sidewalk"], "goldenrod", "white"],
       "line-width": 4,
-      "line-dasharray": [
-        2,
-        1
-      ]
+      "line-dasharray": [2, 1]
     },
     "layout": {
       "visibility": "none"
@@ -6741,9 +4801,7 @@
     "source": "utl_streetlights",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.utl_streetlights/{z}/{x}/{y}.pbf"
-      ],
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_streetlights/{z}/{x}/{y}.pbf"],
       "promoteId": "id",
       "maxzoom": 22
     },
