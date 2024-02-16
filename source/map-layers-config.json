@@ -2959,10 +2959,11 @@
     "group": "Water Layers",
     "type": "circle",
     "source": "wHydrantSource",
+    "source-layer": "public.utl_water_hydrant",
     "sourceType": {
-      "type": "geojson",
-      "data": "https://311.coz.org/static/data/geojson/utl_water_agol_hydrant.geojson",
-      "generateId": true
+      "type": "vector",
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_hydrant/{z}/{x}/{y}.pbf"],
+      "promoteId": "id"
     },
     "paint": {
       "circle-radius": {
@@ -3000,10 +3001,7 @@
     "type": "symbol",
     "top": true,
     "source": "wHydrantSource",
-    "sourceType": {
-      "type": "geojson",
-      "data": "https://311.coz.org/static/data/geojson/utl_water_agol_hydrant.geojson"
-    },
+    "source-layer": "public.utl_water_hydrant",
     "paint": {
       "text-color": "black",
       "text-halo-color": "white",
