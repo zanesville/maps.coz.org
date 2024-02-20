@@ -2670,7 +2670,7 @@
     "sourceType": {
       "type": "vector",
       "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"],
-      "promoteId": "id"
+      "promoteId": "fid"
     },
     "source-layer": "public.utl_water_lsli",
     "children": true,
