@@ -2246,12 +2246,10 @@
     "source": "wLateralSource",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_lateral/{z}/{x}/{y}.mvt"
-      ],
-      "maxzoom": 17
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lateral/{z}/{x}/{y}.pbf"],
+      "promoteId": "id"
     },
-    "source-layer": "utl_water_agol_lateral",
+    "source-layer": "public.utl_water_lateral",
     "paint": {
       "line-width": 2,
       "line-color": "MEDIUMSPRINGGREEN",
@@ -2268,19 +2266,17 @@
     "id": "utl_water_meters",
     "directory": "City Water System",
     "group": "Water Layers",
-    "type": "symbol",
     "name": "Water Meters (From Cell Location)",
+    "type": "symbol",
     "legend": "<span class='fa fa-square fa-sm' style='color:#00ffc5;'></span> Residential<br><span class='fa fa-square fa-sm' style='color:#fce205;'></span> Commercial",
     "children": true,
     "source": "utl_water_meters",
+    "source-layer": "public.utl_water_meters",
     "sourceType": {
       "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_meters/{z}/{x}/{y}.mvt"
-      ],
-      "maxzoom": 17
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_meters/{z}/{x}/{y}.pbf"],
+      "promoteId": "id"
     },
-    "source-layer": "utl_water_agol_meters",
     "layout": {
       "symbol-z-order": "source",
       "icon-allow-overlap": true,
@@ -2304,21 +2300,14 @@
     "id": "utl_water_meters_labels",
     "directory": "City Water System",
     "group": "Water Layers",
+    "name": "Water Meter Labels",
     "type": "symbol",
     "top": true,
     "parent": "utl_water_meters",
     "hidden": true,
-    "name": "Water Meter Labels",
     "source": "utl_water_meters",
-    "sourceType": {
-      "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_meters/{z}/{x}/{y}.mvt"
-      ],
-      "maxzoom": 17
-    },
+    "source-layer": "public.utl_water_meters",
     "minzoom": 17,
-    "source-layer": "utl_water_agol_meters",
     "paint": {
       "text-color": [
         "case",
@@ -2543,10 +2532,10 @@
     "source": "wMainSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"],
-      "maxzoom": 17
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_main/{z}/{x}/{y}.pbf"],
+      "promoteId": "id"
     },
-    "source-layer": "utl_water_agol_main",
+    "source-layer": "public.utl_water_main",
     "paint": {
       "line-width": [
         "case",
@@ -2576,10 +2565,10 @@
     "source": "wMainSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"],
-      "maxzoom": 17
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_main/{z}/{x}/{y}.pbf"],
+      "promoteId": "id"
     },
-    "source-layer": "utl_water_agol_main",
+    "source-layer": "public.utl_water_main",
     "paint": {
       "line-width": [
         "case",
@@ -2614,10 +2603,10 @@
     "group": "Water Layers",
     "sourceType": {
       "type": "geojson",
-      "tiles": ["https://311.coz.org/static/data/vector-tiles/utl_water_agol_main/{z}/{x}/{y}.mvt"],
-      "maxzoom": 17
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_main/{z}/{x}/{y}.pbf"],
+      "promoteId": "id"
     },
-    "source-layer": "utl_water_agol_main",
+    "source-layer": "public.utl_water_main",
     "paint": {
       "text-color": "#121212",
       "text-halo-color": "white",
@@ -2656,7 +2645,8 @@
     "source-layer": "public.utl_water_fitting",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_fitting/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_fitting/{z}/{x}/{y}.pbf"],
+      "promoteId": "id"
     },
     "paint": {
       "circle-radius": 5,
@@ -2679,7 +2669,8 @@
     "source": "utl_water_lsli",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"],
+      "promoteId": "id"
     },
     "source-layer": "public.utl_water_lsli",
     "children": true,
@@ -2730,7 +2721,8 @@
     "group": "Water Layers",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://311.coz.org/api/v1/vector-tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"],
+      "promoteId": "id"
     },
     "source-layer": "public.utl_water_lsli",
     "parent": "utl_water_lsli",
@@ -2760,7 +2752,8 @@
       "type": "vector",
       "tiles": [
         "https://311.coz.org/api/v1/vector-tiles/public.utl_water_valve_exercising/{z}/{x}/{y}.pbf"
-      ]
+      ],
+      "promoteId": "id"
     },
     "paint": {
       "circle-radius": 5,
@@ -2792,11 +2785,11 @@
     "sourceType": {
       "type": "vector",
       "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_system_valve/{z}/{x}/{y}.mvt"
+        "https://311.coz.org/api/v1/vector-tiles/public.utl_water_system_valve_status/{z}/{x}/{y}.pbf"
       ],
-      "maxzoom": 17
+      "promoteId": "id"
     },
-    "source-layer": "utl_water_agol_system_valve",
+    "source-layer": "public.utl_water_system_valve_status",
     "paint": {
       "circle-radius": {
         "stops": [
@@ -2846,14 +2839,7 @@
     "hidden": true,
     "parent": "utl_water_system_valves",
     "source": "wSystemValveSource",
-    "sourceType": {
-      "type": "vector",
-      "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_system_valve/{z}/{x}/{y}.mvt"
-      ],
-      "maxzoom": 17
-    },
-    "source-layer": "utl_water_agol_system_valve",
+    "source-layer": "public.utl_water_system_valve_status",
     "paint": {
       "circle-radius": {
         "stops": [
@@ -2880,9 +2866,13 @@
     "group": "Water Layers",
     "name": "Control Valves",
     "source": "wControlValve",
+    "source-layer": "public.utl_water_control_valve",
     "sourceType": {
-      "type": "geojson",
-      "data": "https://311.coz.org/static/data/geojson/utl_water_agol_control_valve.geojson"
+      "type": "vector",
+      "tiles": [
+        "https://311.coz.org/api/v1/vector-tiles/public.utl_water_control_valve/{z}/{x}/{y}.pbf"
+      ],
+      "promoteId": "id"
     },
     "paint": {
       "circle-radius": {
@@ -2921,11 +2911,11 @@
     "sourceType": {
       "type": "vector",
       "tiles": [
-        "https://311.coz.org/static/data/vector-tiles/utl_water_agol_curb_stop_valve/{z}/{x}/{y}.mvt"
+        "https://311.coz.org/api/v1/vector-tiles/public.utl_water_curb_stop_valve/{z}/{x}/{y}.pbf"
       ],
-      "maxzoom": 17
+      "promoteId": "id"
     },
-    "source-layer": "utl_water_agol_curb_stop_valve",
+    "source-layer": "public.utl_water_curb_stop_valve",
     "layout": {
       "symbol-z-order": "source",
       "icon-allow-overlap": true,
@@ -3194,7 +3184,8 @@
       "type": "vector",
       "tiles": [
         "https://311.coz.org/api/v1/vector-tiles/public.utl_water_field_work/{z}/{x}/{y}.pbf"
-      ]
+      ],
+      "promoteId": "id"
     },
     "paint": {
       "circle-radius": 6,
