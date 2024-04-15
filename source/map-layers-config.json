@@ -2098,7 +2098,7 @@
         }
       }
     },
-    "filter": [">=", ["get", "date_last_paved"], "2016-01-01"]
+    "filter": [">=", ["get", "date_last_paved"], "2020-01-01"]
   },
   {
     "id": "utl_mus_sanitary_lines",
