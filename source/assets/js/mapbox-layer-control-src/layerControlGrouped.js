@@ -664,9 +664,16 @@ function filterModal(map, layer) {
       }
     });
 
-    form.addEventListener("reset", function(e) {
+    form.addEventListener("reset", function() {
+      console.log("[layerControlGrouped.js] - Resetting filter");
       layer.metadata.layers.forEach(l => {
-        map.setFilter(l)
+        const filter = layer?.filter || null;
+        console.log({l}, {filter})
+        if (filter) {
+          map.setFilter(l, filter)
+        }else{
+          map.setFilter(l)
+        }
       })
     })
 
