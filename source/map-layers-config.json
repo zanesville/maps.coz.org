@@ -2091,7 +2091,12 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["name", "date_last_paved", "road_type"]
+      "popup": ["name", "date_last_paved", "road_type"],
+      "filterSchema": {
+        "date_last_paved": {
+          "type": "date"
+        }
+      }
     },
     "filter": [">=", ["get", "date_last_paved"], "2016-01-01"]
   },
