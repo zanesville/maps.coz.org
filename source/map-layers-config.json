@@ -2817,6 +2817,8 @@
         "white",
         ["==", ["get", "VALVETYPE"], "Boundary Valve"],
         "fuchsia",
+        ["==", ["get", "VALVETYPE"], "Slot Key Valve"],
+        "darkgray",
         "black"
       ],
       "circle-stroke-color": ["case", ["has", "VALVETYPE"], "black", "red"],
