@@ -2790,11 +2790,11 @@
     "sourceType": {
       "type": "vector",
       "tiles": [
-        "https://311.coz.org/api/v1/vector-tiles/public.utl_water_system_valve_status/{z}/{x}/{y}.pbf"
+        "https://311.coz.org/api/v1/vector-tiles/public.utl_water_system_valves/{z}/{x}/{y}.pbf"
       ],
       "promoteId": "id"
     },
-    "source-layer": "public.utl_water_system_valve_status",
+    "source-layer": "public.utl_water_system_valves",
     "paint": {
       "circle-radius": {
         "stops": [
@@ -2846,7 +2846,7 @@
     "hidden": true,
     "parent": "utl_water_system_valves",
     "source": "wSystemValveSource",
-    "source-layer": "public.utl_water_system_valve_status",
+    "source-layer": "public.utl_water_system_valves",
     "paint": {
       "circle-radius": {
         "stops": [
@@ -2863,7 +2863,7 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": false
+      "popup": true
     }
   },
   {
