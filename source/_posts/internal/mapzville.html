@@ -7,49 +7,50 @@ btn: Launch
 category: internal
 link: "/internal/mapzville/?adm_mus_parcels=true&ParcelsOutline=true#16.37/39.941027/-82.01233"
 about: >-
-  This application shows all of the public Zanesville GIS data on an interactive map. The site features an address and parcel search, measure tool, basic print functionality, and a custom layer control.
+  This application shows all of the public Zanesville GIS data on an interactive map. The site features an address and
+  parcel search, measure tool, basic print functionality, and a custom layer control.
   <br>
-  <p>The layers in the sidebar are maintained by the City of Zanesville, Muskingum County, or other authoritative public sources. Mapbox provides the data for all other map layers.</p>
+  <p>The layers in the sidebar are maintained by the City of Zanesville, Muskingum County, or other authoritative public
+    sources. Mapbox provides the data for all other map layers.</p>
 
-  <p class="text-error"><em>Please note that parcels are updated on a monthly or bi-monthly basis.<br>For the latest tax information visit the <a href="http://www.muskingumcountyauditor.org/"
-  target="_blank">Musking County Auditor's Website</a> or the link in the popup menu</em>.</p>
+  <p class="text-error"><em>Please note that parcels are updated on a monthly or bi-monthly basis.<br>For the latest tax
+      information visit the <a href="http://www.muskingumcountyauditor.org/" target="_blank">Musking County Auditor's
+        Website</a> or the link in the popup menu</em>.</p>
 header: >-
-  <script
-  src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.2.0/mapbox-gl-draw.js'></script>
-  <link rel='stylesheet'
-  href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.2.0/mapbox-gl-draw.css'
-  type='text/css'/>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.2.0/mapbox-gl-draw.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.2.0/mapbox-gl-draw.css'
+    type='text/css' />
 
 css: >-
   .mapboxgl-ctrl-scale {
-    background-color: #0d84b35c;
-    border-width: 2px;
-    border-style: none solid solid;
-    border-color: #0c79a5;
-    color: #094b7c;
-    text-align: center;
-    font-weight: bold;
+  background-color: #0d84b35c;
+  border-width: 2px;
+  border-style: none solid solid;
+  border-color: #0c79a5;
+  color: #094b7c;
+  text-align: center;
+  font-weight: bold;
   }
   .mapboxgl-ctrl-scale {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-color: #24292e;
-    color: #24292e;
-    line-height: 1.5;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-color: #24292e;
+  color: #24292e;
+  line-height: 1.5;
   }
   .adt .red {
-    color: #b2182b;
+  color: #b2182b;
   }
   .adt .orange {
-    color: orange;
+  color: orange;
   }
   .adt .blue {
-    color: #2166ac;
+  color: #2166ac;
   }
   .mapboxgl-popup {
-    min-width: 320px;
+  min-width: 320px;
   }
   .mapboxgl-popup .table {
-    min-width: 320px;
+  min-width: 320px;
   }
 ---
 <script type="module">
@@ -80,153 +81,153 @@ css: >-
   */
 
   var npsIcons = [{
-      "name": "airport-black-24",
-      "url": "/assets/symbols/nps/airport-black-24.png"
-    },
-    {
-      "name": "amphitheater-black-24",
-      "url": "/assets/symbols/nps/amphitheater-black-24.png"
-    },
-    {
-      "name": "bench-black-24",
-      "url": "/assets/symbols/nps/bench-black-24.png"
-    },
-    {
-      "name": "bicycle-trail-black-24",
-      "url": "/assets/symbols/nps/bicycle-trail-black-24.png"
-    },
-    {
-      "name": "boat-launch-black-24",
-      "url": "/assets/symbols/nps/boat-launch-black-24.png"
-    },
-    {
-      "name": "boat-tour-black-24",
-      "url": "/assets/symbols/nps/boat-tour-black-24.png"
-    },
-    {
-      "name": "bus-stop-black-24",
-      "url": "/assets/symbols/nps/bus-stop-black-24.png"
-    },
-    {
-      "name": "circle-black-2",
-      "url": "/assets/symbols/nps/circle-black.png"
-    },
-    {
-      "name": "dam-black-24",
-      "url": "/assets/symbols/nps/dam-black-24.png"
-    },
-    {
-      "name": "drinking-water-black-24",
-      "url": "/assets/symbols/nps/drinking-water-black-24.png"
-    },
-    {
-      "name": "flagpole-black-24",
-      "url": "/assets/symbols/nps/flagpole-black-24.png"
-    },
-    {
-      "name": "historic-feature-black-24",
-      "url": "/assets/symbols/nps/historic-feature-black-24.png"
-    },
-    {
-      "name": "hospital-black-24",
-      "url": "/assets/symbols/nps/hospital-black-24.png"
-    },
-    {
-      "name": "incident-black-22",
-      "url": "/assets/symbols/nps/incident-black-22.png"
-    },
-    {
-      "name": "information-black-24",
-      "url": "/assets/symbols/nps/information-black-24.png"
-    },
-    {
-      "name": "interpretive-exhibit-black-24",
-      "url": "/assets/symbols/nps/interpretive-exhibit-black-24.png"
-    },
-    {
-      "name": "library-black-24",
-      "url": "/assets/symbols/nps/library-black-24.png"
-    },
-    {
-      "name": "museum-black-24",
-      "url": "/assets/symbols/nps/museum-black-24.png"
-    },
-    {
-      "name": "parking-black-24",
-      "url": "/assets/symbols/nps/parking-black-16-b.png"
-    },
-    {
-      "name": "pets-on-leash-black-24",
-      "url": "/assets/symbols/nps/pets-on-leash-black-24.png"
-    },
-    {
-      "name": "picnic-area-black-24",
-      "url": "/assets/symbols/nps/picnic-area-black-24.png"
-    },
-    {
-      "name": "playground-black-24",
-      "url": "/assets/symbols/nps/playground-black-24.png"
-    },
-    {
-      "name": "restrooms-black-24",
-      "url": "/assets/symbols/nps/restrooms-black-24.png"
-    },
-    {
-      "name": "rr-xing-black-24",
-      "url": "/assets/symbols/nps/rr-xing-black-24.png"
-    },
-    {
-      "name": "scenic-viewpoint-black-24",
-      "url": "/assets/symbols/nps/scenic-viewpoint-black-24.png"
-    },
-    {
-      "name": "shelter-black-24",
-      "url": "/assets/symbols/nps/shelter-black-24.png"
-    },
-    {
-      "name": "sign-black-24",
-      "url": "/assets/symbols/nps/sign-black-24.png"
-    },
-    {
-      "name": "statue-black-24",
-      "url": "/assets/symbols/nps/statue-black-24.png"
-    },
-    {
-      name: "theater-black-24",
-      url: "/assets/symbols/nps/theater-black-24.png"
-    },
-    {
-      name: "fire-24",
-      url: "/assets/symbols/nps/fire-24.png"
-    },
-    {
-      name: "mechanic-black-24", 
-      url: "/assets/symbols/nps/mechanic-black-24.png"
-    },
-    {
-      name: "trailhead-black-24",
-      url: "/assets/symbols/nps/trailhead-black-24.png"
-    },
-    {
-      name: "ranger-station-black-24",
-      url: "/assets/symbols/nps/ranger-station-black-24.png"
-    },
-    {
-      name: "basketball-24",
-      url: "/assets/symbols/nps/basketball-24.png"
-    },
-    {
-      name: "diamond-orange-24",
-      url: "/assets/symbols/png/diamond-orange-24.png"
-    },
-    {
-      name: "diamond-blue-24",
-      url: "/assets/symbols/png/diamond-blue-24.png"
-    },
-    {
-      name: "cemetery-19",
-      url: "/assets/symbols/nps/cemetery-19.png"
-    }
+    "name": "airport-black-24",
+    "url": "/assets/symbols/nps/airport-black-24.png"
+  },
+  {
+    "name": "amphitheater-black-24",
+    "url": "/assets/symbols/nps/amphitheater-black-24.png"
+  },
+  {
+    "name": "bench-black-24",
+    "url": "/assets/symbols/nps/bench-black-24.png"
+  },
+  {
+    "name": "bicycle-trail-black-24",
+    "url": "/assets/symbols/nps/bicycle-trail-black-24.png"
+  },
+  {
+    "name": "boat-launch-black-24",
+    "url": "/assets/symbols/nps/boat-launch-black-24.png"
+  },
+  {
+    "name": "boat-tour-black-24",
+    "url": "/assets/symbols/nps/boat-tour-black-24.png"
+  },
+  {
+    "name": "bus-stop-black-24",
+    "url": "/assets/symbols/nps/bus-stop-black-24.png"
+  },
+  {
+    "name": "circle-black-2",
+    "url": "/assets/symbols/nps/circle-black.png"
+  },
+  {
+    "name": "dam-black-24",
+    "url": "/assets/symbols/nps/dam-black-24.png"
+  },
+  {
+    "name": "drinking-water-black-24",
+    "url": "/assets/symbols/nps/drinking-water-black-24.png"
+  },
+  {
+    "name": "flagpole-black-24",
+    "url": "/assets/symbols/nps/flagpole-black-24.png"
+  },
+  {
+    "name": "historic-feature-black-24",
+    "url": "/assets/symbols/nps/historic-feature-black-24.png"
+  },
+  {
+    "name": "hospital-black-24",
+    "url": "/assets/symbols/nps/hospital-black-24.png"
+  },
+  {
+    "name": "incident-black-22",
+    "url": "/assets/symbols/nps/incident-black-22.png"
+  },
+  {
+    "name": "information-black-24",
+    "url": "/assets/symbols/nps/information-black-24.png"
+  },
+  {
+    "name": "interpretive-exhibit-black-24",
+    "url": "/assets/symbols/nps/interpretive-exhibit-black-24.png"
+  },
+  {
+    "name": "library-black-24",
+    "url": "/assets/symbols/nps/library-black-24.png"
+  },
+  {
+    "name": "museum-black-24",
+    "url": "/assets/symbols/nps/museum-black-24.png"
+  },
+  {
+    "name": "parking-black-24",
+    "url": "/assets/symbols/nps/parking-black-16-b.png"
+  },
+  {
+    "name": "pets-on-leash-black-24",
+    "url": "/assets/symbols/nps/pets-on-leash-black-24.png"
+  },
+  {
+    "name": "picnic-area-black-24",
+    "url": "/assets/symbols/nps/picnic-area-black-24.png"
+  },
+  {
+    "name": "playground-black-24",
+    "url": "/assets/symbols/nps/playground-black-24.png"
+  },
+  {
+    "name": "restrooms-black-24",
+    "url": "/assets/symbols/nps/restrooms-black-24.png"
+  },
+  {
+    "name": "rr-xing-black-24",
+    "url": "/assets/symbols/nps/rr-xing-black-24.png"
+  },
+  {
+    "name": "scenic-viewpoint-black-24",
+    "url": "/assets/symbols/nps/scenic-viewpoint-black-24.png"
+  },
+  {
+    "name": "shelter-black-24",
+    "url": "/assets/symbols/nps/shelter-black-24.png"
+  },
+  {
+    "name": "sign-black-24",
+    "url": "/assets/symbols/nps/sign-black-24.png"
+  },
+  {
+    "name": "statue-black-24",
+    "url": "/assets/symbols/nps/statue-black-24.png"
+  },
+  {
+    name: "theater-black-24",
+    url: "/assets/symbols/nps/theater-black-24.png"
+  },
+  {
+    name: "fire-24",
+    url: "/assets/symbols/nps/fire-24.png"
+  },
+  {
+    name: "mechanic-black-24",
+    url: "/assets/symbols/nps/mechanic-black-24.png"
+  },
+  {
+    name: "trailhead-black-24",
+    url: "/assets/symbols/nps/trailhead-black-24.png"
+  },
+  {
+    name: "ranger-station-black-24",
+    url: "/assets/symbols/nps/ranger-station-black-24.png"
+  },
+  {
+    name: "basketball-24",
+    url: "/assets/symbols/nps/basketball-24.png"
+  },
+  {
+    name: "diamond-orange-24",
+    url: "/assets/symbols/png/diamond-orange-24.png"
+  },
+  {
+    name: "diamond-blue-24",
+    url: "/assets/symbols/png/diamond-blue-24.png"
+  },
+  {
+    name: "cemetery-19",
+    url: "/assets/symbols/nps/cemetery-19.png"
+  }
   ]
 
   var map = new mapboxgl.Map({
@@ -234,7 +235,7 @@ css: >-
     hash: true,
     style: "mapbox://styles/cozgis/ckhxq84it12q61aqo00krez8a",
     // style: "http://127.0.0.1:4000/assets/map-styles/coz-omt-bright.json",
-    center: [-82.012565,39.941011],
+    center: [-82.012565, 39.941011],
     zoom: 14,
     preserveDrawingBuffer: true
   });
@@ -243,8 +244,8 @@ css: >-
   map event listeners
   */
 
-  map.on('click', function(e) {
-    var features = cozMAP.getFeatures(map, e);
+  map.on('click', async function (e) {
+    var features = await cozMAP.getFeatures(map, e);
     console.log(features)
     cozMAP.popup(map, features)
   });
@@ -252,35 +253,35 @@ css: >-
   map.on('load', async function () {
     map.setLayoutProperty("place-neighbourhood", "visibility", "none")
     /* load images for various styles - could also load directly into the map style spritesheet on mapbox.com*/
-    map.loadImage('/assets/symbols/arrow-1.png', function(err, img) {
+    map.loadImage('/assets/symbols/arrow-1.png', function (err, img) {
       map.addImage('arrow', img);
     });
 
-    map.loadImage('/assets/symbols/square-purple.png', function(err, img) {
+    map.loadImage('/assets/symbols/square-purple.png', function (err, img) {
       map.addImage('square-purple2', img);
     });
 
-    map.loadImage('/assets/symbols/circle-purple.png', function(err, img) {
+    map.loadImage('/assets/symbols/circle-purple.png', function (err, img) {
       map.addImage('circle-purple', img);
     });
 
-    map.loadImage('/assets/symbols/circle-seagreen.png', function(err, img) {
+    map.loadImage('/assets/symbols/circle-seagreen.png', function (err, img) {
       map.addImage('circle-seagreen2', img);
     });
 
-    map.loadImage('/assets/symbols/triangle-seagreen.png', function(err, img) {
+    map.loadImage('/assets/symbols/triangle-seagreen.png', function (err, img) {
       map.addImage('triangle-seagreen2', img);
     });
 
-    map.loadImage('/assets/symbols/square-yellow.png', function(err, img) {
+    map.loadImage('/assets/symbols/square-yellow.png', function (err, img) {
       map.addImage('square-yellow', img);
     });
 
-    map.loadImage('/assets/symbols/square-cyan.png', function(err, img) {
+    map.loadImage('/assets/symbols/square-cyan.png', function (err, img) {
       map.addImage('square-cyan', img);
     });
 
-    map.loadImage('/assets/symbols/manhole-storm-ii.png', function(err, img) {
+    map.loadImage('/assets/symbols/manhole-storm-ii.png', function (err, img) {
       map.addImage('manhole-storm', img);
     });
 
@@ -294,90 +295,90 @@ css: >-
     cozMAP.mglAddIcons(map, npsIcons, function () {
 
       fetch("/map-layers-config.json")
-      .then(res => {
-        return res.json()
-      })
-      .then(data => {
-        // data.push({
-        //   id: "mapillary-point-detections",
-        //   type: "symbol",
-        //   top: true,
-        //   directory: "Engineering",
-        //   group: "Mapillary",
-        //   name: "Mapillary Point Detections",
-        //   source: "mapillary-point-detections",
-        //   sourceType: {
-        //     type: "vector",
-        //     tiles: [ "https://a.mapillary.com/v3/map_features?tile={z}/{x}/{y}&client_id=V3B6aHlRZVdMUG5aX1R3dnhjZFVfdzo4YmEwZjY1Mjg2ZTNhYzQ2&layers=points"],
-        //     attribution: "<a href='https://www.mapillary.com'>Mapillary</a>, CC BY",
-        //     minzoom: 12,
-        //     maxzoom: 17,
-        //     promoteId: "key"
-        //   },
-        //   "source-layer": "mapillary-points",
-        //   "filter": ["all",
-        //     ["!=", ["get", "value"], "construction--flat--driveway"],
-        //     ["!=", ["get", "value"], "object--sign--advertisement"],
-        //     ["!=", ["get", "value"], "object--sign--store"],
-        //     ["!=", ["get", "value"], "object--support--utility-pole"]
-        //   ],
-        //   layout: {
-        //     "icon-image": "{value}",
-        //     "icon-allow-overlap": true,
-        //     "icon-ignore-placement": true,
-        //     visibility: "none"
-        //   },
-        //   metadata: {
-        //     popup: ["accuracy", "altitude", "first_seen_at", "layer", "value"],
-        //     filterSchema: {
-        //       "value": {
-        //         type: "select",
-        //         options: ["object--catch-basin"]
-        //       }
-        //     }
-        //   }
-        // })
-        const layersConfig = cozMAP.mapAddLayers(map, data, {lazyLoading: true});
-        // console.log(layersConfig)
-        var lc = new cozMAP.layerControlGrouped({
-          options: {
-            collapsed: false
-          },
-          layers: layersConfig
-        });
-        document.querySelector("#coz-sidebar--layerControl").appendChild(lc.onAdd(map));
-        var controls = document.querySelectorAll(".mgl-layerControlDirectory");
-        for (var i=0; i < controls.length; i++) {
-          controls[i].children[0].click();
-          controls[i].style.display = "block";
-        };
+        .then(res => {
+          return res.json()
+        })
+        .then(data => {
+          // data.push({
+          //   id: "mapillary-point-detections",
+          //   type: "symbol",
+          //   top: true,
+          //   directory: "Engineering",
+          //   group: "Mapillary",
+          //   name: "Mapillary Point Detections",
+          //   source: "mapillary-point-detections",
+          //   sourceType: {
+          //     type: "vector",
+          //     tiles: [ "https://a.mapillary.com/v3/map_features?tile={z}/{x}/{y}&client_id=V3B6aHlRZVdMUG5aX1R3dnhjZFVfdzo4YmEwZjY1Mjg2ZTNhYzQ2&layers=points"],
+          //     attribution: "<a href='https://www.mapillary.com'>Mapillary</a>, CC BY",
+          //     minzoom: 12,
+          //     maxzoom: 17,
+          //     promoteId: "key"
+          //   },
+          //   "source-layer": "mapillary-points",
+          //   "filter": ["all",
+          //     ["!=", ["get", "value"], "construction--flat--driveway"],
+          //     ["!=", ["get", "value"], "object--sign--advertisement"],
+          //     ["!=", ["get", "value"], "object--sign--store"],
+          //     ["!=", ["get", "value"], "object--support--utility-pole"]
+          //   ],
+          //   layout: {
+          //     "icon-image": "{value}",
+          //     "icon-allow-overlap": true,
+          //     "icon-ignore-placement": true,
+          //     visibility: "none"
+          //   },
+          //   metadata: {
+          //     popup: ["accuracy", "altitude", "first_seen_at", "layer", "value"],
+          //     filterSchema: {
+          //       "value": {
+          //         type: "select",
+          //         options: ["object--catch-basin"]
+          //       }
+          //     }
+          //   }
+          // })
+          const layersConfig = cozMAP.mapAddLayers(map, data, { lazyLoading: true });
+          // console.log(layersConfig)
+          var lc = new cozMAP.layerControlGrouped({
+            options: {
+              collapsed: false
+            },
+            layers: layersConfig
+          });
+          document.querySelector("#coz-sidebar--layerControl").appendChild(lc.onAdd(map));
+          var controls = document.querySelectorAll(".mgl-layerControlDirectory");
+          for (var i = 0; i < controls.length; i++) {
+            controls[i].children[0].click();
+            controls[i].style.display = "block";
+          };
 
-               //ADD MANHOLE INSPECTION DATA DUE TO SUREY123 TRIMMING LAT LNGS TO 5 DECIMALS SO STORING THEM AS STRINGS
-      fetch("https://services9.arcgis.com/IUhP9plEzDTayUVC/arcgis/rest/services/Manhole_Inspection_Form_View_II/FeatureServer/0/query?where=OBJECTID%3E0&outFields=*&f=geojson")
-      .then(res => {
-        return res.json()
-      })
-      .then(data => {
-        data.features.map(function(f) {
-          if (f.properties["inspect_latlng"]) {
-            var coords = (f.properties["inspect_latlng"]).split(",");
-            coords = [Number(coords[0]), Number(coords[1])]
-            console.log(coords);
-            f.geometry.coordinates = coords;
-          }
-        });
-        console.log(data)
-        map.getSource("utl_wastewater_manhole_inspections").setData(data);
-      })
-      .catch(err => {
-        console.log(err)
-      });
+          //ADD MANHOLE INSPECTION DATA DUE TO SUREY123 TRIMMING LAT LNGS TO 5 DECIMALS SO STORING THEM AS STRINGS
+          fetch("https://services9.arcgis.com/IUhP9plEzDTayUVC/arcgis/rest/services/Manhole_Inspection_Form_View_II/FeatureServer/0/query?where=OBJECTID%3E0&outFields=*&f=geojson")
+            .then(res => {
+              return res.json()
+            })
+            .then(data => {
+              data.features.map(function (f) {
+                if (f.properties["inspect_latlng"]) {
+                  var coords = (f.properties["inspect_latlng"]).split(",");
+                  coords = [Number(coords[0]), Number(coords[1])]
+                  console.log(coords);
+                  f.geometry.coordinates = coords;
+                }
+              });
+              console.log(data)
+              map.getSource("utl_wastewater_manhole_inspections").setData(data);
+            })
+            .catch(err => {
+              console.log(err)
+            });
 
-      })
+        })
     });
 
     cozMAP.mapAddControls(map, {
-      t:gltoken
+      t: gltoken
     });
     map.addControl(new cozMAP.mapPrintControl(), 'top-right');
     map.addControl(new cozMAP.mglStreetViewControl({
@@ -433,7 +434,7 @@ css: >-
         });
         if (_hasImagery) {
           map.setPaintProperty("alleys", "line-opacity", 0.1)
-        }else{
+        } else {
           map.setPaintProperty("alleys", "line-opacity", 1)
         }
       }
@@ -444,14 +445,14 @@ css: >-
     */
 
 
-    document.addEventListener('mapIsLoaded', function() {
+    document.addEventListener('mapIsLoaded', function () {
       // if (!contoursToggle) {
       //   var contoursToggle = document.getElementById('contours');
       //   contoursToggle.onchange = function() {
       //     infoMini.innerHTML = ""
       //   };
       //  }
-       mapDiv.style.visibility = "visible";
+      mapDiv.style.visibility = "visible";
     });
 
     /** end contours **/
@@ -461,13 +462,13 @@ css: >-
     var traceMap = map;
     //urls to sanitary sewer lines, points, storm lines points
     var urls = [
-      "https://311.coz.org/api/v1/feature-server/collections/public.utl_sanitary_points/items.json?limit=50000",
-      "https://311.coz.org/api/v1/feature-server/collections/public.utl_stormwater_stm_points/items.json?limit=50000",
-      "https://311.coz.org/api/v1/feature-server/collections/public.utl_sanitary_lines/items.json?limit=50000",
-      "https://311.coz.org/api/v1/feature-server/collections/public.utl_stormwater_stm_lines/items.json?limit=50000"
+      "https://habitrak.com/features/collections/public.utl_sanitary_points/items.json?limit=50000",
+      "https://habitrak.com/features/collections/public.utl_stormwater_stm_points/items.json?limit=50000",
+      "https://habitrak.com/features/collections/public.utl_sanitary_lines/items.json?limit=50000",
+      "https://habitrak.com/features/collections/public.utl_stormwater_stm_lines/items.json?limit=50000"
     ]
-    Promise.all(urls.map(u=>fetch(u))).then(responses =>
-        Promise.all(responses.map(res => res.json()))
+    Promise.all(urls.map(u => fetch(u))).then(responses =>
+      Promise.all(responses.map(res => res.json()))
     ).then(data => {
 
       var points = {
