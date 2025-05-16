@@ -2451,9 +2451,9 @@
       ],
       "line-color": [
         "case",
-        ["==", ["get", "SYSTEM"], "High Pressure"],
+        ["==", ["get", "system"], "High Pressure"],
         "#0062ff",
-        ["==", ["get", "SYSTEM"], "Low Pressure"],
+        ["==", ["get", "system"], "Low Pressure"],
         "#26d9d0",
         "deeppink"
       ]
