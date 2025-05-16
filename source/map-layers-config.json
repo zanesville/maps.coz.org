@@ -2787,17 +2787,17 @@
       "icon-ignore-placement": true,
       "icon-image": [
         "case",
-        ["==", ["get", "ACCESS_TYPE"], "Curb Stop Valve"],
+        ["==", ["get", "access_type"], "Curb Stop Valve"],
         "circle-seagreen2",
-        ["==", ["get", "ACCESS_TYPE"], "Meter Pit"],
+        ["==", ["get", "access_type"], "Meter Pit"],
         "triangle-seagreen2",
         "circle-black2"
       ],
       "icon-size": [
         "case",
-        ["==", ["get", "ACCESS_TYPE"], "Curb Stop Valve"],
+        ["==", ["get", "access_type"], "Curb Stop Valve"],
         0.7,
-        ["==", ["get", "ACCESS_TYPE"], "Meter Pit"],
+        ["==", ["get", "access_type"], "Meter Pit"],
         1,
         0.7
       ],
