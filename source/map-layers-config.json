@@ -2410,9 +2410,9 @@
     "paint": {
       "line-width": [
         "case",
-        [">", ["get", "DIAMETER"], 19],
+        [">", ["get", "diameter"], 19],
         10,
-        [">", ["get", "DIAMETER"], 11],
+        [">", ["get", "diameter"], 11],
         8,
         6
       ],
@@ -2443,9 +2443,9 @@
     "paint": {
       "line-width": [
         "case",
-        [">", ["get", "DIAMETER"], 19],
+        [">", ["get", "diameter"], 19],
         7,
-        [">", ["get", "DIAMETER"], 11],
+        [">", ["get", "diameter"], 11],
         5,
         3
       ],
@@ -2487,7 +2487,7 @@
     "layout": {
       "visibility": "none",
       "text-font": ["DIN Offc Pro Bold"],
-      "text-field": ["concat", ["get", "DIAMETER"], "in"],
+      "text-field": ["concat", ["get", "diameter"], "in"],
       "symbol-placement": "line",
       "symbol-spacing": 500,
       "text-anchor": "center",
@@ -2955,7 +2955,7 @@
     "metadata": {
       "popup": [
         "img_url",
-        "DIAMETER",
+        "diameter",
         "VALVETYPE",
         "CRITICALVALVE",
         "service_date",
