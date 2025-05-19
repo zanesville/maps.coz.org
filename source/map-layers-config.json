@@ -2667,23 +2667,23 @@
       },
       "circle-color": [
         "case",
-        ["==", ["get", "VALVETYPE"], "Main"],
+        ["==", ["get", "valvetype"], "Main"],
         "#00C5FF",
-        ["==", ["get", "VALVETYPE"], "Hydrant"],
+        ["==", ["get", "valvetype"], "Hydrant"],
         "red",
-        ["==", ["get", "VALVETYPE"], "Plug"],
+        ["==", ["get", "valvetype"], "Plug"],
         "orange",
-        ["==", ["get", "VALVETYPE"], "Fire Line"],
+        ["==", ["get", "valvetype"], "Fire Line"],
         "yellow",
-        ["==", ["get", "VALVETYPE"], "Butterfly"],
+        ["==", ["get", "valvetype"], "Butterfly"],
         "white",
-        ["==", ["get", "VALVETYPE"], "Boundary Valve"],
+        ["==", ["get", "valvetype"], "Boundary Valve"],
         "fuchsia",
-        ["==", ["get", "VALVETYPE"], "Slot Key Valve"],
+        ["==", ["get", "valvetype"], "Slot Key Valve"],
         "darkgray",
         "black"
       ],
-      "circle-stroke-color": ["case", ["has", "VALVETYPE"], "black", "red"],
+      "circle-stroke-color": ["case", ["has", "valvetype"], "black", "red"],
       "circle-stroke-width": {
         "stops": [
           [0, 0],
@@ -2717,7 +2717,7 @@
           [16, 3]
         ]
       },
-      "circle-color": ["case", ["==", ["get", "VALVETYPE"], "Boundary Valve"], "black", "black"],
+      "circle-color": ["case", ["==", ["get", "valvetype"], "Boundary Valve"], "black", "black"],
       "circle-pitch-scale": "map",
       "circle-pitch-alignment": "map"
     },
