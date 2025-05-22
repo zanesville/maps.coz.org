@@ -39,7 +39,7 @@ archive_dir: coz-app-archive
 category_dir: /
 code_dir:
 i18n_dir: :lang
-include: 
+include:
   - '_redirects'
   - '_headers'
 skip_render:
@@ -122,12 +122,12 @@ archive_generator:
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-# Netlify: 
+# Netlify:
 #deploy:
  # type: netlify
   #token: 9c5be66a6daa3a0d4ff057344397276a6ee52b100122ce4ed5177cd979b1ac7c
   #site_id: 52f0542b-4fea-4774-88b8-45c72ac6a902
-  # zip: true  #deploy with zip file. 
+  # zip: true  #deploy with zip file.
 
 #hexo-cdnify modified - could not get this to work properly - revisit sometime, using gulp-replace instead
 cdn:
@@ -143,7 +143,7 @@ cdn:
 pages:
   path: "source/pages"
 
-#https://github.com/hexojs/hexo-asset-pipeline 
+#https://github.com/hexojs/hexo-asset-pipeline
 asset_pipeline:
   revisioning:
     enable: false
@@ -171,7 +171,7 @@ js_minifier:
   silent: false
   output:
   compress:
-  exclude: 
+  exclude:
     - '*.min.js'
   include:
 
