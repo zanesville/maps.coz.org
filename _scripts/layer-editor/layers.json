@@ -289,7 +289,7 @@
     "legend": "<div id='RS-1' title='Low-Density Single-Family'><span class='fa fa-square' style='color:YELLOW'></span> RS-1</div><div id='RS-2' title='Medium-Low-Density Single-Family'><span class='fa fa-square' style='color:GOLD'></span> RS-2</div><div id='RS-3' title='Medium-Density Single-Family'><span class='fa fa-square' style='color:ORANGE'></span> RS-3</div><div id='RS-4' title='Medium-High-Density Single-Family'><span class='fa fa-square' style='color:DARKORANGE'></span> RS-4</div><div id='RS-5' title='High-Density Single-Family'><span class='fa fa-square' style='color:rgb(179,78,11)'></span> RS-5</div><div id='RA-1' title='Attached Residential'><span class='fa fa-square' style='color:LIGHTBLUE'></span> RA-1</div><div id='RM-1' title='Low-Density Multi-Family'><span class='fa fa-square' style='color:DEEPSKYBLUE'></span> RM-1</div><div id='RM-2' title='High-Density Multi-Family'><span class='fa fa-square' style='color:ROYALBLUE'></span> RM-2</div><div id='C-1' title='Neighborhood Commercial'><span class='fa fa-square' style='color:pink'></span> C-1</div><div id='C-2' title='Community Commercial'><span class='fa fa-square' style='color:INDIANRED'></span> C-2</div><div id='C-3' title='Downtown Commercial'><span class='fa fa-square' style='color:CRIMSON'></span> C-3</div><div id='C-4' title='Highway Commercial'><span class='fa fa-square' style='color:MAROON'></span> C-4</div><div id='I-1' title='Industrial'><span class='fa fa-square' style='color:GRAY'></span> I-1</div><div id='O-1' title='Local Office'><span class='fa fa-square' style='color:VIOLET'></span> O-1</div><div id='O-2' title='Office Park'><span class='fa fa-square' style='color:MAGENTA'></span> O-2</div><div id='AE' title='Agriculture and Estate'><span class='fa fa-square' style='color:YELLOWGREEN'></span> AE</div><div id='PUD' title='Planned Unit Development'><span class='fa fa-square' style='color:PURPLE'></span> PUD</div>",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"],
       "promoteId": "id",
       "maxzoom": 20
     },
@@ -386,7 +386,7 @@
     "source": "zoningSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"],
       "promoteId": "id",
       "maxzoom": 20
     },
@@ -422,7 +422,7 @@
     "group": "Planning",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.adm_census_tracks/items.json",
+      "data": "https://cozmaps.org/features/collections/public.adm_census_tracks/items.json",
       "generateId": true
     },
     "name": "Opportunity Zones",
@@ -449,7 +449,7 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.adm_mus_parcels",
@@ -494,7 +494,7 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.adm_mus_parcels",
@@ -529,7 +529,7 @@
     "source": "dev_community_reinvestment_areas",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.dev_community_reinvestment_areas/items.json",
+      "data": "https://cozmaps.org/features/collections/public.dev_community_reinvestment_areas/items.json",
       "generateId": true
     },
     "paint": {
@@ -554,7 +554,7 @@
     "source": "dev_community_reinvestment_areas",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.dev_community_reinvestment_areas/items.json"
+      "data": "https://cozmaps.org/features/collections/public.dev_community_reinvestment_areas/items.json"
     },
     "top": true,
     "paint": {
@@ -602,7 +602,7 @@
     "children": true,
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.dev_zoning_overlays/items.json",
+      "data": "https://cozmaps.org/features/collections/public.dev_zoning_overlays/items.json",
       "generateId": true
     },
     "paint": {
@@ -627,7 +627,7 @@
     "group": "Zoning",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.dev_zoning_overlays/items.json"
+      "data": "https://cozmaps.org/features/collections/public.dev_zoning_overlays/items.json"
     },
     "paint": {
       "line-color": "maroon",
@@ -650,7 +650,7 @@
     "source": "dev_zoning_overlays",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.dev_zoning_overlays/items.json"
+      "data": "https://cozmaps.org/features/collections/public.dev_zoning_overlays/items.json"
     },
     "paint": {
       "line-color": "BURLYWOOD",
@@ -676,7 +676,7 @@
     "group": "Zoning",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.dev_zoning_overlays/items.json"
+      "data": "https://cozmaps.org/features/collections/public.dev_zoning_overlays/items.json"
     },
     "paint": {
       "text-color": "burlywood",
@@ -709,7 +709,7 @@
     "group": "Tax Parcels",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.adm_mus_parcels_2017/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels_2017/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.adm_mus_parcels_2017",
@@ -736,7 +736,7 @@
     "source": "parcel2018Source",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.adm_mus_parcels_2018/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels_2018/{z}/{x}/{y}.pbf"],
       "maxzoom": 17
     },
     "source-layer": "public.adm_mus_parcels_2018",
@@ -763,7 +763,7 @@
     "children": true,
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.adm_mus_parcels",
@@ -791,7 +791,7 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.adm_mus_parcels",
@@ -823,7 +823,7 @@
     "minzoom": 19,
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.adm_mus_parcels_centroids/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels_centroids/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.adm_mus_parcels_centroids",
@@ -861,7 +861,7 @@
     "source": "eng_mus_annexations",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.eng_mus_annexations/items.json",
+      "data": "https://cozmaps.org/features/collections/public.eng_mus_annexations/items.json",
       "generateId": true
     },
     "paint": {
@@ -886,7 +886,7 @@
     "source": "adm_wards",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.adm_wards/items.json",
+      "data": "https://cozmaps.org/features/collections/public.adm_wards/items.json",
       "generateId": true
     },
     "paint": {
@@ -932,7 +932,7 @@
     "source": "adm_wards_labels",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.adm_wards/items.json",
+      "data": "https://cozmaps.org/features/collections/public.adm_wards/items.json",
       "generateId": true
     },
     "paint": {
@@ -968,7 +968,7 @@
     "source": "adminSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.adm_admin_boundaries",
@@ -994,7 +994,7 @@
     "source": "adminSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.adm_admin_boundaries",
@@ -1020,7 +1020,7 @@
     "source": "addressSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.adm_mus_addresses",
@@ -1056,7 +1056,7 @@
     "source": "addressSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.adm_mus_addresses",
@@ -1086,7 +1086,7 @@
     "source": "coz-impervious-source",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_stormwater_impervious_view/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_stormwater_impervious_view/items.json",
       "generateId": true
     },
     "group": "Impervious Surface Layers",
@@ -1117,7 +1117,7 @@
     "source": "eng_building_footprints",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"],
       "minzoom": 15,
       "maxzoom": 20
     },
@@ -1145,7 +1145,7 @@
     "legend": "<span class='fa fa-square' style='color:darkgreen;'></span> City Parks<br><span class='fa fa-square' style='color:yellowgreen;'></span> Other Parks<br><span class='fa fa-minus' style='color:darkgreen;'></span> Trails",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.rec_parks/items.json",
+      "data": "https://cozmaps.org/features/collections/public.rec_parks/items.json",
       "generateId": true
     },
     "paint": {
@@ -1188,7 +1188,7 @@
     "source": "rec_parks",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.rec_parks/items.json",
+      "data": "https://cozmaps.org/features/collections/public.rec_parks/items.json",
       "generateId": true
     },
     "paint": {
@@ -1216,7 +1216,7 @@
     "source": "rec_parks",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.rec_parks/items.json",
+      "data": "https://cozmaps.org/features/collections/public.rec_parks/items.json",
       "generateId": true
     },
     "paint": {
@@ -1249,7 +1249,7 @@
     "source": "trailsSource",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.rec_parks_trails/items.json",
+      "data": "https://cozmaps.org/features/collections/public.rec_parks_trails/items.json",
       "generateId": true
     },
     "paint": {
@@ -1275,7 +1275,7 @@
     "source": "trailsSource",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.rec_parks_trails/items.json",
+      "data": "https://cozmaps.org/features/collections/public.rec_parks_trails/items.json",
       "generateId": true
     },
     "paint": {
@@ -1299,7 +1299,7 @@
     "source": "rec_parks_tree_inventory",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.rec_parks_tree_inventory/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://cozmaps.org/tiles/public.rec_parks_tree_inventory/{z}/{x}/{y}.pbf"]
     },
     "source-layer": "public.rec_parks_tree_inventory",
     "paint": {
@@ -1339,7 +1339,7 @@
     "source": "rec_parks",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.rec_parks/items.json",
+      "data": "https://cozmaps.org/features/collections/public.rec_parks/items.json",
       "generateId": true
     },
     "paint": {
@@ -1373,7 +1373,7 @@
     "group": "Topography",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.env_mus_contours_2ft_clipped/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.env_mus_contours_2ft_clipped/{z}/{x}/{y}.pbf"],
       "minzoom": 15
     },
     "source-layer": "public.env_mus_contours_2ft_clipped",
@@ -1400,7 +1400,7 @@
     "source": "env_contours_10ft_simplified",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.env_contours_10ft_simplified/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.env_contours_10ft_simplified/{z}/{x}/{y}.pbf"],
       "minzoom": 15
     },
     "source-layer": "public.env_contours_10ft_simplified",
@@ -1429,7 +1429,7 @@
     "sourceType": {
       "type": "vector",
       "tiles": [
-        "https://habitrak.com/tiles/public.env_usfw_national_wetland_inventory/{z}/{x}/{y}.pbf"
+        "https://cozmaps.org/tiles/public.env_usfw_national_wetland_inventory/{z}/{x}/{y}.pbf"
       ]
     },
     "source-layer": "public.env_usfw_national_wetland_inventory",
@@ -1460,7 +1460,7 @@
     "type": "line",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.env_nhd_flowline/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://cozmaps.org/tiles/public.env_nhd_flowline/{z}/{x}/{y}.pbf"]
     },
     "source-layer": "public.env_nhd_flowline",
     "paint": {
@@ -1487,7 +1487,7 @@
     "source-layer": "public.env_nfhl_flood_hazard_areas",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.env_nfhl_flood_hazard_areas/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://cozmaps.org/tiles/public.env_nfhl_flood_hazard_areas/{z}/{x}/{y}.pbf"]
     },
     "paint": {
       "fill-color": [
@@ -1521,7 +1521,7 @@
     "source": "public.eng_odot_traffic_segments",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.eng_odot_traffic_segments/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://cozmaps.org/tiles/public.eng_odot_traffic_segments/{z}/{x}/{y}.pbf"]
     },
     "source-layer": "public.eng_odot_traffic_segments",
     "paint": {
@@ -1553,7 +1553,7 @@
     "source": "public.eng_odot_traffic_segments",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.eng_odot_traffic_segments/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://cozmaps.org/tiles/public.eng_odot_traffic_segments/{z}/{x}/{y}.pbf"]
     },
     "source-layer": "public.eng_odot_traffic_segments",
     "paint": {
@@ -1689,7 +1689,7 @@
     "source": "public.eng_paver_pci_view",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"],
       "promoteId": "id"
     },
     "source-layer": "public.eng_paver_pci_view",
@@ -1720,7 +1720,7 @@
     "source": "public.eng_paver_pci_view",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"],
       "promoteId": "id"
     },
     "source-layer": "public.eng_paver_pci_view",
@@ -1778,7 +1778,7 @@
     "source": "public.eng_paver_pci_view",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"],
       "promoteId": "id"
     },
     "source-layer": "public.eng_paver_pci_view",
@@ -1811,7 +1811,7 @@
     "source": "utl_mus_sanitary_lines",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_mus_sanitary_lines/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://cozmaps.org/tiles/public.utl_mus_sanitary_lines/{z}/{x}/{y}.pbf"]
     },
     "source-layer": "public.utl_mus_sanitary_lines",
     "paint": {
@@ -1835,7 +1835,7 @@
     "source": "utl_mus_sanitary_lines",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_mus_sanitary_lines/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://cozmaps.org/tiles/public.utl_mus_sanitary_lines/{z}/{x}/{y}.pbf"]
     },
     "source-layer": "public.utl_mus_sanitary_lines",
     "paint": {
@@ -1858,7 +1858,7 @@
     "source": "utl_mus_sanitary_points",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_mus_sanitary_points/{z}/{x}/{y}.pbf"]
+      "tiles": ["https://cozmaps.org/tiles/public.utl_mus_sanitary_points/{z}/{x}/{y}.pbf"]
     },
     "source-layer": "public.utl_mus_sanitary_points",
     "paint": {
@@ -1945,7 +1945,7 @@
     "source": "wLateralSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_water_lateral/{z}/{x}/{y}.mvt"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_water_lateral/{z}/{x}/{y}.mvt"],
       "maxzoom": 15
     },
     "source-layer": "utl_water_lateral",
@@ -1972,7 +1972,7 @@
     "source": "utl_water_meters",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_water_meters/{z}/{x}/{y}.mvt"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_water_meters/{z}/{x}/{y}.mvt"],
       "maxzoom": 15
     },
     "source-layer": "utl_water_meters",
@@ -2007,7 +2007,7 @@
     "source": "utl_water_meters",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_water_meters/{z}/{x}/{y}.mvt"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_water_meters/{z}/{x}/{y}.mvt"],
       "maxzoom": 15
     },
     "minzoom": 17,
@@ -2096,7 +2096,7 @@
     "source": "utl_mus_water_customers",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_mus_water_customers/{z}/{x}/{y}.mvt"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_mus_water_customers/{z}/{x}/{y}.mvt"],
       "maxzoom": 17
     },
     "source-layer": "utl_mus_water_customers",
@@ -2124,7 +2124,7 @@
     "source": "wMainSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_water_main/{z}/{x}/{y}.mvt"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_water_main/{z}/{x}/{y}.mvt"],
       "maxzoom": 15
     },
     "source-layer": "utl_water_main",
@@ -2157,7 +2157,7 @@
     "source": "wMainSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_water_main/{z}/{x}/{y}.mvt"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_water_main/{z}/{x}/{y}.mvt"],
       "maxzoom": 15
     },
     "source-layer": "utl_water_main",
@@ -2188,7 +2188,7 @@
     "group": "Water Layers",
     "sourceType": {
       "type": "geojson",
-      "tiles": ["https://habitrak.com/tiles/public.utl_water_main/{z}/{x}/{y}.mvt"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_water_main/{z}/{x}/{y}.mvt"],
       "maxzoom": 15
     },
     "source-layer": "utl_water_main",
@@ -2229,7 +2229,7 @@
     "source": "wSystemValveSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_water_system_valves/{z}/{x}/{y}.mvt"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_water_system_valves/{z}/{x}/{y}.mvt"],
       "maxzoom": 15
     },
     "source-layer": "utl_water_system_valves",
@@ -2306,7 +2306,7 @@
     "source": "wCurbStopValveSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_water_curb_stop_valve/{z}/{x}/{y}.mvt"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_water_curb_stop_valve/{z}/{x}/{y}.mvt"],
       "maxzoom": 15
     },
     "source-layer": "utl_water_curb_stop_valve",
@@ -2414,7 +2414,7 @@
     "source": "utl_water_index_map",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_water_index_map/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_water_index_map/items.json",
       "generateId": true
     },
     "paint": {
@@ -2438,7 +2438,7 @@
     "source": "utl_sanitary_east_end_grid",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_east_end_grid/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_east_end_grid/items.json",
       "generateId": true
     },
     "paint": {
@@ -2461,7 +2461,7 @@
     "source": "utl_sanitary_east_end_parcels",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_east_end_parcels/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_east_end_parcels/items.json",
       "generateId": true
     },
     "paint": {
@@ -2486,7 +2486,7 @@
     "source": "utl_sanitary_cso_areas",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_cso_areas/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_cso_areas/items.json",
       "generateId": true
     },
     "paint": {
@@ -2518,7 +2518,7 @@
     "source": "utl_sanitary_cso_areas",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_cso_areas/items.json"
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_cso_areas/items.json"
     },
     "paint": {
       "text-color": "black",
@@ -2546,7 +2546,7 @@
     "source": "sanitaryLinesSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
       "maxzoom": 17
     },
     "source-layer": "public.utl_sanitary_lines",
@@ -2579,7 +2579,7 @@
     "source": "sanitaryLinesSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
       "maxzoom": 17
     },
     "source-layer": "public.utl_sanitary_lines",
@@ -2631,7 +2631,7 @@
     "source": "sanitaryLinesSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
       "maxzoom": 17
     },
     "source-layer": "public.utl_sanitary_lines",
@@ -2660,7 +2660,7 @@
     "source": "utl_sanitary_laterals",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.utl_sanitary_laterals",
@@ -2686,7 +2686,7 @@
     "source": "utl_sanitary_laterals",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.utl_sanitary_laterals",
@@ -2721,7 +2721,7 @@
     "source": "utl_sanitary_laterals",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.utl_sanitary_laterals",
@@ -2748,7 +2748,7 @@
     "source": "sanitaryArrowSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
       "maxzoom": 17
     },
     "source-layer": "public.utl_sanitary_lines",
@@ -2789,7 +2789,7 @@
     "source": "sanitaryStructuresSource",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_points/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_points/items.json",
       "generateId": true
     },
     "paint": {
@@ -2828,7 +2828,7 @@
     "source": "sanitaryLabelsSource",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_points/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_points/items.json",
       "maxzoom": 17
     },
     "paint": {
@@ -2861,7 +2861,7 @@
     "source": "utl_sanitary_master_meters",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_master_meters/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_master_meters/items.json",
       "generateId": true
     },
     "paint": {
@@ -2900,7 +2900,7 @@
     "source": "public.utl_sanitary_plans_view",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_plans_view/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_plans_view/items.json",
       "generateId": true
     },
     "paint": {
@@ -2921,7 +2921,7 @@
     "source": "utl_sanitary_regulators",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_regulators/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_regulators/items.json",
       "generateId": true
     },
     "paint": {
@@ -2971,7 +2971,7 @@
     "source": "utl_sanitary_regulators",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_regulators/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_regulators/items.json",
       "generateId": true
     },
     "paint": {
@@ -3013,7 +3013,7 @@
     "source": "utl_stormwater_rcap_streets",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.utl_stormwater_rcap_streets/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.utl_stormwater_rcap_streets/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.utl_stormwater_rcap_streets",
@@ -3049,7 +3049,7 @@
     "source": "stormLinesSource",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_stormwater_stm_lines/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_stormwater_stm_lines/items.json",
       "generateId": true
     },
     "paint": {
@@ -3075,7 +3075,7 @@
     "legend": "<div><span class='fa fa-minus' style='color:goldenrod'></span> Private</div> <div><span class='fa fa-minus' style='color:#fb00ff'></span> Storm Main</div> <div><span class='fa fa-minus' style='color:sienna'></span> Combination</div> <div><span class='fa fa-minus' style='color:#00a9e6'></span> Stream</div>    <div><span class='fa fa-minus' style='color:#00ffc5'></span> Ditch</div>    <div><span class='fa fa-minus' style='color:#333'></span> Culvert</div>    <div><span class='fa fa-minus' style='color:gray'></span> Abandoned/Unknown</div>",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_stormwater_stm_lines/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_stormwater_stm_lines/items.json",
       "generateId": true
     },
     "paint": {
@@ -3118,7 +3118,7 @@
     "source": "stormLinesSource",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_stormwater_stm_lines/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_stormwater_stm_lines/items.json",
       "generateId": true
     },
     "paint": {
@@ -3155,7 +3155,7 @@
     "source": "stormLinesSource",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_stormwater_stm_lines/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_stormwater_stm_lines/items.json",
       "generateId": true
     },
     "layout": {
@@ -3183,7 +3183,7 @@
     "source": "stmStructuresSource",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_stormwater_stm_points/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_stormwater_stm_points/items.json",
       "generateId": true
     },
     "paint": {
@@ -3211,7 +3211,7 @@
     "source": "stmStructuresSource",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_stormwater_stm_points/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_stormwater_stm_points/items.json",
       "generateId": true
     },
     "layout": {
@@ -3248,7 +3248,7 @@
     "source": "utl_sanitary_flow_monitors",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_flow_monitors/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_flow_monitors/items.json",
       "generateId": true
     },
     "paint": {
@@ -3290,7 +3290,7 @@
     "source": "utl_sanitary_flow_monitors",
     "sourceType": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.utl_sanitary_flow_monitors/items.json",
+      "data": "https://cozmaps.org/features/collections/public.utl_sanitary_flow_monitors/items.json",
       "generateId": true
     },
     "paint": {
@@ -3360,7 +3360,7 @@
     "source": "eng_building_footprints",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"],
       "minzoom": 15,
       "maxzoom": 20
     },
@@ -3427,7 +3427,7 @@
     "source": "public.eng_coz_structures",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.eng_coz_structures/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.eng_coz_structures/{z}/{x}/{y}.pbf"],
       "maxzoom": 20
     },
     "source-layer": "public.eng_coz_structures",
@@ -3469,7 +3469,7 @@
     "source": "eng_coz_ward_lookup_mview",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.eng_coz_ward_lookup_mview/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.eng_coz_ward_lookup_mview/{z}/{x}/{y}.pbf"],
       "promoteId": "id",
       "maxzoom": 20
     },
@@ -3500,7 +3500,7 @@
     "source": "eng_coz_ward_lookup_mview",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://habitrak.com/tiles/public.eng_coz_ward_lookup_mview/{z}/{x}/{y}.pbf"],
+      "tiles": ["https://cozmaps.org/tiles/public.eng_coz_ward_lookup_mview/{z}/{x}/{y}.pbf"],
       "promoteId": "id",
       "maxzoom": 20
     },
@@ -3536,7 +3536,7 @@
     },
     "source": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.eng_coz_pois/items.json"
+      "data": "https://cozmaps.org/features/collections/public.eng_coz_pois/items.json"
     },
     "paint": {
       "circle-color": [
@@ -3598,7 +3598,7 @@
     "group": "City POIS",
     "source": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.eng_coz_pois/items.json"
+      "data": "https://cozmaps.org/features/collections/public.eng_coz_pois/items.json"
     },
     "metadata": {
       "popup": ["name", "images", "address", "website"]
@@ -3633,7 +3633,7 @@
     },
     "source": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.eng_coz_pois/items.json"
+      "data": "https://cozmaps.org/features/collections/public.eng_coz_pois/items.json"
     },
     "minzoom": 16,
     "paint": {
@@ -3687,7 +3687,7 @@
     "legend": "<div><span class='fa fa-minus' style='color:orange;'></span> Alternate Routes<br><span class='fa fa-minus' style='color:red;'></span> Road Closed</div>",
     "source": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.eng_road_closures/items.json",
+      "data": "https://cozmaps.org/features/collections/public.eng_road_closures/items.json",
       "generateId": true
     },
     "paint": {
@@ -3718,7 +3718,7 @@
     "legend": " ",
     "source": {
       "type": "geojson",
-      "data": "https://habitrak.com/features/collections/public.eng_bikeped/items.json",
+      "data": "https://cozmaps.org/features/collections/public.eng_bikeped/items.json",
       "generateId": true
     },
     "paint": {

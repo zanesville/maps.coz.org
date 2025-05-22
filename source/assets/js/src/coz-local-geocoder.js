@@ -10,7 +10,7 @@ var geocoderData, geocoderDataList;
 // var fuse = new Fuse([])
 
 getJSON(
-  "https://habitrak.com/features/collections/public.eng_coz_geocoder_mview/items.json",
+  "https://cozmaps.org/features/collections/public.eng_coz_geocoder_mview/items.json",
   function (data) {
     geocoderData = data;
     geocoderDataList = [];

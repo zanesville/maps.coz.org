@@ -324,12 +324,15 @@ async function getFeatures(map, e, l) {
     for (let i = 0; i < features.length; i++) {
       const obj = features[i];
       try {
-        const queryUrl = `https://habitrak.com/features/functions/postgisftw.get_attachments/items.json?schema_name=public&table_name=${obj.sourceLayer?.replace("public.", "")}&parent_id=${obj.id}`;
+        const queryUrl = `https://cozmaps.org/features/functions/postgisftw.get_attachments/items.json?schema_name=public&table_name=${obj.sourceLayer?.replace(
+          "public.",
+          ""
+        )}&parent_id=${obj.id}`;
         console.log({ queryUrl });
         const attachments = await fetch(queryUrl).then((res) => res.json());
         console.log({ attachments });
         if (attachments && attachments.length > 0) {
-          attachments.forEach((a,i) => {
+          attachments.forEach((a, i) => {
             obj.properties[`attachment_img_${i}`] = a?.url;
             //TODO add an image gallery to the popup if more than 1 image is found
             obj.properties[`attachment_img_name_${i}`] = a?.name;

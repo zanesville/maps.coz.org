@@ -4,27 +4,27 @@ title: Stormwater Accounts
 subtitle: Impervious Area Account Details
 unsplash: accounts
 header: >-
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 css: >-
-.btn {height: auto;}
-.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate
-.paginate_button.current:hover {background: none;}
-.dataTables_wrapper .dataTables_paginate .paginate_button:hover:not(.disabled) {
-border-color: #0c79a5;
-background-color: #0c79a5!important;
-background: none;
-color: white;
-}
-.table.table-scroll {
-display: table;
-}
-.dataTables_wrapper {
-min-height: 660px;
-}
-.container>div
-{
-margin-bottom: 2rem;
-}
+  .btn {height: auto;}
+  .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate
+  .paginate_button.current:hover {background: none;}
+  .dataTables_wrapper .dataTables_paginate .paginate_button:hover:not(.disabled) {
+  border-color: #0c79a5;
+  background-color: #0c79a5!important;
+  background: none;
+  color: white;
+  }
+  .table.table-scroll {
+  display: table;
+  }
+  .dataTables_wrapper {
+  min-height: 660px;
+  }
+  .container>div
+  {
+  margin-bottom: 2rem;
+  }
 type: web-app
 ---
 <div class="container" style="max-width: 1200px;">
@@ -82,7 +82,7 @@ type: web-app
     ""
   ]
 
-  fetch('https://habitrak.com/features/collections/public.utl_stormwater_impervious_view/items.json')
+  fetch('https://cozmaps.org/features/collections/public.utl_stormwater_impervious_view/items.json')
     .then(function (res) {
       return res.json()
     })
