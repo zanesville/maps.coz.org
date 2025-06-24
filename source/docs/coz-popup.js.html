@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>JSDoc: Source: coz-popup.js</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <title>JSDoc: Source: coz-popup.js</title>
+
+  <script src="scripts/prettify/prettify.js"> </script>
+  <script src="scripts/prettify/lang-css.js"> </script>
+  <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
 </head>
 
 <body>
 
-<div id="main">
+  <div id="main">
 
     <h1 class="page-title">Source: coz-popup.js</h1>
 
-    
 
 
 
-    
+
+
     <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>import {getLayers} from "./coz-helpers.js";
+      <article>
+        <pre class="prettyprint source linenums"><code>import {getLayers} from "./coz-helpers.js";
 import {getQuery} from "./coz-helpers.js";
 import {hasLayer} from "./coz-helpers.js";
 
@@ -51,10 +52,10 @@ var highlightState = {
 }
 
 /**
- * 
- * @param {*} map 
- * @param {*} feature 
- * @param {*} highlightOnly 
+ *
+ * @param {*} map
+ * @param {*} feature
+ * @param {*} highlightOnly
  */
 function highlightAddFeature(map, feature, highlightOnly) {
   // console.log(feature)
@@ -75,7 +76,7 @@ function highlightAddFeature(map, feature, highlightOnly) {
   }
 
   highlightClearFeature(highlightMap, highlightType)
-  
+
   var clone = [feature.layer].slice();
   var highlightLayer = clone[0]
 
@@ -111,8 +112,8 @@ function highlightAddFeature(map, feature, highlightOnly) {
 }
 
 /**
- * 
- * @param {*} e 
+ *
+ * @param {*} e
  */
 function highlightClearFeature(e, type, noFeatures) {
   var type = (!type) ? "click" : type;
@@ -143,8 +144,8 @@ function highlightClearFeature(e, type, noFeatures) {
 }
 
 /**
- * 
- * @param {*} type 
+ *
+ * @param {*} type
  */
 function highlightLayerPaint(featureType, color) {
   if (color) {
@@ -184,7 +185,7 @@ function highlightLayerPaint(featureType, color) {
       "fill-opacity": 0.7
     },
     "fill-extrusion": {
-      "fill-extrusion-color": ["case", 
+      "fill-extrusion-color": ["case",
           ["==", ["feature-state", "click"], true] ,"yellow",
           ["==", ["feature-state", "highlight"], true] ,"yellow",
         color],
@@ -196,12 +197,12 @@ function highlightLayerPaint(featureType, color) {
 }
 
 /**
- * 
+ *
  * @memberof cozMap
  * @method getFeatures
- * @param {*} map 
- * @param {*} e 
- * @param {*} l 
+ * @param {*} map
+ * @param {*} e
+ * @param {*} l
  */
 
 function getFeatures(map, e, l) {
@@ -211,7 +212,7 @@ function getFeatures(map, e, l) {
       return []
     }
   }
-  
+
   //SHOULD MAYBE MOVE THIS OUT OF HERE TO A HELPER FILE
 
   var point;
@@ -294,7 +295,7 @@ function getFeatures(map, e, l) {
     queriedFeatures = map.queryRenderedFeatures(point);
     bboxFeatures = map.queryRenderedFeatures(bbox);
   }
-  
+
   const combinedFeatures = [...queriedFeatures, ...bboxFeatures]
   const features = cleanFeatures(combinedFeatures);
 
@@ -373,7 +374,7 @@ function popup(map, features, n, highlightOnly) {
     highlightAddFeature(map, features[0], true);
     return
   }
-  
+
   var x = (!n) ? 0 : n;
 
   highlightAddFeature(popupMap, popupFeatures[x])
@@ -415,7 +416,7 @@ function popup(map, features, n, highlightOnly) {
   popupWindow.appendChild(popupDiv);
 
   document.getElementById("map--info-window").style.display = "block";
-    
+
   if (window.innerWidth > 768) {
     // var width = document.querySelector("#map--info-window-content").children[0].children[1].offsetWidth
     // console.log(document.querySelector("#map--info-window-content").children[0].children[1], width)
@@ -472,7 +473,7 @@ function popupShowMoreFeatures(map, features, heading, x) {
   }
 
   div.appendChild(prev);
-  
+
   var span = document.createElement("div");
   span.textContent = heading;
   span.style.fontSize = "18px";
@@ -562,7 +563,6 @@ function popupBuildHtml(map, f) {
       "parcel_number",
       "uuid",
       "plan_local",
-      "Ownedby",
       "Maintby",
       "__vt__id__index",
     ];
@@ -605,7 +605,7 @@ function popupBuildHtml(map, f) {
       var popupImageLink = document.createElement("a");
       popupImageLink.href = hasImage;
       popupImageLink.target = "_blank";
-      
+
       var popupImg = document.createElement("img");
       popupImg.src = hasImage;
       popupImg.style.width = "100%";
@@ -708,7 +708,7 @@ function formatNumber(value) {
 /**
  * genId
  * Generate an ID of x length, NOT IN USE
- * @param {Number} length 
+ * @param {Number} length
  */
 function genId(length) {
   var result           = '';
@@ -719,25 +719,59 @@ function genId(length) {
   }
   return result;
 }</code></pre>
-        </article>
+      </article>
     </section>
 
 
 
 
-</div>
+  </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="mglStreetViewControl.html">mglStreetViewControl</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addIEPolyfills">addIEPolyfills</a></li><li><a href="global.html#checkedToggleLayers">checkedToggleLayers</a></li><li><a href="global.html#cozSidebarToggleControl">cozSidebarToggleControl</a></li><li><a href="global.html#createStory">createStory</a></li><li><a href="global.html#genId">genId</a></li><li><a href="global.html#getJSON">getJSON</a></li><li><a href="global.html#getLayers">getLayers</a></li><li><a href="global.html#getParent">getParent</a></li><li><a href="global.html#getQuery">getQuery</a></li><li><a href="global.html#hasLayer">hasLayer</a></li><li><a href="global.html#highlight">highlight</a></li><li><a href="global.html#highlightAddFeature">highlightAddFeature</a></li><li><a href="global.html#highlightClearFeature">highlightClearFeature</a></li><li><a href="global.html#highlightLayerPaint">highlightLayerPaint</a></li><li><a href="global.html#highlightReset">highlightReset</a></li><li><a href="global.html#mapAddLayers">mapAddLayers</a></li><li><a href="global.html#mapCheckRendered">mapCheckRendered</a></li><li><a href="global.html#mapGetInfo">mapGetInfo</a></li><li><a href="global.html#mapillaryLayers">mapillaryLayers</a></li><li><a href="global.html#mapMeasureControl">mapMeasureControl</a></li><li><a href="global.html#mapSelectOnLoad">mapSelectOnLoad</a></li><li><a href="global.html#RulerControl">RulerControl</a></li><li><a href="global.html#showBoundingBox">showBoundingBox</a></li><li><a href="global.html#streetViewIcon">streetViewIcon</a></li><li><a href="global.html#updateQueryStringParam">updateQueryStringParam</a></li></ul>
-</nav>
+  <nav>
+    <h2><a href="index.html">Home</a></h2>
+    <h3>Classes</h3>
+    <ul>
+      <li><a href="mglStreetViewControl.html">mglStreetViewControl</a></li>
+    </ul>
+    <h3>Global</h3>
+    <ul>
+      <li><a href="global.html#addIEPolyfills">addIEPolyfills</a></li>
+      <li><a href="global.html#checkedToggleLayers">checkedToggleLayers</a></li>
+      <li><a href="global.html#cozSidebarToggleControl">cozSidebarToggleControl</a></li>
+      <li><a href="global.html#createStory">createStory</a></li>
+      <li><a href="global.html#genId">genId</a></li>
+      <li><a href="global.html#getJSON">getJSON</a></li>
+      <li><a href="global.html#getLayers">getLayers</a></li>
+      <li><a href="global.html#getParent">getParent</a></li>
+      <li><a href="global.html#getQuery">getQuery</a></li>
+      <li><a href="global.html#hasLayer">hasLayer</a></li>
+      <li><a href="global.html#highlight">highlight</a></li>
+      <li><a href="global.html#highlightAddFeature">highlightAddFeature</a></li>
+      <li><a href="global.html#highlightClearFeature">highlightClearFeature</a></li>
+      <li><a href="global.html#highlightLayerPaint">highlightLayerPaint</a></li>
+      <li><a href="global.html#highlightReset">highlightReset</a></li>
+      <li><a href="global.html#mapAddLayers">mapAddLayers</a></li>
+      <li><a href="global.html#mapCheckRendered">mapCheckRendered</a></li>
+      <li><a href="global.html#mapGetInfo">mapGetInfo</a></li>
+      <li><a href="global.html#mapillaryLayers">mapillaryLayers</a></li>
+      <li><a href="global.html#mapMeasureControl">mapMeasureControl</a></li>
+      <li><a href="global.html#mapSelectOnLoad">mapSelectOnLoad</a></li>
+      <li><a href="global.html#RulerControl">RulerControl</a></li>
+      <li><a href="global.html#showBoundingBox">showBoundingBox</a></li>
+      <li><a href="global.html#streetViewIcon">streetViewIcon</a></li>
+      <li><a href="global.html#updateQueryStringParam">updateQueryStringParam</a></li>
+    </ul>
+  </nav>
 
-<br class="clear">
+  <br class="clear">
 
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Thu Feb 02 2023 09:04:04 GMT-0500 (Eastern Standard Time)
-</footer>
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Thu Feb 02 2023 09:04:04
+    GMT-0500 (Eastern Standard Time)
+  </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+  <script> prettyPrint(); </script>
+  <script src="scripts/linenumber.js"> </script>
 </body>
+
 </html>

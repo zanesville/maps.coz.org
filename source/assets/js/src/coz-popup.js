@@ -649,7 +649,6 @@ function popupBuildHtml(map, f) {
       "parcel_number",
       "uuid",
       "plan_local",
-      "Ownedby",
       "Maintby",
       "__vt__id__index",
     ];
