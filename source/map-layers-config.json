@@ -1967,7 +1967,7 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["name", "date_last_paved", "road_type"],
+      "popup": ["name", "date_last_paved", "road_type","pci_predicted_category"],
       "filterSchema": {
         "date_last_paved": {
           "type": "date"
