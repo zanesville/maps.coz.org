@@ -2866,7 +2866,7 @@
     "layout": {
       "visibility": "none",
       "text-font": ["DIN Offc Pro Bold"],
-      "text-field": "{FACILITYID}",
+      "text-field": "{facilityid}",
       "text-anchor": "bottom-left",
       "text-size": 14,
       "text-offset": [0.5, -0.4]
