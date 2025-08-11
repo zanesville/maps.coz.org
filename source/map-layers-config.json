@@ -3479,7 +3479,7 @@
     "layout": {
       "visibility": "none",
       "text-font": ["DIN Offc Pro Bold"],
-      "text-field": "{fieldid}",
+      "text-field": "{temp}",
       "text-anchor": "bottom-left",
       "text-size": 14,
       "text-offset": [0.5, -0.2]
