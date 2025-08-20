@@ -137,6 +137,33 @@
     }
   },
   {
+    "id": "img_2025",
+    "type": "raster",
+    "name": "2025 Imagery",
+    "directory": "Imagery",
+    "group": "Aerial Imagery",
+    "image": "https://gis.coz.org/map-data/preview-images/ortho.jpg",
+    "source": "img_2025",
+    "sourceType": {
+      "type": "raster",
+      "tiles": [
+        "https://tiles.arcgis.com/tiles/N1ybEAKiuuUIL8Mz/arcgis/rest/services/Imagery2025web/MapServer/tile/{z}/{y}/{x}"
+      ],
+      "tileSize": 256,
+      "attribution": "<a href='https://muskingum-county-gis-muskcogis.hub.arcgis.com' target='_blank'>Muskingum County Imagery</a>",
+      "maxzoom": 20
+    },
+    "paint": {
+      "raster-opacity": 1
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": false
+    }
+  },
+  {
     "id": "img_hist_maps_1832_musk_atlas",
     "type": "raster",
     "name": "Muskingum Co. circa 1832",
