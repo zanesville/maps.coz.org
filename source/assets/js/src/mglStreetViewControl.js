@@ -37,9 +37,9 @@ class mglStreetViewControl {
     //add mapillary points and lines
     const _mapillaryLayers = mapillaryLayers(this._mapillaryLayerOptions);
 
-    _mapillaryLayers.map((l) => {
-      _map.addLayer(l);
-    });
+    // _mapillaryLayers.map((l) => {
+    //   _map.addLayer(l);
+    // });
 
     const _mapMinZoom = this._map.getMinZoom();
 
@@ -50,10 +50,10 @@ class mglStreetViewControl {
 
     this._btn.onclick = function () {
       //if layers are already showing, reset and return
-      if (_map.getLayoutProperty(_mapillaryLayers[0].id, "visibility") === "visible") {
-        reset(_marker);
-        return;
-      }
+      // if (_map.getLayoutProperty(_mapillaryLayers[0].id, "visibility") === "visible") {
+      //   reset(_marker);
+      //   return;
+      // }
 
       //set latlng and show marker
       _marker.setLngLat(map.getCenter()).addTo(map).on("dragend", onDragEnd);
@@ -63,9 +63,9 @@ class mglStreetViewControl {
       if (_map.getZoom() < 14) _map.setZoom(14);
 
       //show mapillary imagery points and lines
-      _mapillaryLayers.forEach((l) => {
-        _map.setLayoutProperty(l.id, "visibility", "visible");
-      });
+      // _mapillaryLayers.forEach((l) => {
+      //   _map.setLayoutProperty(l.id, "visibility", "visible");
+      // });
 
       //show toast, spectre css only
       if (!document.getElementById("streetviewControlToast")) {
@@ -107,15 +107,16 @@ class mglStreetViewControl {
           [point.x - bboxClickTargetSize / 2, point.y - bboxClickTargetSize / 2],
           [point.x + bboxClickTargetSize / 2, point.y + bboxClickTargetSize / 2],
         ];
-        const mapillaryLayerIds = _mapillaryLayers.reduce((i, l) => [...i, l.id], []);
-        const mapillaryImages = _map.queryRenderedFeatures(bbox, { layers: mapillaryLayerIds });
-        const mapillaryExists = !mapillaryImages.length ? false : true;
+        // const mapillaryLayerIds = _mapillaryLayers.reduce((i, l) => [...i, l.id], []);
+        // const mapillaryImages = _map.queryRenderedFeatures(bbox, { layers: mapillaryLayerIds });
+        const mapillaryExists = false; //!mapillaryImages.length ? false : true;
 
         const urls = [
           "https://www.google.com/maps/@?api=1&map_action=pano&heading=0&pitch=0&viewpoint="
             .concat(lngLat.lat, ",")
             .concat(lngLat.lng),
         ];
+        console.log(urls[0]);
         if (mapillaryExists) {
           urls.push(
             "https://www.mapillary.com/app/?z=16&lat=" +
@@ -153,9 +154,9 @@ class mglStreetViewControl {
         _map.setMinZoom(_mapMinZoom);
 
         //hide mapillary points and lines
-        _mapillaryLayers.forEach((l) => {
-          _map.setLayoutProperty(l.id, "visibility", "none");
-        });
+        // _mapillaryLayers.forEach((l) => {
+        //   _map.setLayoutProperty(l.id, "visibility", "none");
+        // });
 
         //hide toast message
         if (document.querySelector("#streetviewControlToast")) {
