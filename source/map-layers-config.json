@@ -94,7 +94,9 @@
     "source": "img_osip_2020",
     "sourceType": {
       "type": "raster",
-      "tiles": ["https://311.coz.org/static/data/raster-tiles/img_osip_2020/{z}/{x}/{y}.webp"],
+      "tiles": [
+        "https://311.coz.org/static/data/raster-tiles/img_osip_2020/{z}/{x}/{y}.webp"
+      ],
       "tileSize": 512,
       "attribution": "<a href='https://ogrip.oit.ohio.gov/projectsinitiatives/statewideimagery.aspx' target='_blank'>OSIP III Imagery</a>",
       "maxzoom": 20
@@ -418,7 +420,9 @@
     "legend": "<div id='RS-1' title='Low-Density Single-Family'><span class='fa fa-square' style='color:YELLOW'></span> RS-1</div><div id='RS-2' title='Medium-Low-Density Single-Family'><span class='fa fa-square' style='color:GOLD'></span> RS-2</div><div id='RS-3' title='Medium-Density Single-Family'><span class='fa fa-square' style='color:ORANGE'></span> RS-3</div><div id='RS-4' title='Medium-High-Density Single-Family'><span class='fa fa-square' style='color:DARKORANGE'></span> RS-4</div><div id='RS-5' title='High-Density Single-Family'><span class='fa fa-square' style='color:rgb(179,78,11)'></span> RS-5</div><div id='RA-1' title='Attached Residential'><span class='fa fa-square' style='color:LIGHTBLUE'></span> RA-1</div><div id='RM-1' title='Low-Density Multi-Family'><span class='fa fa-square' style='color:DEEPSKYBLUE'></span> RM-1</div><div id='RM-2' title='High-Density Multi-Family'><span class='fa fa-square' style='color:ROYALBLUE'></span> RM-2</div><div id='C-1' title='Neighborhood Commercial'><span class='fa fa-square' style='color:pink'></span> C-1</div><div id='C-2' title='Community Commercial'><span class='fa fa-square' style='color:INDIANRED'></span> C-2</div><div id='C-3' title='Downtown Commercial'><span class='fa fa-square' style='color:CRIMSON'></span> C-3</div><div id='C-4' title='Highway Commercial'><span class='fa fa-square' style='color:MAROON'></span> C-4</div><div id='I-1' title='Industrial'><span class='fa fa-square' style='color:GRAY'></span> I-1</div><div id='O-1' title='Local Office'><span class='fa fa-square' style='color:VIOLET'></span> O-1</div><div id='O-2' title='Office Park'><span class='fa fa-square' style='color:MAGENTA'></span> O-2</div><div id='AE' title='Agriculture and Estate'><span class='fa fa-square' style='color:YELLOWGREEN'></span> AE</div><div id='PUD' title='Planned Unit Development'><span class='fa fa-square' style='color:PURPLE'></span> PUD</div>",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id",
       "maxzoom": 22
     },
@@ -426,7 +430,10 @@
     "paint": {
       "fill-color": [
         "match",
-        ["get", "zoning_code"],
+        [
+          "get",
+          "zoning_code"
+        ],
         "RS-1",
         "YELLOW",
         "RS-2",
@@ -473,7 +480,11 @@
     },
     "metadata": {
       "popup2": "<table><tr><td>Zoning Code: </td><td>{{zoning_code}}</td><tr>Parcel: </>{{parcelnum}}<br><strong>Address: </strong> {{parcel_address}}",
-      "popup3": ["parcelnum", "parcel_address", "zoning_code"],
+      "popup3": [
+        "parcelnum",
+        "parcel_address",
+        "zoning_code"
+      ],
       "popup": true,
       "filterSchema": {
         "zoning_code": {
@@ -515,7 +526,9 @@
     "source": "zoningSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.dev_zoning_mview/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id",
       "maxzoom": 22
     },
@@ -530,13 +543,27 @@
       "visibility": "none",
       "text-anchor": "center",
       "text-padding": 2,
-      "text-font": ["DIN Offc Pro Bold"],
-      "text-field": ["concat", ["get", "zoning_code"]],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
+      "text-field": [
+        "concat",
+        [
+          "get",
+          "zoning_code"
+        ]
+      ],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [12, 18],
-          [22, 22]
+          [
+            12,
+            18
+          ],
+          [
+            22,
+            22
+          ]
         ]
       }
     },
@@ -552,7 +579,9 @@
     "source": "cic_properies_source",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.dev_cic_parcels/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.dev_cic_parcels/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22,
       "promoteId": "fid"
     },
@@ -589,7 +618,11 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": ["==", "tract_status", "Designated"],
+    "filter": [
+      "==",
+      "tract_status",
+      "Designated"
+    ],
     "metadata": {
       "popup": true
     }
@@ -604,28 +637,86 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels",
     "paint": {
       "fill-color": [
         "case",
-        ["==", ["get", "landusecode"], 100],
+        [
+          "==",
+          [
+            "get",
+            "landusecode"
+          ],
+          100
+        ],
         "firebrick",
-        ["==", ["get", "landusecode"], 400],
+        [
+          "==",
+          [
+            "get",
+            "landusecode"
+          ],
+          400
+        ],
         "firebrick",
-        ["==", ["get", "landusecode"], 500],
+        [
+          "==",
+          [
+            "get",
+            "landusecode"
+          ],
+          500
+        ],
         "firebrick",
-        ["==", ["get", "landusecode"], 501],
+        [
+          "==",
+          [
+            "get",
+            "landusecode"
+          ],
+          501
+        ],
         "firebrick",
-        ["==", ["get", "landusecode"], 502],
+        [
+          "==",
+          [
+            "get",
+            "landusecode"
+          ],
+          502
+        ],
         "firebrick",
-        ["==", ["get", "landusecode"], 503],
+        [
+          "==",
+          [
+            "get",
+            "landusecode"
+          ],
+          503
+        ],
         "firebrick",
-        ["==", ["get", "landusecode"], 504],
+        [
+          "==",
+          [
+            "get",
+            "landusecode"
+          ],
+          504
+        ],
         "firebrick",
-        ["==", ["get", "landusecode"], 505],
+        [
+          "==",
+          [
+            "get",
+            "landusecode"
+          ],
+          505
+        ],
         "firebrick",
         "transparent"
       ],
@@ -649,15 +740,22 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels",
     "paint": {
       "fill-color": [
         "interpolate",
-        ["linear"],
-        ["get", "prior_tax"],
+        [
+          "linear"
+        ],
+        [
+          "get",
+          "prior_tax"
+        ],
         0,
         "transparent",
         1,
@@ -695,7 +793,11 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": ["==", "status", "Existing"],
+    "filter": [
+      "==",
+      "status",
+      "Existing"
+    ],
     "metadata": {
       "popup": true
     }
@@ -720,18 +822,33 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Bold"],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
       "text-allow-overlap": true,
-      "text-field": ["get", "name"],
+      "text-field": [
+        "get",
+        "name"
+      ],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [12, 16],
-          [22, 20]
+          [
+            12,
+            16
+          ],
+          [
+            22,
+            20
+          ]
         ]
       }
     },
-    "filter": ["==", "status", "Existing"],
+    "filter": [
+      "==",
+      "status",
+      "Existing"
+    ],
     "metadata": {
       "popup": false
     }
@@ -830,13 +947,27 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Bold"],
-      "text-field": ["concat", ["get", "name"]],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
+      "text-field": [
+        "concat",
+        [
+          "get",
+          "name"
+        ]
+      ],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [12, 18],
-          [22, 22]
+          [
+            12,
+            18
+          ],
+          [
+            22,
+            22
+          ]
         ]
       }
     },
@@ -857,10 +988,58 @@
     },
     "type": "circle",
     "paint": {
-      "circle-radius": ["case", ["==", ["get", "city_row_parcel"], true], 7, 4],
-      "circle-color": ["case", ["==", ["get", "city_row_parcel"], true], "black", "white"],
-      "circle-stroke-color": ["case", ["==", ["get", "city_row_parcel"], true], "red", "black"],
-      "circle-stroke-width": ["case", ["==", ["get", "city_row_parcel"], true], 2, 1]
+      "circle-radius": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "city_row_parcel"
+          ],
+          true
+        ],
+        7,
+        4
+      ],
+      "circle-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "city_row_parcel"
+          ],
+          true
+        ],
+        "black",
+        "white"
+      ],
+      "circle-stroke-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "city_row_parcel"
+          ],
+          true
+        ],
+        "red",
+        "black"
+      ],
+      "circle-stroke-width": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "city_row_parcel"
+          ],
+          true
+        ],
+        2,
+        1
+      ]
     },
     "layout": {
       "visibility": "none"
@@ -878,7 +1057,9 @@
     "group": "Tax Parcels",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels_2017/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.adm_mus_parcels_2017/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels_2017",
@@ -890,7 +1071,11 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": ["!=", "PARCELNUM", "WW"],
+    "filter": [
+      "!=",
+      "PARCELNUM",
+      "WW"
+    ],
     "metadata": {
       "popup": true
     }
@@ -905,7 +1090,9 @@
     "source": "parcel2018Source",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels_2018/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.adm_mus_parcels_2018/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels_2018",
@@ -917,7 +1104,11 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": ["!=", "PARCELNUM", "WW"],
+    "filter": [
+      "!=",
+      "PARCELNUM",
+      "WW"
+    ],
     "metadata": {
       "popup": true
     }
@@ -932,7 +1123,9 @@
     "children": true,
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "minzoom": 15,
@@ -945,7 +1138,11 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": ["!=", "PARCELNUM", "WW"],
+    "filter": [
+      "!=",
+      "PARCELNUM",
+      "WW"
+    ],
     "metadata": {
       "popup": true
     }
@@ -961,25 +1158,61 @@
     "source": "parcelSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.adm_mus_parcels/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "minzoom": 15,
     "source-layer": "public.adm_mus_parcels",
     "paint": {
-      "line-color": ["case", ["==", ["feature-state", "hover"], 1], "black", "rgba(255,255,255,1)"],
-      "line-width": ["case", ["==", ["feature-state", "hover"], 2], 2, 2],
+      "line-color": [
+        "case",
+        [
+          "==",
+          [
+            "feature-state",
+            "hover"
+          ],
+          1
+        ],
+        "black",
+        "rgba(255,255,255,1)"
+      ],
+      "line-width": [
+        "case",
+        [
+          "==",
+          [
+            "feature-state",
+            "hover"
+          ],
+          2
+        ],
+        2,
+        2
+      ],
       "line-opacity": {
         "stops": [
-          [13, 0.1],
-          [16, 1]
+          [
+            13,
+            0.1
+          ],
+          [
+            16,
+            1
+          ]
         ]
       }
     },
     "layout": {
       "visibility": "none"
     },
-    "filter": ["!=", "PARCELNUM", "WW"],
+    "filter": [
+      "!=",
+      "PARCELNUM",
+      "WW"
+    ],
     "metadata": {
       "popup": true
     }
@@ -993,7 +1226,9 @@
     "source": "alley_labels_source",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.trn_mus_centerlines/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.trn_mus_centerlines/{z}/{x}/{y}.pbf"
+      ],
       "minzoom": 10,
       "maxzoom": 22
     },
@@ -1006,15 +1241,28 @@
       "line-color": "white",
       "line-width": {
         "stops": [
-          [10, 3],
-          [22, 8]
+          [
+            10,
+            3
+          ],
+          [
+            22,
+            8
+          ]
         ]
       }
     },
     "layout": {
       "visibility": "visible"
     },
-    "filter": ["==", ["get", "st_type"], "ALY"]
+    "filter": [
+      "==",
+      [
+        "get",
+        "st_type"
+      ],
+      "ALY"
+    ]
   },
   {
     "id": "alley_labels",
@@ -1025,7 +1273,9 @@
     "source": "alley_labels_source",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.trn_mus_centerlines/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.trn_mus_centerlines/{z}/{x}/{y}.pbf"
+      ],
       "minzoom": 10,
       "maxzoom": 22
     },
@@ -1046,17 +1296,39 @@
       "symbol-spacing": 300,
       "visibility": "visible",
       "text-padding": 2,
-      "text-font": ["DIN Offc Pro Bold"],
-      "text-field": ["concat", ["get", "st_name"], " ALLEY"],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
+      "text-field": [
+        "concat",
+        [
+          "get",
+          "st_name"
+        ],
+        " ALLEY"
+      ],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [10, 9],
-          [22, 14]
+          [
+            10,
+            9
+          ],
+          [
+            22,
+            14
+          ]
         ]
       }
     },
-    "filter": ["==", ["get", "st_type"], "ALY"]
+    "filter": [
+      "==",
+      [
+        "get",
+        "st_type"
+      ],
+      "ALY"
+    ]
   },
   {
     "id": "ParcelsLabels",
@@ -1068,7 +1340,9 @@
     "minzoom": 18,
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_parcels_centroids/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.adm_mus_parcels_centroids/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_parcels_centroids",
@@ -1080,13 +1354,24 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Bold"],
-      "text-field": ["get", "parcelnum"],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
+      "text-field": [
+        "get",
+        "parcelnum"
+      ],
       "text-anchor": "center",
       "text-size": {
         "stops": [
-          [17, 12],
-          [22, 16]
+          [
+            17,
+            12
+          ],
+          [
+            22,
+            16
+          ]
         ]
       },
       "text-padding": 6
@@ -1110,7 +1395,19 @@
       "generateId": true
     },
     "paint": {
-      "fill-color": ["case", ["==", ["get", "to_"], "ZANESVILLE"], "fuchsia", "gray"],
+      "fill-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "to_"
+          ],
+          "ZANESVILLE"
+        ],
+        "fuchsia",
+        "gray"
+      ],
       "fill-opacity": 0.6,
       "fill-outline-color": "black"
     },
@@ -1188,13 +1485,28 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Regular"],
-      "text-field": ["concat", "Ward ", ["get", "ward"]],
+      "text-font": [
+        "DIN Offc Pro Regular"
+      ],
+      "text-field": [
+        "concat",
+        "Ward ",
+        [
+          "get",
+          "ward"
+        ]
+      ],
       "text-anchor": "center",
       "text-size": {
         "stops": [
-          [17, 18],
-          [22, 22]
+          [
+            17,
+            18
+          ],
+          [
+            22,
+            22
+          ]
         ]
       },
       "text-padding": 6
@@ -1213,7 +1525,9 @@
     "source": "adminSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.adm_admin_boundaries",
@@ -1239,14 +1553,19 @@
     "source": "adminSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.adm_admin_boundaries/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.adm_admin_boundaries",
     "paint": {
       "line-color": "white",
       "line-width": 3,
-      "line-dasharray": [2, 4]
+      "line-dasharray": [
+        2,
+        4
+      ]
     },
     "layout": {
       "visibility": "none"
@@ -1265,7 +1584,9 @@
     "source": "addressSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_addresses",
@@ -1274,9 +1595,18 @@
       "circle-stroke-width": 1,
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [13, 1],
-          [16, 3]
+          [
+            0,
+            0
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            16,
+            3
+          ]
         ]
       },
       "circle-stroke-color": "white",
@@ -1287,7 +1617,9 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["lsn"]
+      "popup": [
+        "lsn"
+      ]
     }
   },
   {
@@ -1301,7 +1633,9 @@
     "source": "addressSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.adm_mus_addresses/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.adm_mus_addresses",
@@ -1314,14 +1648,21 @@
     "minzoom": 17.1,
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Regular"],
+      "text-font": [
+        "DIN Offc Pro Regular"
+      ],
       "text-field": "{lsn}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [0.5, 0]
+      "text-offset": [
+        0.5,
+        0
+      ]
     },
     "metadata": {
-      "popup": ["lsn"]
+      "popup": [
+        "lsn"
+      ]
     }
   },
   {
@@ -1345,7 +1686,11 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["imp_eru", "imp_master", "imp_total_area"],
+      "popup": [
+        "imp_eru",
+        "imp_master",
+        "imp_total_area"
+      ],
       "filterSchema": {
         "imp_total_area": {
           "type": "number"
@@ -1362,7 +1707,9 @@
     "source": "eng_building_footprints",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"
+      ],
       "minzoom": 15,
       "maxzoom": 22
     },
@@ -1396,23 +1743,57 @@
     "paint": {
       "fill-color": [
         "case",
-        ["==", ["get", "owner"], "City of Zanesville"],
+        [
+          "==",
+          [
+            "get",
+            "owner"
+          ],
+          "City of Zanesville"
+        ],
         "darkgreen",
         "yellowgreen"
       ],
       "fill-outline-color": [
         "case",
-        ["==", ["get", "owner"], "City of Zanesville"],
+        [
+          "==",
+          [
+            "get",
+            "owner"
+          ],
+          "City of Zanesville"
+        ],
         "forestgreen",
         "lightgreen"
       ],
-      "fill-opacity": ["case", ["==", ["feature-state", "hover"], 1], 0.8, 0.3]
+      "fill-opacity": [
+        "case",
+        [
+          "==",
+          [
+            "feature-state",
+            "hover"
+          ],
+          1
+        ],
+        0.8,
+        0.3
+      ]
     },
     "layout": {
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["acres", "amenities", "img", "info", "location", "name", "owner"]
+      "popup": [
+        "acres",
+        "amenities",
+        "img",
+        "info",
+        "location",
+        "name",
+        "owner"
+      ]
     }
   },
   {
@@ -1439,12 +1820,31 @@
     "paint": {
       "line-color": [
         "case",
-        ["==", ["get", "owner"], "City of Zanesville"],
+        [
+          "==",
+          [
+            "get",
+            "owner"
+          ],
+          "City of Zanesville"
+        ],
         "darkgreen",
         "yellowgreen"
       ],
       "line-width": 2,
-      "line-opacity": ["case", ["==", ["feature-state", "hover"], 1], 1, 0.8]
+      "line-opacity": [
+        "case",
+        [
+          "==",
+          [
+            "feature-state",
+            "hover"
+          ],
+          1
+        ],
+        1,
+        0.8
+      ]
     },
     "layout": {
       "visibility": "none"
@@ -1467,7 +1867,14 @@
     "paint": {
       "line-color": [
         "case",
-        ["==", ["get", "owner"], "City of Zanesville"],
+        [
+          "==",
+          [
+            "get",
+            "owner"
+          ],
+          "City of Zanesville"
+        ],
         "darkgreen",
         "yellowgreen"
       ],
@@ -1524,9 +1931,24 @@
       "generateId": true
     },
     "paint": {
-      "line-color": ["case", ["==", ["feature-state", "hover"], 1], "yellow", "forestgreen"],
+      "line-color": [
+        "case",
+        [
+          "==",
+          [
+            "feature-state",
+            "hover"
+          ],
+          1
+        ],
+        "yellow",
+        "forestgreen"
+      ],
       "line-width": 2,
-      "line-dasharray": [5, 5]
+      "line-dasharray": [
+        5,
+        5
+      ]
     },
     "layout": {
       "visibility": "none"
@@ -1544,22 +1966,36 @@
     "source": "rec_parks_tree_inventory",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.rec_parks_tree_inventory/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://cozmaps.org/tiles/public.rec_parks_tree_inventory/{z}/{x}/{y}.pbf"
+      ]
     },
     "source-layer": "public.rec_parks_tree_inventory",
     "paint": {
       "circle-color": "green",
       "circle-radius": {
         "stops": [
-          [14, 3],
-          [18, 8]
+          [
+            14,
+            3
+          ],
+          [
+            18,
+            8
+          ]
         ]
       },
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [14, 2],
-          [18, 4]
+          [
+            14,
+            2
+          ],
+          [
+            18,
+            4
+          ]
         ]
       },
       "circle-stroke-opacity": 0.6,
@@ -1595,13 +2031,27 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Regular"],
-      "text-field": ["concat", ["get", "name"]],
+      "text-font": [
+        "DIN Offc Pro Regular"
+      ],
+      "text-field": [
+        "concat",
+        [
+          "get",
+          "name"
+        ]
+      ],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [12, 8],
-          [22, 18]
+          [
+            12,
+            8
+          ],
+          [
+            22,
+            18
+          ]
         ]
       }
     },
@@ -1618,14 +2068,21 @@
     "group": "Topography",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.env_mus_contours_2ft_clipped/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.env_mus_contours_2ft_clipped/{z}/{x}/{y}.pbf"
+      ],
       "minzoom": 15
     },
     "source-layer": "public.env_mus_contours_2ft_clipped",
     "paint": {
       "line-color": "tan",
       "line-width": 1,
-      "line-dasharray": [3, 1, 2, 1]
+      "line-dasharray": [
+        3,
+        1,
+        2,
+        1
+      ]
     },
     "minzoom": 15,
     "layout": {
@@ -1645,7 +2102,9 @@
     "source": "env_contours_10ft_simplified",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.env_contours_10ft_simplified/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.env_contours_10ft_simplified/{z}/{x}/{y}.pbf"
+      ],
       "minzoom": 15
     },
     "source-layer": "public.env_contours_10ft_simplified",
@@ -1687,13 +2146,37 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["attribute", "wetland_type"]
+      "popup": [
+        "attribute",
+        "wetland_type"
+      ]
     },
     "filter": [
       "any",
-      ["==", ["get", "wetland_ty"], "Freshwater Emergent Wetland"],
-      ["==", ["get", "wetland_ty"], "Freshwater Forested/Shrub Wetland"],
-      ["==", ["get", "wetland_ty"], "Freshwater Pond"]
+      [
+        "==",
+        [
+          "get",
+          "wetland_ty"
+        ],
+        "Freshwater Emergent Wetland"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "wetland_ty"
+        ],
+        "Freshwater Forested/Shrub Wetland"
+      ],
+      [
+        "==",
+        [
+          "get",
+          "wetland_ty"
+        ],
+        "Freshwater Pond"
+      ]
     ]
   },
   {
@@ -1708,15 +2191,23 @@
     "source": "env_hydro_polygons",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.env_hydro_polygons/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://cozmaps.org/tiles/public.env_hydro_polygons/{z}/{x}/{y}.pbf"
+      ]
     },
     "source-layer": "public.env_hydro_polygons",
     "paint": {
       "fill-color": "#8dcbf7",
       "fill-opacity": {
         "stops": [
-          [11, 0],
-          [18, 0.4]
+          [
+            11,
+            0
+          ],
+          [
+            18,
+            0.4
+          ]
         ]
       },
       "fill-outline-color": "transparent"
@@ -1739,7 +2230,9 @@
     "type": "line",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.env_nhd_flowline/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://cozmaps.org/tiles/public.env_nhd_flowline/{z}/{x}/{y}.pbf"
+      ]
     },
     "source-layer": "public.env_nhd_flowline",
     "paint": {
@@ -1747,15 +2240,26 @@
       "line-width": 2,
       "line-opacity": {
         "stops": [
-          [12, 0],
-          [18, 0.2]
+          [
+            12,
+            0
+          ],
+          [
+            18,
+            0.2
+          ]
         ]
       }
     },
     "layout": {
       "visibility": "none"
     },
-    "filter": ["!in", "gnis_name", "Muskingum River", "Licking River"],
+    "filter": [
+      "!in",
+      "gnis_name",
+      "Muskingum River",
+      "Licking River"
+    ],
     "metadata": {
       "popup": true
     }
@@ -1771,16 +2275,39 @@
     "source-layer": "public.env_nfhl_flood_hazard_areas",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.env_nfhl_flood_hazard_areas/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://cozmaps.org/tiles/public.env_nfhl_flood_hazard_areas/{z}/{x}/{y}.pbf"
+      ]
     },
     "paint": {
       "fill-color": [
         "case",
-        ["==", ["get", "zone_subty"], "FLOODWAY"],
+        [
+          "==",
+          [
+            "get",
+            "zone_subty"
+          ],
+          "FLOODWAY"
+        ],
         "DODGERBLUE",
-        ["==", ["get", "zone_subty"], "0.2 PCT ANNUAL CHANCE FLOOD HAZARD"],
+        [
+          "==",
+          [
+            "get",
+            "zone_subty"
+          ],
+          "0.2 PCT ANNUAL CHANCE FLOOD HAZARD"
+        ],
         "orangered",
-        ["==", ["get", "zone_subty"], "AREA WITH REDUCED RISK DUE TO LEVEE"],
+        [
+          "==",
+          [
+            "get",
+            "zone_subty"
+          ],
+          "AREA WITH REDUCED RISK DUE TO LEVEE"
+        ],
         "MEDIUMVIOLETRED",
         "turquoise"
       ],
@@ -1791,7 +2318,12 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["zone_subty", "fld_zone", "dfirm_id", "fld_ar_id"]
+      "popup": [
+        "zone_subty",
+        "fld_zone",
+        "dfirm_id",
+        "fld_ar_id"
+      ]
     }
   },
   {
@@ -1805,15 +2337,23 @@
     "source": "public.eng_odot_traffic_segments",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.eng_odot_traffic_segments/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://cozmaps.org/tiles/public.eng_odot_traffic_segments/{z}/{x}/{y}.pbf"
+      ]
     },
     "source-layer": "public.eng_odot_traffic_segments",
     "paint": {
       "line-width": {
         "property": "aadt_total",
         "stops": [
-          [0, 5],
-          [55056, 11]
+          [
+            0,
+            5
+          ],
+          [
+            55056,
+            11
+          ]
         ]
       },
       "line-color": "gray"
@@ -1837,33 +2377,65 @@
     "source": "public.eng_odot_traffic_segments",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.eng_odot_traffic_segments/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://cozmaps.org/tiles/public.eng_odot_traffic_segments/{z}/{x}/{y}.pbf"
+      ]
     },
     "source-layer": "public.eng_odot_traffic_segments",
     "paint": {
       "line-color": {
         "property": "aadt_total",
         "stops": [
-          [0, "#2166ac"],
-          [2275, "#67a9cf"],
-          [5892, "#d1e5f0"],
-          [10188, "orange"],
-          [16498, "darkorange"],
-          [26291, "#b2182b"]
+          [
+            0,
+            "#2166ac"
+          ],
+          [
+            2275,
+            "#67a9cf"
+          ],
+          [
+            5892,
+            "#d1e5f0"
+          ],
+          [
+            10188,
+            "orange"
+          ],
+          [
+            16498,
+            "darkorange"
+          ],
+          [
+            26291,
+            "#b2182b"
+          ]
         ]
       },
       "line-width": {
         "property": "aadt_total",
         "stops": [
-          [0, 3],
-          [16498, 9]
+          [
+            0,
+            3
+          ],
+          [
+            16498,
+            9
+          ]
         ]
       },
       "line-opacity": {
         "property": "aadt_total",
         "stops": [
-          [0, 0.6],
-          [16498, 1]
+          [
+            0,
+            0.6
+          ],
+          [
+            16498,
+            1
+          ]
         ]
       }
     },
@@ -1875,7 +2447,6 @@
       "popup": true
     }
   },
-
   {
     "id": "public.eng_paver_pci_view_case",
     "name": "PCI Case",
@@ -1887,7 +2458,9 @@
     "source": "public.eng_paver_pci_view",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "source-layer": "public.eng_paver_pci_view",
@@ -1896,7 +2469,21 @@
       "line-opacity": 1,
       "line-width": [
         "case",
-        ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"]]],
+        [
+          "in",
+          [
+            "get",
+            "road_type"
+          ],
+          [
+            "literal",
+            [
+              "Service",
+              "Alley",
+              "Trail"
+            ]
+          ]
+        ],
         7,
         10
       ]
@@ -1918,7 +2505,9 @@
     "source": "public.eng_paver_pci_view",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "source-layer": "public.eng_paver_pci_view",
@@ -1926,26 +2515,89 @@
     "paint": {
       "line-color": [
         "case",
-        ["==", ["get", "pci_predicted_category"], "EXCELLENT"],
+        [
+          "==",
+          [
+            "get",
+            "pci_predicted_category"
+          ],
+          "EXCELLENT"
+        ],
         "#009392",
-        ["==", ["get", "pci_predicted_category"], "VERY GOOD"],
+        [
+          "==",
+          [
+            "get",
+            "pci_predicted_category"
+          ],
+          "VERY GOOD"
+        ],
         "#39b185",
-        ["==", ["get", "pci_predicted_category"], "GOOD"],
+        [
+          "==",
+          [
+            "get",
+            "pci_predicted_category"
+          ],
+          "GOOD"
+        ],
         "#9ccb86",
-        ["==", ["get", "pci_predicted_category"], "FAIR"],
+        [
+          "==",
+          [
+            "get",
+            "pci_predicted_category"
+          ],
+          "FAIR"
+        ],
         "#e9e29c",
-        ["==", ["get", "pci_predicted_category"], "POOR"],
+        [
+          "==",
+          [
+            "get",
+            "pci_predicted_category"
+          ],
+          "POOR"
+        ],
         "orange",
-        ["==", ["get", "pci_predicted_category"], "VERY POOR"],
+        [
+          "==",
+          [
+            "get",
+            "pci_predicted_category"
+          ],
+          "VERY POOR"
+        ],
         "red",
-        ["==", ["get", "pci_predicted_category"], "FAILED"],
+        [
+          "==",
+          [
+            "get",
+            "pci_predicted_category"
+          ],
+          "FAILED"
+        ],
         "darkred",
         "gray"
       ],
       "line-opacity": 1,
       "line-width": [
         "case",
-        ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"]]],
+        [
+          "in",
+          [
+            "get",
+            "road_type"
+          ],
+          [
+            "literal",
+            [
+              "Service",
+              "Alley",
+              "Trail"
+            ]
+          ]
+        ],
         4,
         6
       ]
@@ -1961,7 +2613,16 @@
         },
         "pci_predicted_category": {
           "type": "select",
-          "options": ["", "EXCELLENT", "VERY GOOD", "GOOD", "FAIR", "POOR", "VERY POOR", "FAILED"]
+          "options": [
+            "",
+            "EXCELLENT",
+            "VERY GOOD",
+            "GOOD",
+            "FAIR",
+            "POOR",
+            "VERY POOR",
+            "FAILED"
+          ]
         }
       }
     }
@@ -1976,14 +2637,30 @@
     "source": "public.eng_paver_pci_view",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.eng_paver_pci_view/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "source-layer": "public.eng_paver_pci_view",
     "paint": {
       "line-color": [
         "case",
-        ["in", ["get", "road_type"], ["literal", ["Service", "Alley", "Trail"]]],
+        [
+          "in",
+          [
+            "get",
+            "road_type"
+          ],
+          [
+            "literal",
+            [
+              "Service",
+              "Alley",
+              "Trail"
+            ]
+          ]
+        ],
         "blue",
         "firebrick"
       ],
@@ -1994,14 +2671,26 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["name", "date_last_paved", "road_type","pci_predicted_category"],
+      "popup": [
+        "name",
+        "date_last_paved",
+        "road_type",
+        "pci_predicted_category"
+      ],
       "filterSchema": {
         "date_last_paved": {
           "type": "date"
         }
       }
     },
-    "filter": [">=", ["get", "date_last_paved"], "2020-01-01"]
+    "filter": [
+      ">=",
+      [
+        "get",
+        "date_last_paved"
+      ],
+      "2020-01-01"
+    ]
   },
   {
     "id": "utl_mus_sanitary_lines",
@@ -2014,7 +2703,9 @@
     "source": "utl_mus_sanitary_lines",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_mus_sanitary_lines/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_mus_sanitary_lines/{z}/{x}/{y}.pbf"
+      ]
     },
     "source-layer": "public.utl_mus_sanitary_lines",
     "paint": {
@@ -2038,7 +2729,9 @@
     "source": "utl_mus_sanitary_lines",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_mus_sanitary_lines/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_mus_sanitary_lines/{z}/{x}/{y}.pbf"
+      ]
     },
     "source-layer": "public.utl_mus_sanitary_lines",
     "paint": {
@@ -2061,24 +2754,44 @@
     "source": "utl_mus_sanitary_points",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_mus_sanitary_points/{z}/{x}/{y}.pbf"]
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_mus_sanitary_points/{z}/{x}/{y}.pbf"
+      ]
     },
     "source-layer": "public.utl_mus_sanitary_points",
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 2],
-          [16, 5]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            16,
+            5
+          ]
         ]
       },
       "circle-color": "firebrick",
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [0, 0],
-          [12, 1],
-          [16, 2]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            16,
+            2
+          ]
         ]
       },
       "circle-pitch-scale": "map",
@@ -2148,14 +2861,19 @@
     "source": "wLateralSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_lateral/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_lateral/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "source-layer": "public.utl_water_lateral",
     "paint": {
       "line-width": 2,
       "line-color": "MEDIUMSPRINGGREEN",
-      "line-dasharray": [2, 1]
+      "line-dasharray": [
+        2,
+        1
+      ]
     },
     "layout": {
       "visibility": "none"
@@ -2176,7 +2894,9 @@
     "source-layer": "public.utl_water_meters",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_meters/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_meters/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "layout": {
@@ -2185,13 +2905,39 @@
       "icon-ignore-placement": true,
       "icon-image": [
         "case",
-        ["==", ["get", "SERVICETYPE"], "Domestic"],
+        [
+          "==",
+          [
+            "get",
+            "SERVICETYPE"
+          ],
+          "Domestic"
+        ],
         "square-cyan",
-        ["==", ["get", "SERVICETYPE"], "Commercial"],
+        [
+          "==",
+          [
+            "get",
+            "SERVICETYPE"
+          ],
+          "Commercial"
+        ],
         "square-yellow",
         "circle-black2"
       ],
-      "icon-size": ["interpolate", ["linear"], ["zoom"], 14, 0.4, 17, 0.7],
+      "icon-size": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        14,
+        0.4,
+        17,
+        0.7
+      ],
       "visibility": "none"
     },
     "metadata": {
@@ -2213,9 +2959,23 @@
     "paint": {
       "text-color": [
         "case",
-        ["==", ["get", "SERVICETYPE"], "Domestic"],
+        [
+          "==",
+          [
+            "get",
+            "SERVICETYPE"
+          ],
+          "Domestic"
+        ],
         "#00ffc5",
-        ["==", ["get", "SERVICETYPE"], "Commercial"],
+        [
+          "==",
+          [
+            "get",
+            "SERVICETYPE"
+          ],
+          "Commercial"
+        ],
         "#fce205",
         "black"
       ],
@@ -2225,11 +2985,16 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Bold"],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
       "text-field": "{ADDRESS}",
       "text-anchor": "bottom-left",
       "text-size": 13,
-      "text-offset": [0.4, -0.4]
+      "text-offset": [
+        0.4,
+        -0.4
+      ]
     },
     "metadata": {
       "popup": true
@@ -2321,7 +3086,9 @@
     "source": "dps_sanitation_routes",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.dps_sanitation_routes/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.dps_sanitation_routes/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "fid",
       "maxzoom": 22
     },
@@ -2330,31 +3097,57 @@
     "paint": {
       "fill-color": [
         "match",
-        ["get", "weekday"],
-        ["Monday"],
+        [
+          "get",
+          "weekday"
+        ],
+        [
+          "Monday"
+        ],
         "blue",
-        ["Tuesday"],
+        [
+          "Tuesday"
+        ],
         "firebrick",
-        ["Wednesday"],
+        [
+          "Wednesday"
+        ],
         "darkorange",
-        ["Thursday"],
+        [
+          "Thursday"
+        ],
         "dodgerblue",
-        ["Friday"],
+        [
+          "Friday"
+        ],
         "green",
         "black"
       ],
       "fill-outline-color": [
         "match",
-        ["get", "weekday"],
-        ["Monday"],
+        [
+          "get",
+          "weekday"
+        ],
+        [
+          "Monday"
+        ],
         "blue",
-        ["Tuesday"],
+        [
+          "Tuesday"
+        ],
         "firebrick",
-        ["Wednesday"],
+        [
+          "Wednesday"
+        ],
         "darkorange",
-        ["Thursday"],
+        [
+          "Thursday"
+        ],
         "dodgerblue",
-        ["Friday"],
+        [
+          "Friday"
+        ],
         "green",
         "black"
       ],
@@ -2375,7 +3168,9 @@
     "source": "dps_sanitation_routes",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.dps_sanitation_routes/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.dps_sanitation_routes/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "fid",
       "maxzoom": 22
     },
@@ -2386,16 +3181,29 @@
       "text-halo-width": 1.5,
       "text-halo-color": [
         "match",
-        ["get", "weekday"],
-        ["Monday"],
+        [
+          "get",
+          "weekday"
+        ],
+        [
+          "Monday"
+        ],
         "blue",
-        ["Tuesday"],
+        [
+          "Tuesday"
+        ],
         "firebrick",
-        ["Wednesday"],
+        [
+          "Wednesday"
+        ],
         "darkorange",
-        ["Thursday"],
+        [
+          "Thursday"
+        ],
         "dodgerblue",
-        ["Friday"],
+        [
+          "Friday"
+        ],
         "green",
         "black"
       ],
@@ -2405,13 +3213,28 @@
       "visibility": "none",
       "text-anchor": "center",
       "text-padding": 2,
-      "text-font": ["DIN Offc Pro Bold"],
-      "text-field": ["concat", "Zone ", ["get", "zone"]],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
+      "text-field": [
+        "concat",
+        "Zone ",
+        [
+          "get",
+          "zone"
+        ]
+      ],
       "text-max-width": 9,
       "text-size": {
         "stops": [
-          [12, 18],
-          [22, 22]
+          [
+            12,
+            18
+          ],
+          [
+            22,
+            22
+          ]
         ]
       }
     },
@@ -2430,16 +3253,32 @@
     "source": "wMainSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_main/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_main/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "source-layer": "public.utl_water_main",
     "paint": {
       "line-width": [
         "case",
-        [">", ["get", "diameter"], 19],
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          19
+        ],
         10,
-        [">", ["get", "diameter"], 11],
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          11
+        ],
         8,
         6
       ],
@@ -2463,24 +3302,54 @@
     "source": "wMainSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_main/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_main/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "source-layer": "public.utl_water_main",
     "paint": {
       "line-width": [
         "case",
-        [">", ["get", "diameter"], 19],
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          19
+        ],
         7,
-        [">", ["get", "diameter"], 11],
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          11
+        ],
         5,
         3
       ],
       "line-color": [
         "case",
-        ["==", ["get", "system"], "High Pressure"],
+        [
+          "==",
+          [
+            "get",
+            "system"
+          ],
+          "High Pressure"
+        ],
         "#0062ff",
-        ["==", ["get", "system"], "Low Pressure"],
+        [
+          "==",
+          [
+            "get",
+            "system"
+          ],
+          "Low Pressure"
+        ],
         "#26d9d0",
         "deeppink"
       ]
@@ -2501,7 +3370,9 @@
     "group": "Water Layers",
     "sourceType": {
       "type": "geojson",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_main/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_main/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "source-layer": "public.utl_water_main",
@@ -2513,18 +3384,36 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Bold"],
-      "text-field": ["concat", ["get", "diameter"], "in"],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
+      "text-field": [
+        "concat",
+        [
+          "get",
+          "diameter"
+        ],
+        "in"
+      ],
       "symbol-placement": "line",
       "symbol-spacing": 500,
       "text-anchor": "center",
-      "text-offset": [0, 0],
+      "text-offset": [
+        0,
+        0
+      ],
       "text-allow-overlap": true,
       "text-ignore-placement": true,
       "text-size": {
         "stops": [
-          [17, 12],
-          [22, 16]
+          [
+            17,
+            12
+          ],
+          [
+            22,
+            16
+          ]
         ]
       },
       "text-padding": 0
@@ -2543,7 +3432,9 @@
     "source-layer": "public.utl_water_fitting",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_fitting/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_fitting/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "paint": {
@@ -2567,7 +3458,9 @@
     "source": "utl_water_lsli",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "fid"
     },
     "source-layer": "public.utl_water_lsli",
@@ -2576,16 +3469,28 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 4],
-          [16, 9]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            16,
+            9
+          ]
         ]
       },
       "circle-stroke-width": 2,
       "circle-stroke-color": "white",
       "circle-color": [
         "match",
-        ["get", "smaterial"],
+        [
+          "get",
+          "smaterial"
+        ],
         "Lead",
         "red",
         "Unknown - Material Unknown",
@@ -2619,7 +3524,9 @@
     "group": "Water Layers",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_lsli/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "source-layer": "public.utl_water_lsli",
@@ -2632,7 +3539,18 @@
       "icon-allow-overlap": true
     },
     "paint": {
-      "icon-opacity": ["match", ["get", "smaterial"], "Lead", 1, "Unknown - Material Unknown", 1, 0]
+      "icon-opacity": [
+        "match",
+        [
+          "get",
+          "smaterial"
+        ],
+        "Lead",
+        1,
+        "Unknown - Material Unknown",
+        1,
+        0
+      ]
     },
     "metadata": {
       "popup": true
@@ -2648,7 +3566,9 @@
     "source-layer": "public.utl_water_valve_exercising",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_valve_exercising/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_valve_exercising/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "paint": {
@@ -2680,41 +3600,115 @@
     "source": "wSystemValveSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_system_valves/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_system_valves/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "source-layer": "public.utl_water_system_valves",
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 1],
-          [16, 6]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            16,
+            6
+          ]
         ]
       },
       "circle-color": [
         "case",
-        ["==", ["get", "valvetype"], "Main"],
+        [
+          "==",
+          [
+            "get",
+            "valvetype"
+          ],
+          "Main"
+        ],
         "#00C5FF",
-        ["==", ["get", "valvetype"], "Hydrant"],
+        [
+          "==",
+          [
+            "get",
+            "valvetype"
+          ],
+          "Hydrant"
+        ],
         "red",
-        ["==", ["get", "valvetype"], "Plug"],
+        [
+          "==",
+          [
+            "get",
+            "valvetype"
+          ],
+          "Plug"
+        ],
         "orange",
-        ["==", ["get", "valvetype"], "Fire Line"],
+        [
+          "==",
+          [
+            "get",
+            "valvetype"
+          ],
+          "Fire Line"
+        ],
         "yellow",
-        ["==", ["get", "valvetype"], "Butterfly"],
+        [
+          "==",
+          [
+            "get",
+            "valvetype"
+          ],
+          "Butterfly"
+        ],
         "white",
-        ["==", ["get", "valvetype"], "Boundary Valve"],
+        [
+          "==",
+          [
+            "get",
+            "valvetype"
+          ],
+          "Boundary Valve"
+        ],
         "fuchsia",
-        ["==", ["get", "valvetype"], "Slot Key Valve"],
+        [
+          "==",
+          [
+            "get",
+            "valvetype"
+          ],
+          "Slot Key Valve"
+        ],
         "darkgray",
         "black"
       ],
-      "circle-stroke-color": ["case", ["has", "valvetype"], "black", "red"],
+      "circle-stroke-color": [
+        "case",
+        [
+          "has",
+          "valvetype"
+        ],
+        "black",
+        "red"
+      ],
       "circle-stroke-width": {
         "stops": [
-          [0, 0],
-          [16, 2]
+          [
+            0,
+            0
+          ],
+          [
+            16,
+            2
+          ]
         ]
       },
       "circle-pitch-scale": "map",
@@ -2739,12 +3733,33 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 0.5],
-          [16, 3]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            0.5
+          ],
+          [
+            16,
+            3
+          ]
         ]
       },
-      "circle-color": ["case", ["==", ["get", "valvetype"], "Boundary Valve"], "black", "black"],
+      "circle-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "valvetype"
+          ],
+          "Boundary Valve"
+        ],
+        "black",
+        "black"
+      ],
       "circle-pitch-scale": "map",
       "circle-pitch-alignment": "map"
     },
@@ -2765,23 +3780,40 @@
     "source-layer": "public.utl_water_control_valve",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_control_valve/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_control_valve/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 1],
-          [16, 5]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            16,
+            5
+          ]
         ]
       },
       "circle-color": "whitesmoke",
       "circle-stroke-color": "royalblue",
       "circle-stroke-width": {
         "stops": [
-          [0, 0],
-          [16, 2]
+          [
+            0,
+            0
+          ],
+          [
+            16,
+            2
+          ]
         ]
       },
       "circle-pitch-scale": "map",
@@ -2804,7 +3836,9 @@
     "source": "wCurbStopValveSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_curb_stop_valve/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_curb_stop_valve/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "source-layer": "public.utl_water_curb_stop_valve",
@@ -2814,17 +3848,45 @@
       "icon-ignore-placement": true,
       "icon-image": [
         "case",
-        ["==", ["get", "access_type"], "Curb Stop Valve"],
+        [
+          "==",
+          [
+            "get",
+            "access_type"
+          ],
+          "Curb Stop Valve"
+        ],
         "circle-seagreen2",
-        ["==", ["get", "access_type"], "Meter Pit"],
+        [
+          "==",
+          [
+            "get",
+            "access_type"
+          ],
+          "Meter Pit"
+        ],
         "triangle-seagreen2",
         "circle-black2"
       ],
       "icon-size": [
         "case",
-        ["==", ["get", "access_type"], "Curb Stop Valve"],
+        [
+          "==",
+          [
+            "get",
+            "access_type"
+          ],
+          "Curb Stop Valve"
+        ],
         0.7,
-        ["==", ["get", "access_type"], "Meter Pit"],
+        [
+          "==",
+          [
+            "get",
+            "access_type"
+          ],
+          "Meter Pit"
+        ],
         1,
         0.7
       ],
@@ -2844,15 +3906,26 @@
     "source-layer": "public.utl_water_hydrant",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_hydrant/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_hydrant/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 2],
-          [16, 7]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            16,
+            7
+          ]
         ]
       },
       "circle-color": "red",
@@ -2860,9 +3933,18 @@
       "circle-stroke-opacity": 1,
       "circle-stroke-width": {
         "stops": [
-          [0, 0],
-          [12, 2],
-          [16, 3]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            16,
+            3
+          ]
         ]
       },
       "circle-pitch-scale": "map",
@@ -2892,11 +3974,16 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Bold"],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
       "text-field": "{facilityid}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [0.5, -0.4]
+      "text-offset": [
+        0.5,
+        -0.4
+      ]
     },
     "metadata": {
       "popup": true
@@ -2916,7 +4003,19 @@
     },
     "paint": {
       "fill-color": "firebrick",
-      "fill-opacity": ["case", ["==", ["get", "missing"], 1], 0.9, 0.4],
+      "fill-opacity": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "missing"
+          ],
+          1
+        ],
+        0.9,
+        0.4
+      ],
       "fill-outline-color": "white"
     },
     "layout": {
@@ -2941,9 +4040,18 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 4],
-          [16, 12]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            16,
+            12
+          ]
         ]
       },
       "circle-color": "red",
@@ -2955,7 +4063,11 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["address", "name", "type"]
+      "popup": [
+        "address",
+        "name",
+        "type"
+      ]
     }
   },
   {
@@ -2972,8 +4084,32 @@
     },
     "paint": {
       "circle-radius": 6,
-      "circle-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
-      "circle-stroke-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
+      "circle-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "inspect_ok"
+          ],
+          "Yes"
+        ],
+        "white",
+        "white"
+      ],
+      "circle-stroke-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "inspect_ok"
+          ],
+          "Yes"
+        ],
+        "black",
+        "red"
+      ],
       "circle-stroke-width": 2.5
     },
     "layout": {
@@ -3008,8 +4144,32 @@
     },
     "paint": {
       "circle-radius": 6,
-      "circle-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
-      "circle-stroke-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
+      "circle-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "inspect_ok"
+          ],
+          "Yes"
+        ],
+        "white",
+        "white"
+      ],
+      "circle-stroke-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "inspect_ok"
+          ],
+          "Yes"
+        ],
+        "black",
+        "red"
+      ],
       "circle-stroke-width": 2.5
     },
     "layout": {
@@ -3043,14 +4203,45 @@
     },
     "paint": {
       "circle-radius": 6,
-      "circle-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "white", "white"],
-      "circle-stroke-color": ["case", ["==", ["get", "inspect_ok"], "Yes"], "black", "red"],
+      "circle-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "inspect_ok"
+          ],
+          "Yes"
+        ],
+        "white",
+        "white"
+      ],
+      "circle-stroke-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "inspect_ok"
+          ],
+          "Yes"
+        ],
+        "black",
+        "red"
+      ],
       "circle-stroke-width": 2.5
     },
     "layout": {
       "visibility": "none"
     },
-    "filter": ["==", ["get", "CRITICALVALVE"], "Yes"],
+    "filter": [
+      "==",
+      [
+        "get",
+        "CRITICALVALVE"
+      ],
+      "Yes"
+    ],
     "metadata": {
       "popup": [
         "DIAMETER",
@@ -3074,7 +4265,9 @@
     "source-layer": "public.utl_water_field_work",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_water_field_work/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_field_work/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id"
     },
     "paint": {
@@ -3158,9 +4351,23 @@
     "paint": {
       "fill-color": [
         "case",
-        ["==", ["get", "separated"], "No"],
+        [
+          "==",
+          [
+            "get",
+            "separated"
+          ],
+          "No"
+        ],
         "red",
-        ["==", ["get", "separated"], "Yes"],
+        [
+          "==",
+          [
+            "get",
+            "separated"
+          ],
+          "Yes"
+        ],
         "green",
         "purple"
       ],
@@ -3194,7 +4401,9 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Bold"],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
       "text-field": "{cso_area}"
     },
     "metadata": {
@@ -3212,16 +4421,32 @@
     "source": "sanitaryLinesSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.utl_sanitary_lines",
     "paint": {
       "line-width": [
         "case",
-        [">", ["get", "diameter"], 24],
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          24
+        ],
         8,
-        [">", ["get", "diameter"], 11],
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          11
+        ],
         6,
         5
       ],
@@ -3245,30 +4470,81 @@
     "source": "sanitaryLinesSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.utl_sanitary_lines",
     "paint": {
       "line-width": [
         "case",
-        [">", ["get", "diameter"], 24],
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          24
+        ],
         6,
-        [">", ["get", "diameter"], 11],
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          11
+        ],
         4,
         3
       ],
       "line-color": [
         "case",
-        ["==", ["get", "subclass"], "Interceptor"],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          "Interceptor"
+        ],
         "darkgreen",
-        ["==", ["get", "subclass"], "Sanitary"],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          "Sanitary"
+        ],
         "limegreen",
-        ["==", ["get", "subclass"], "Combination"],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          "Combination"
+        ],
         "sienna",
-        ["==", ["get", "subclass"], "Abandoned"],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          "Abandoned"
+        ],
         "gray",
-        ["==", ["get", "subclass"], "Force Main"],
+        [
+          "==",
+          [
+            "get",
+            "subclass"
+          ],
+          "Force Main"
+        ],
         "#202020",
         "lightgray"
       ]
@@ -3281,7 +4557,13 @@
       "filterSchema": {
         "subclass": {
           "type": "select",
-          "options": ["", "Interceptor", "Sanitary", "Combination", "Force Main"]
+          "options": [
+            "",
+            "Interceptor",
+            "Sanitary",
+            "Combination",
+            "Force Main"
+          ]
         }
       }
     }
@@ -3297,7 +4579,9 @@
     "source": "sanitaryLinesSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.utl_sanitary_lines",
@@ -3326,7 +4610,9 @@
     "source": "utl_sanitary_laterals",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.utl_sanitary_laterals",
@@ -3352,7 +4638,9 @@
     "source": "utl_sanitary_laterals",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.utl_sanitary_laterals",
@@ -3360,11 +4648,32 @@
       "line-width": 3,
       "line-color": [
         "case",
-        ["==", ["get", "status"], "active"],
+        [
+          "==",
+          [
+            "get",
+            "status"
+          ],
+          "active"
+        ],
         "orange",
-        ["==", ["get", "status"], "capped"],
+        [
+          "==",
+          [
+            "get",
+            "status"
+          ],
+          "capped"
+        ],
         "gray",
-        ["==", ["get", "class"], "storm"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "storm"
+        ],
         "fuchsia",
         "red"
       ]
@@ -3387,7 +4696,9 @@
     "source": "utl_sanitary_laterals",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_sanitary_laterals/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.utl_sanitary_laterals",
@@ -3414,7 +4725,9 @@
     "source": "sanitaryArrowSource",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_sanitary_lines/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.utl_sanitary_lines",
@@ -3426,18 +4739,36 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Bold"],
-      "text-field": ["concat", ["get", "diameter"], "in"],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
+      "text-field": [
+        "concat",
+        [
+          "get",
+          "diameter"
+        ],
+        "in"
+      ],
       "symbol-placement": "line",
       "symbol-spacing": 500,
       "text-anchor": "top",
-      "text-offset": [0, 0.5],
+      "text-offset": [
+        0,
+        0.5
+      ],
       "text-allow-overlap": true,
       "text-ignore-placement": true,
       "text-size": {
         "stops": [
-          [17, 12],
-          [22, 16]
+          [
+            17,
+            12
+          ],
+          [
+            22,
+            16
+          ]
         ]
       },
       "text-padding": 0
@@ -3461,18 +4792,48 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 2],
-          [16, 5]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            16,
+            5
+          ]
         ]
       },
-      "circle-color": ["case", ["==", ["get", "class"], "MH"], "limegreen", "black"],
+      "circle-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "MH"
+        ],
+        "limegreen",
+        "black"
+      ],
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [0, 0],
-          [12, 1],
-          [16, 2]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            16,
+            2
+          ]
         ]
       },
       "circle-pitch-scale": "map",
@@ -3505,11 +4866,16 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Bold"],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
       "text-field": "{facilityid}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [0.5, -0.2]
+      "text-offset": [
+        0.5,
+        -0.2
+      ]
     },
     "metadata": {
       "popup": true
@@ -3522,7 +4888,11 @@
     "directory": "Sanitary Sewer System",
     "group": "Sanitary Sewer Layers",
     "metadata": {
-      "popup": ["name", "source", "created"]
+      "popup": [
+        "name",
+        "source",
+        "created"
+      ]
     },
     "source": "utl_sanitary_master_meters",
     "sourceType": {
@@ -3533,18 +4903,36 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 4],
-          [16, 8]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            16,
+            8
+          ]
         ]
       },
       "circle-color": "firebrick",
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [0, 0],
-          [12, 1],
-          [16, 2]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            16,
+            2
+          ]
         ]
       },
       "circle-pitch-scale": "map",
@@ -3569,29 +4957,78 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 6],
-          [16, 10]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            16,
+            10
+          ]
         ]
       },
       "circle-color": [
         "case",
         [
           "in",
-          ["get", "rack_id"],
-          ["literal", ["R-15", "R-17", "R-18", "R-19", "R-07", "R-02", "R-04", "R-05"]]
+          [
+            "get",
+            "rack_id"
+          ],
+          [
+            "literal",
+            [
+              "R-15",
+              "R-17",
+              "R-18",
+              "R-19",
+              "R-07",
+              "R-02",
+              "R-04",
+              "R-05"
+            ]
+          ]
         ],
         "green",
-        ["in", ["get", "rack_id"], ["literal", ["R-11", "R-10", "R-09", "R-08", "R-06"]]],
+        [
+          "in",
+          [
+            "get",
+            "rack_id"
+          ],
+          [
+            "literal",
+            [
+              "R-11",
+              "R-10",
+              "R-09",
+              "R-08",
+              "R-06"
+            ]
+          ]
+        ],
         "purple",
         "red"
       ],
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [0, 0],
-          [12, 1],
-          [16, 2]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            16,
+            2
+          ]
         ]
       },
       "circle-opacity": 0.8
@@ -3621,11 +5058,42 @@
         "case",
         [
           "in",
-          ["get", "rack_id"],
-          ["literal", ["R-15", "R-17", "R-18", "R-19", "R-07", "R-02", "R-04", "R-05"]]
+          [
+            "get",
+            "rack_id"
+          ],
+          [
+            "literal",
+            [
+              "R-15",
+              "R-17",
+              "R-18",
+              "R-19",
+              "R-07",
+              "R-02",
+              "R-04",
+              "R-05"
+            ]
+          ]
         ],
         "green",
-        ["in", ["get", "rack_id"], ["literal", ["R-11", "R-10", "R-09", "R-08", "R-06"]]],
+        [
+          "in",
+          [
+            "get",
+            "rack_id"
+          ],
+          [
+            "literal",
+            [
+              "R-11",
+              "R-10",
+              "R-09",
+              "R-08",
+              "R-06"
+            ]
+          ]
+        ],
         "purple",
         "red"
       ],
@@ -3635,11 +5103,16 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Bold"],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
       "text-field": "{rack_id}",
       "text-anchor": "bottom-left",
       "text-size": 16,
-      "text-offset": [0.5, -0.2]
+      "text-offset": [
+        0.5,
+        -0.2
+      ]
     },
     "metadata": {
       "popup": false
@@ -3666,7 +5139,11 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": ["!=", "feature", "Abandoned"],
+    "filter": [
+      "!=",
+      "feature",
+      "Abandoned"
+    ],
     "metadata": {
       "popup": true
     }
@@ -3689,19 +5166,68 @@
       "line-width": 4,
       "line-color": [
         "case",
-        ["==", ["get", "class"], "Private"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Private"
+        ],
         "goldenrod",
-        ["==", ["get", "class"], "Storm Main"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Storm Main"
+        ],
         "#FB00FF",
-        ["==", ["get", "class"], "Combination"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Combination"
+        ],
         "sienna",
-        ["==", ["get", "class"], "Stream"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Stream"
+        ],
         "rgb(0,169,230)",
-        ["==", ["get", "class"], "Ditch"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Ditch"
+        ],
         "rgb(0,255,197)",
-        ["==", ["get", "class"], "Culvert"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Culvert"
+        ],
         "#333",
-        ["==", ["get", "class"], "Abandoned"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Abandoned"
+        ],
         "gray",
         "gray"
       ],
@@ -3710,7 +5236,13 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": ["!in", "class", "Ditch", "Stream", "Stream CSO Outfall"],
+    "filter": [
+      "!in",
+      "class",
+      "Ditch",
+      "Stream",
+      "Stream CSO Outfall"
+    ],
     "metadata": {
       "popup": true
     }
@@ -3730,14 +5262,38 @@
     },
     "paint": {
       "line-width": 4,
-      "line-dasharray": [3, 2],
+      "line-dasharray": [
+        3,
+        2
+      ],
       "line-color": [
         "case",
-        ["==", ["get", "class"], "Stream"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Stream"
+        ],
         "rgb(0,169,230)",
-        ["==", ["get", "class"], "Ditch"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Ditch"
+        ],
         "rgb(0,255,197)",
-        ["==", ["get", "class"], "Stream CSO Outfall"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Stream CSO Outfall"
+        ],
         "darkorange",
         "gray"
       ],
@@ -3746,7 +5302,13 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": ["in", "class", "Ditch", "Stream", "Stream CSO Outfall"],
+    "filter": [
+      "in",
+      "class",
+      "Ditch",
+      "Stream",
+      "Stream CSO Outfall"
+    ],
     "metadata": {
       "popup": true
     }
@@ -3794,13 +5356,43 @@
       "generateId": true
     },
     "paint": {
-      "circle-color": ["case", ["==", ["get", "class"], "Inlet"], "fuchsia", "black"],
+      "circle-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Inlet"
+        ],
+        "fuchsia",
+        "black"
+      ],
       "circle-radius": 5,
       "circle-opacity": 0.3,
       "circle-stroke-color": "white",
       "circle-stroke-width": 2
     },
-    "filter": ["all", ["!=", ["get", "class"], "CSO Outfall"], ["!=", ["get", "class"], "Outfall"]],
+    "filter": [
+      "all",
+      [
+        "!=",
+        [
+          "get",
+          "class"
+        ],
+        "CSO Outfall"
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "class"
+        ],
+        "Outfall"
+      ]
+    ],
     "layout": {
       "visibility": "none"
     },
@@ -3824,20 +5416,38 @@
     "layout": {
       "icon-image": [
         "case",
-        ["==", ["get", "class"], "CSO Outfall"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "CSO Outfall"
+        ],
         "diamond-orange-24",
         "diamond-blue-24"
       ],
       "icon-allow-overlap": true,
       "icon-size": {
         "stops": [
-          [14, 0.7],
-          [18, 0.9]
+          [
+            14,
+            0.7
+          ],
+          [
+            18,
+            0.9
+          ]
         ]
       },
       "visibility": "none"
     },
-    "filter": ["in", "class", "CSO Outfall", "Outfall"],
+    "filter": [
+      "in",
+      "class",
+      "CSO Outfall",
+      "Outfall"
+    ],
     "metadata": {
       "popup": true
     }
@@ -3859,9 +5469,23 @@
       "line-width": 5,
       "line-color": [
         "case",
-        ["==", ["get", "class"], "Stream"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Stream"
+        ],
         "DeepSkyBlue",
-        ["==", ["get", "class"], "Ditch"],
+        [
+          "==",
+          [
+            "get",
+            "class"
+          ],
+          "Ditch"
+        ],
         "black",
         "black"
       ],
@@ -3870,7 +5494,12 @@
     "layout": {
       "visibility": "none"
     },
-    "filter": ["in", "class", "Ditch", "Stream"],
+    "filter": [
+      "in",
+      "class",
+      "Ditch",
+      "Stream"
+    ],
     "metadata": {
       "popup": false
     }
@@ -3918,7 +5547,10 @@
       "line-width": 6,
       "line-color": [
         "match",
-        ["get", "comp_class"],
+        [
+          "get",
+          "comp_class"
+        ],
         "gravitymain",
         "fuchsia",
         "opendrain",
@@ -3981,34 +5613,85 @@
     "paint": {
       "circle-color": [
         "case",
-        ["==", ["get", "comp_class"], "catchbasin"],
+        [
+          "==",
+          [
+            "get",
+            "comp_class"
+          ],
+          "catchbasin"
+        ],
         "fuchsia",
-        ["==", ["get", "comp_class"], "cleanout"],
+        [
+          "==",
+          [
+            "get",
+            "comp_class"
+          ],
+          "cleanout"
+        ],
         "darkorange",
-        ["==", ["get", "comp_class"], "culvertpoint"],
+        [
+          "==",
+          [
+            "get",
+            "comp_class"
+          ],
+          "culvertpoint"
+        ],
         "darkgray",
-        ["==", ["get", "comp_class"], "manhole"],
+        [
+          "==",
+          [
+            "get",
+            "comp_class"
+          ],
+          "manhole"
+        ],
         "#212121",
-        ["==", ["get", "comp_class"], "missingpoint"],
+        [
+          "==",
+          [
+            "get",
+            "comp_class"
+          ],
+          "missingpoint"
+        ],
         "red",
         "black"
       ],
       "circle-radius": {
         "stops": [
-          [0, 1],
-          [20, 8]
+          [
+            0,
+            1
+          ],
+          [
+            20,
+            8
+          ]
         ]
       },
       "circle-opacity": 1,
       "circle-stroke-color": "white",
       "circle-stroke-width": {
         "stops": [
-          [0, 1],
-          [20, 3]
+          [
+            0,
+            1
+          ],
+          [
+            20,
+            3
+          ]
         ]
       }
     },
-    "filter": ["!in", "comp_class", "dischargepoint"],
+    "filter": [
+      "!in",
+      "comp_class",
+      "dischargepoint"
+    ],
     "layout": {
       "visibility": "none"
     },
@@ -4033,16 +5716,40 @@
     "layout": {
       "icon-image": [
         "case",
-        ["==", ["get", "comp_class"], "dischargepoint"],
+        [
+          "==",
+          [
+            "get",
+            "comp_class"
+          ],
+          "dischargepoint"
+        ],
         "diamond-blue-24",
         "manhole-storm"
       ],
       "icon-allow-overlap": true,
       "icon-ignore-placement": true,
-      "icon-size": ["case", ["==", ["get", "comp_class"], "dischargepoint"], 0.9, 0.3],
+      "icon-size": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "comp_class"
+          ],
+          "dischargepoint"
+        ],
+        0.9,
+        0.3
+      ],
       "visibility": "none"
     },
-    "filter": ["in", "comp_class", "dischargepoint", "manhole"],
+    "filter": [
+      "in",
+      "comp_class",
+      "dischargepoint",
+      "manhole"
+    ],
     "metadata": {
       "popup": true
     }
@@ -4055,7 +5762,11 @@
     "group": "Sanitary Sewer Layers",
     "children": true,
     "metadata": {
-      "popup": ["name", "source", "created"]
+      "popup": [
+        "name",
+        "source",
+        "created"
+      ]
     },
     "source": "utl_sanitary_flow_monitors",
     "sourceType": {
@@ -4066,18 +5777,36 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 6],
-          [16, 10]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            16,
+            10
+          ]
         ]
       },
       "circle-color": "rgba(0,0,0,0.5)",
       "circle-stroke-color": "fuchsia",
       "circle-stroke-width": {
         "stops": [
-          [0, 0],
-          [12, 3],
-          [16, 4]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            16,
+            4
+          ]
         ]
       },
       "circle-pitch-scale": "map",
@@ -4113,11 +5842,16 @@
     },
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Bold"],
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
       "text-field": "FM-{name}",
       "text-anchor": "bottom-left",
       "text-size": 16,
-      "text-offset": [0.7, -0.2]
+      "text-offset": [
+        0.7,
+        -0.2
+      ]
     }
   },
   {
@@ -4161,9 +5895,18 @@
     "paint": {
       "circle-radius": {
         "stops": [
-          [0, 0],
-          [12, 8],
-          [16, 16]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            16,
+            16
+          ]
         ]
       },
       "circle-color": "red",
@@ -4172,9 +5915,18 @@
       "circle-stroke-opacity": 0.5,
       "circle-stroke-width": {
         "stops": [
-          [0, 0],
-          [12, 2],
-          [16, 3]
+          [
+            0,
+            0
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            16,
+            3
+          ]
         ]
       },
       "circle-pitch-scale": "map",
@@ -4197,7 +5949,9 @@
     "source": "eng_building_footprints",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.eng_building_footprints/{z}/{x}/{y}.pbf"
+      ],
       "minzoom": 15,
       "maxzoom": 22
     },
@@ -4207,15 +5961,50 @@
       "fill-extrusion-opacity": 0.6,
       "fill-extrusion-height": [
         "case",
-        [">", ["get", "extrudeheight"], 10],
+        [
+          ">",
+          [
+            "get",
+            "extrudeheight"
+          ],
+          10
+        ],
         18,
-        [">", ["get", "extrudeheight"], 20],
+        [
+          ">",
+          [
+            "get",
+            "extrudeheight"
+          ],
+          20
+        ],
         26,
-        [">", ["get", "extrudeheight"], 30],
+        [
+          ">",
+          [
+            "get",
+            "extrudeheight"
+          ],
+          30
+        ],
         34,
-        [">", ["get", "extrudeheight"], 40],
+        [
+          ">",
+          [
+            "get",
+            "extrudeheight"
+          ],
+          40
+        ],
         42,
-        [">", ["get", "extrudeheight"], 50],
+        [
+          ">",
+          [
+            "get",
+            "extrudeheight"
+          ],
+          50
+        ],
         52,
         8
       ]
@@ -4264,7 +6053,9 @@
     "source": "public.eng_coz_structures",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.eng_coz_structures/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.eng_coz_structures/{z}/{x}/{y}.pbf"
+      ],
       "maxzoom": 22
     },
     "source-layer": "public.eng_coz_structures",
@@ -4273,15 +6064,50 @@
       "fill-extrusion-opacity": 0.6,
       "fill-extrusion-height": [
         "case",
-        [">", ["get", "extrudeheight"], 10],
+        [
+          ">",
+          [
+            "get",
+            "extrudeheight"
+          ],
+          10
+        ],
         18,
-        [">", ["get", "extrudeheight"], 20],
+        [
+          ">",
+          [
+            "get",
+            "extrudeheight"
+          ],
+          20
+        ],
         26,
-        [">", ["get", "extrudeheight"], 30],
+        [
+          ">",
+          [
+            "get",
+            "extrudeheight"
+          ],
+          30
+        ],
         34,
-        [">", ["get", "extrudeheight"], 40],
+        [
+          ">",
+          [
+            "get",
+            "extrudeheight"
+          ],
+          40
+        ],
         42,
-        [">", ["get", "extrudeheight"], 50],
+        [
+          ">",
+          [
+            "get",
+            "extrudeheight"
+          ],
+          50
+        ],
         52,
         8
       ]
@@ -4306,7 +6132,9 @@
     "source": "eng_coz_ward_lookup_mview",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.eng_coz_ward_lookup_mview/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.eng_coz_ward_lookup_mview/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id",
       "maxzoom": 22
     },
@@ -4317,8 +6145,14 @@
       "circle-stroke-width": 2,
       "circle-radius": {
         "stops": [
-          [14, 2],
-          [18, 4]
+          [
+            14,
+            2
+          ],
+          [
+            18,
+            4
+          ]
         ]
       }
     },
@@ -4337,7 +6171,9 @@
     "source": "eng_coz_ward_lookup_mview",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.eng_coz_ward_lookup_mview/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.eng_coz_ward_lookup_mview/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id",
       "maxzoom": 22
     },
@@ -4351,11 +6187,16 @@
     "minzoom": 17.1,
     "layout": {
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Regular"],
+      "text-font": [
+        "DIN Offc Pro Regular"
+      ],
       "text-field": "{address}",
       "text-anchor": "bottom-left",
       "text-size": 14,
-      "text-offset": [0.5, 0]
+      "text-offset": [
+        0.5,
+        0
+      ]
     },
     "metadata": {
       "popup": false
@@ -4369,7 +6210,11 @@
     "directory": "City Places & Services",
     "group": "City POIS",
     "metadata": {
-      "popup": ["name", "images", "address"]
+      "popup": [
+        "name",
+        "images",
+        "address"
+      ]
     },
     "source": "eng_coz_pois_source",
     "sourceType": {
@@ -4380,41 +6225,131 @@
     "paint": {
       "circle-color": [
         "case",
-        ["==", ["get", "icon"], "fire-24"],
+        [
+          "==",
+          [
+            "get",
+            "icon"
+          ],
+          "fire-24"
+        ],
         "hsl(0, 100%, 90%)",
-        ["==", ["get", "category"], "parks"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "parks"
+        ],
         "hsl(120, 100%, 95%)",
-        ["==", ["get", "category"], "historic"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "historic"
+        ],
         "hsl(19, 26%, 95%)",
-        ["==", ["get", "category"], "municipal"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "municipal"
+        ],
         "hsl(187, 82%, 95%)",
-        ["==", ["get", "category"], "cemeteries"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "cemeteries"
+        ],
         "hsl(187, 82%, 95%)",
-        ["==", ["get", "category"], "public"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "public"
+        ],
         "hsl(187, 82%, 95%)",
         "white"
       ],
       "circle-stroke-color": [
         "case",
-        ["==", ["get", "icon"], "fire-24"],
+        [
+          "==",
+          [
+            "get",
+            "icon"
+          ],
+          "fire-24"
+        ],
         "red",
-        ["==", ["get", "category"], "parks"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "parks"
+        ],
         "green",
-        ["==", ["get", "category"], "historic"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "historic"
+        ],
         "hsl(19, 26%, 28%)",
-        ["==", ["get", "category"], "municipal"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "municipal"
+        ],
         "#0079a2",
-        ["==", ["get", "category"], "cemeteries"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "cemeteries"
+        ],
         "#0079a2",
-        ["==", ["get", "category"], "public"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "public"
+        ],
         "#0079a2",
         "#333"
       ],
       "circle-stroke-width": 2,
       "circle-radius": {
         "stops": [
-          [14, 10],
-          [18, 13]
+          [
+            14,
+            10
+          ],
+          [
+            18,
+            13
+          ]
         ]
       }
     },
@@ -4423,9 +6358,30 @@
     },
     "filter": [
       "all",
-      ["!=", ["get", "icon"], null],
-      ["!=", ["get", "icon"], ""],
-      ["!=", ["get", "type"], "Park"]
+      [
+        "!=",
+        [
+          "get",
+          "icon"
+        ],
+        null
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "icon"
+        ],
+        ""
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "type"
+        ],
+        "Park"
+      ]
     ]
   },
   {
@@ -4442,24 +6398,56 @@
       "generateId": true
     },
     "metadata": {
-      "popup": ["name", "images", "address", "website"]
+      "popup": [
+        "name",
+        "images",
+        "address",
+        "website"
+      ]
     },
     "layout": {
       "icon-image": "{icon}",
       "icon-allow-overlap": true,
       "icon-size": {
         "stops": [
-          [14, 0.7],
-          [18, 0.9]
+          [
+            14,
+            0.7
+          ],
+          [
+            18,
+            0.9
+          ]
         ]
       },
       "visibility": "none"
     },
     "filter": [
       "all",
-      ["!=", ["get", "icon"], null],
-      ["!=", ["get", "icon"], ""],
-      ["!=", ["get", "type"], "Park"]
+      [
+        "!=",
+        [
+          "get",
+          "icon"
+        ],
+        null
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "icon"
+        ],
+        ""
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "type"
+        ],
+        "Park"
+      ]
     ]
   },
   {
@@ -4470,7 +6458,11 @@
     "directory": "City Places & Services",
     "group": "City POIS",
     "metadata": {
-      "popup": ["name", "images", "address"]
+      "popup": [
+        "name",
+        "images",
+        "address"
+      ]
     },
     "source": "eng_coz_pois_source",
     "sourceType": {
@@ -4482,17 +6474,59 @@
     "paint": {
       "text-color": [
         "case",
-        ["==", ["get", "icon"], "fire-24"],
+        [
+          "==",
+          [
+            "get",
+            "icon"
+          ],
+          "fire-24"
+        ],
         "red",
-        ["==", ["get", "category"], "parks"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "parks"
+        ],
         "green",
-        ["==", ["get", "category"], "historic"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "historic"
+        ],
         "hsl(19, 26%, 28%)",
-        ["==", ["get", "category"], "municipal"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "municipal"
+        ],
         "#005673",
-        ["==", ["get", "category"], "cemeteries"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "cemeteries"
+        ],
         "#005673",
-        ["==", ["get", "category"], "public"],
+        [
+          "==",
+          [
+            "get",
+            "category"
+          ],
+          "public"
+        ],
         "#005673",
         "#333"
       ],
@@ -4503,22 +6537,54 @@
     "layout": {
       "icon-allow-overlap": false,
       "visibility": "none",
-      "text-font": ["DIN Offc Pro Regular"],
+      "text-font": [
+        "DIN Offc Pro Regular"
+      ],
       "text-field": "{name}",
       "text-anchor": "bottom-left",
-      "text-offset": [0.6, -0.5],
+      "text-offset": [
+        0.6,
+        -0.5
+      ],
       "text-size": {
         "stops": [
-          [14, 12],
-          [18, 14]
+          [
+            14,
+            12
+          ],
+          [
+            18,
+            14
+          ]
         ]
       }
     },
     "filter": [
       "all",
-      ["!=", ["get", "icon"], null],
-      ["!=", ["get", "icon"], ""],
-      ["!=", ["get", "type"], "Park"]
+      [
+        "!=",
+        [
+          "get",
+          "icon"
+        ],
+        null
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "icon"
+        ],
+        ""
+      ],
+      [
+        "!=",
+        [
+          "get",
+          "type"
+        ],
+        "Park"
+      ]
     ]
   },
   {
@@ -4537,9 +6603,23 @@
     "paint": {
       "line-color": [
         "case",
-        ["==", ["get", "type"], "detour"],
+        [
+          "==",
+          [
+            "get",
+            "type"
+          ],
+          "detour"
+        ],
         "orange",
-        ["==", ["get", "type"], "closed"],
+        [
+          "==",
+          [
+            "get",
+            "type"
+          ],
+          "closed"
+        ],
         "red",
         "#000"
       ],
@@ -4549,9 +6629,19 @@
       "visibility": "none"
     },
     "metadata": {
-      "popup": ["title", "description"]
+      "popup": [
+        "title",
+        "description"
+      ]
     },
-    "filter": ["==", ["get", "status"], "active"]
+    "filter": [
+      "==",
+      [
+        "get",
+        "status"
+      ],
+      "active"
+    ]
   },
   {
     "id": "tmp_trail_expansion_case",
@@ -4594,7 +6684,10 @@
     "paint": {
       "line-color": "white",
       "line-width": 4,
-      "line-dasharray": [2, 1]
+      "line-dasharray": [
+        2,
+        1
+      ]
     },
     "layout": {
       "visibility": "none"
@@ -4642,9 +6735,24 @@
       "generateId": true
     },
     "paint": {
-      "line-color": ["case", ["==", ["get", "footway"], "sidewalk"], "goldenrod", "white"],
+      "line-color": [
+        "case",
+        [
+          "==",
+          [
+            "get",
+            "footway"
+          ],
+          "sidewalk"
+        ],
+        "goldenrod",
+        "white"
+      ],
       "line-width": 4,
-      "line-dasharray": [2, 1]
+      "line-dasharray": [
+        2,
+        1
+      ]
     },
     "layout": {
       "visibility": "none"
@@ -4661,7 +6769,9 @@
     "source": "utl_streetlights",
     "sourceType": {
       "type": "vector",
-      "tiles": ["https://cozmaps.org/tiles/public.utl_streetlights/{z}/{x}/{y}.pbf"],
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_streetlights/{z}/{x}/{y}.pbf"
+      ],
       "promoteId": "id",
       "maxzoom": 22
     },
@@ -4678,6 +6788,101 @@
     },
     "metadata": {
       "popup": true
+    }
+  },
+  {
+    "id": "utl_water_billing_districts",
+    "directory": "Engineering",
+    "group": "Utility Billing",
+    "name": "Water Utility Billing Districts",
+    "children": true,
+    "source": "utl_water_billing_districts",
+    "sourceType": {
+      "type": "vector",
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_billing_districts/{z}/{x}/{y}.pbf"
+      ],
+      "promoteId": "fid",
+      "maxzoom": 22
+    },
+    "source-layer": "public.utl_water_billing_districts",
+    "type": "fill",
+    "paint": {
+      "fill-color": [
+        "match",
+        [
+          "get",
+          "number"
+        ],
+        4,
+        "green",
+        5,
+        "yellow",
+        3,
+        "pink",
+        6,
+        "purple",
+        2,
+        "dodgerblue",
+        1,
+        "orange",
+        "#fff"
+      ],
+      "fill-opacity": 0.5,
+      "fill-outline-color": "black"
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "utl_water_billing_districts_lines",
+    "directory": "Engineering",
+    "group": "Utility Billing",
+    "parent": "utl_water_billing_districts",
+    "hidden": true,
+    "source": "utl_water_billing_districts",
+    "sourceType": {
+      "type": "vector",
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_billing_districts/{z}/{x}/{y}.pbf"
+      ],
+      "promoteId": "fid",
+      "maxzoom": 22
+    },
+    "source-layer": "public.utl_water_billing_districts",
+    "type": "line",
+    "paint": {
+      "line-color": [
+        "match",
+        [
+          "get",
+          "number"
+        ],
+        4,
+        "green",
+        5,
+        "yellow",
+        3,
+        "pink",
+        6,
+        "purple",
+        2,
+        "dodgerblue",
+        1,
+        "orange",
+        "#fff"
+      ],
+      "line-width": 4
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": false
     }
   }
 ]
