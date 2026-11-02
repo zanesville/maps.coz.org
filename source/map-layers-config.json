@@ -3080,8 +3080,8 @@
   },
   {
     "id": "dps_sanitation_routes",
-    "directory": "Sanitation",
-    "group": "Sanitation",
+    "directory": "Streets & Sanitation",
+    "group": "Streets & Sanitation",
     "name": "Sanitation Routes",
     "source": "dps_sanitation_routes",
     "sourceType": {
@@ -3162,8 +3162,8 @@
   },
   {
     "id": "dps_sanitation_routes_labels",
-    "directory": "Sanitation",
-    "group": "Sanitation",
+    "directory": "Streets & Sanitation",
+    "group": "Streets & Sanitation",
     "name": "Sanitation Route Labels",
     "source": "dps_sanitation_routes",
     "sourceType": {
@@ -3244,8 +3244,8 @@
   },
   {
     "id": "dps_leafcollection",
-    "directory": "Sanitation",
-    "group": "Sanitation",
+    "directory": "Streets & Sanitation",
+    "group": "Streets & Sanitation",
     "name": "Leaf Collection Zones",
     "children": true,
     "description": "Leaf collection zones by collection week; click a zone for its collection dates",
@@ -3311,8 +3311,8 @@
   },
   {
     "id": "dps_leafcollection_labels",
-    "directory": "Sanitation",
-    "group": "Sanitation",
+    "directory": "Streets & Sanitation",
+    "group": "Streets & Sanitation",
     "name": "Leaf Collection Zone Labels",
     "hidden": true,
     "parent": "dps_leafcollection",
