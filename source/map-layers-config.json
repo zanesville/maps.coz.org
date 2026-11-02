@@ -3243,6 +3243,160 @@
     }
   },
   {
+    "id": "dps_leafcollection",
+    "directory": "Sanitation",
+    "group": "Sanitation",
+    "name": "Leaf Collection Zones",
+    "children": true,
+    "description": "Leaf collection zones by collection week; click a zone for its collection dates",
+    "legend": "<div><div title='Collection weeks 1 and 4'><span class='fa fa-square' style='color:#ffa500;'></span> Week 1 &amp; 4</div><div title='Collection weeks 2 and 5'><span class='fa fa-square' style='color:#a0522d;'></span> Week 2 &amp; 5</div><div title='Collection weeks 3 and 6'><span class='fa fa-square' style='color:#46c43d;'></span> Week 3 &amp; 6</div></div>",
+    "source": "dps_leafcollection",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://cozmaps.org/features/collections/public.dps_leafcollection/items.json?limit=9999",
+      "generateId": true
+    },
+    "type": "fill",
+    "paint": {
+      "fill-color": [
+        "match",
+        [
+          "get",
+          "week_no"
+        ],
+        "1",
+        "#ffa500",
+        "2",
+        "#a0522d",
+        "3",
+        "#46c43d",
+        "#666"
+      ],
+      "fill-outline-color": [
+        "match",
+        [
+          "get",
+          "week_no"
+        ],
+        "1",
+        "#ffa500",
+        "2",
+        "#a0522d",
+        "3",
+        "#46c43d",
+        "#666"
+      ],
+      "fill-opacity": 0.5
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    },
+    "filter": [
+      "match",
+      [
+        "get",
+        "week_no"
+      ],
+      [
+        "1",
+        "2",
+        "3"
+      ],
+      true,
+      false
+    ]
+  },
+  {
+    "id": "dps_leafcollection_labels",
+    "directory": "Sanitation",
+    "group": "Sanitation",
+    "name": "Leaf Collection Zone Labels",
+    "hidden": true,
+    "parent": "dps_leafcollection",
+    "source": "dps_leafcollection",
+    "sourceType": {
+      "type": "geojson",
+      "data": "https://cozmaps.org/features/collections/public.dps_leafcollection/items.json?limit=9999",
+      "generateId": true
+    },
+    "type": "symbol",
+    "paint": {
+      "text-color": "white",
+      "text-halo-color": [
+        "match",
+        [
+          "get",
+          "week_no"
+        ],
+        "1",
+        "#ffa500",
+        "2",
+        "#a0522d",
+        "3",
+        "#46c43d",
+        "#666"
+      ],
+      "text-halo-width": 1.5,
+      "text-opacity": 1
+    },
+    "layout": {
+      "visibility": "none",
+      "text-anchor": "center",
+      "text-padding": 2,
+      "text-font": [
+        "DIN Offc Pro Bold"
+      ],
+      "text-field": [
+        "match",
+        [
+          "get",
+          "week_no"
+        ],
+        "1",
+        "Week 1 & 4",
+        "2",
+        "Week 2 & 5",
+        "3",
+        "Week 3 & 6",
+        ""
+      ],
+      "text-max-width": 9,
+      "text-size": {
+        "stops": [
+          [
+            12,
+            18
+          ],
+          [
+            22,
+            22
+          ]
+        ]
+      }
+    },
+    "filter": [
+      "match",
+      [
+        "get",
+        "week_no"
+      ],
+      [
+        "1",
+        "2",
+        "3"
+      ],
+      true,
+      false
+    ],
+    "metadata": {
+      "popup": false
+    },
+    "maxzoom": 16
+  },
+  {
     "id": "utl_water_mains",
     "name": "wMainOuter",
     "hidden": true,
