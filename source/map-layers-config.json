@@ -3482,6 +3482,181 @@
     }
   },
   {
+    "id": "wMainMaterialOuter",
+    "name": "wMainMaterialOuter",
+    "hidden": true,
+    "parent": "wMainMaterial",
+    "type": "line",
+    "directory": "City Water System",
+    "group": "Water Layers",
+    "source": "wMainSource",
+    "sourceType": {
+      "type": "vector",
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_main/{z}/{x}/{y}.pbf"
+      ],
+      "promoteId": "id"
+    },
+    "source-layer": "public.utl_water_main",
+    "paint": {
+      "line-width": [
+        "case",
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          19
+        ],
+        10,
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          11
+        ],
+        8,
+        6
+      ],
+      "line-color": "white"
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true
+    }
+  },
+  {
+    "id": "wMainMaterial",
+    "name": "Water Mains by Material",
+    "type": "line",
+    "directory": "City Water System",
+    "children": true,
+    "group": "Water Layers",
+    "legend": "<div><span class='fa fa-minus' style='color:green;'></span> Plastic (PE, HDPE, PVC, C900, SDR21, SDR9, PP, ABS)<br><span class='fa fa-minus' style='color:black;'></span> Ductile Iron (DIP)<br><span class='fa fa-minus' style='color:red;'></span> Cast Iron (CAS)<br><span class='fa fa-minus' style='color:gray;'></span> Copper / Other / Unknown (COP, AC, SP, TTE, OTH, UNK)</div>",
+    "source": "wMainSource",
+    "sourceType": {
+      "type": "vector",
+      "tiles": [
+        "https://cozmaps.org/tiles/public.utl_water_main/{z}/{x}/{y}.pbf"
+      ],
+      "promoteId": "id"
+    },
+    "source-layer": "public.utl_water_main",
+    "paint": {
+      "line-width": [
+        "case",
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          19
+        ],
+        7,
+        [
+          ">",
+          [
+            "get",
+            "diameter"
+          ],
+          11
+        ],
+        5,
+        3
+      ],
+      "line-color": [
+        "case",
+        [
+          "in",
+          [
+            "get",
+            "material"
+          ],
+          [
+            "literal",
+            [
+              "PE",
+              "HDPE",
+              "PVC",
+              "c900",
+              "C900",
+              "SDR21",
+              "SDR9",
+              "PP",
+              "ABS"
+            ]
+          ]
+        ],
+        "green",
+        [
+          "in",
+          [
+            "get",
+            "material"
+          ],
+          [
+            "literal",
+            [
+              "DIP"
+            ]
+          ]
+        ],
+        "black",
+        [
+          "in",
+          [
+            "get",
+            "material"
+          ],
+          [
+            "literal",
+            [
+              "CAS"
+            ]
+          ]
+        ],
+        "red",
+        "gray"
+      ]
+    },
+    "layout": {
+      "visibility": "none"
+    },
+    "metadata": {
+      "popup": true,
+      "filterSchema": {
+        "material": {
+          "type": "select",
+          "options": [
+            "",
+            "PE",
+            "HDPE",
+            "PVC",
+            "c900",
+            "SDR21",
+            "SDR9",
+            "PP",
+            "ABS",
+            "DIP",
+            "CAS",
+            "COP",
+            "AC",
+            "SP",
+            "TTE",
+            "OTH",
+            "UNK"
+          ]
+        }
+      }
+    }
+  },
+  {
     "id": "wMainLabels",
     "type": "symbol",
     "source": "wMainSource",
